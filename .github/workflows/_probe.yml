@@ -1,0 +1,30 @@
+# 临时诊断探针 —— 用于区分「工作流配置问题」与「账号级 runner 阻塞」
+# 确认结论后即删除本文件。
+name: Probe
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  latest:
+    name: probe ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: |
+          echo "runner OK: ubuntu-latest"
+          uname -a
+
+  pinned:
+    name: probe ubuntu-24.04
+    runs-on: ubuntu-24.04
+    steps:
+      - name: echo
+        run: |
+          echo "runner OK: ubuntu-24.04"
+          uname -a
