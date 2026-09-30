@@ -1,0 +1,389 @@
+{
+  "test_time": "2026-09-07 09:38:19",
+  "base_url": "https://openrouter.ai/api/v1/chat/completions",
+  "max_tokens": 400,
+  "timeout": 75,
+  "question": "你好，请用一句话简短介绍你自己。",
+  "total_models": 21,
+  "ok_models": 14,
+  "wall_seconds": 64.9,
+  "results": {
+    "dots-studio/dots-3-note-preview:free": {
+      "status": "ok",
+      "elapsed": 2.29,
+      "finish_reason": "stop",
+      "content_len": 53,
+      "content_head": "  我是 dots，来自小红书 Dots Studio 的 AI 大模型，可以陪你聊天、帮你解决各种问题。",
+      "reasoning_len": 33,
+      "provider": "AtlasCloud",
+      "routed_model": "dots-studio/dots-3-note-preview:free",
+      "usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 49,
+        "total_tokens": 71,
+        "cost": 0
+      }
+    },
+    "cohere/north-mini-code:free": {
+      "status": "ok",
+      "elapsed": 2.24,
+      "finish_reason": "stop",
+      "content_len": 29,
+      "content_head": "我是一个先进的AI助手，随时准备提供全面且易于理解的答案。",
+      "reasoning_len": 279,
+      "provider": "Cohere",
+      "routed_model": "cohere/north-mini-code:free",
+      "usage": {
+        "prompt_tokens": 11,
+        "completion_tokens": 70,
+        "total_tokens": 81,
+        "cost": 0
+      }
+    },
+    "google/lyria-3-clip-preview": {
+      "status": "http_error",
+      "code": 403,
+      "elapsed": 1.42,
+      "body": "{\"error\":{\"message\":\"This model is not available in your region.\",\"code\":403,\"metadata\":{\"routing_funnel\":[{\"step\":\"Initial Endpoints\",\"endpoint_count\":1}],\"failed_routing_step\":\"Gate Endpoints with Geo Restrictions\"}}}",
+      "retried": true,
+      "first_attempt": {
+        "status": "http_error",
+        "code": 403,
+        "body": "{\"error\":{\"message\":\"This model is not available in your region.\",\"code\":403,\"metadata\":{\"routing_funnel\":[{\"step\":\"Initial Endpoints\",\"endpoint_count\":1}],\"failed_routing_step\":\"Gate Endpoints with Geo Restrictions\"}}}"
+      }
+    },
+    "google/lyria-3-pro-preview": {
+      "status": "http_error",
+      "code": 403,
+      "elapsed": 1.15,
+      "body": "{\"error\":{\"message\":\"This model is not available in your region.\",\"code\":403,\"metadata\":{\"routing_funnel\":[{\"step\":\"Initial Endpoints\",\"endpoint_count\":1}],\"failed_routing_step\":\"Gate Endpoints with Geo Restrictions\"}}}",
+      "retried": true,
+      "first_attempt": {
+        "status": "http_error",
+        "code": 403,
+        "body": "{\"error\":{\"message\":\"This model is not available in your region.\",\"code\":403,\"metadata\":{\"routing_funnel\":[{\"step\":\"Initial Endpoints\",\"endpoint_count\":1}],\"failed_routing_step\":\"Gate Endpoints with Geo Restrictions\"}}}"
+      }
+    },
+    "inclusionai/ling-3.0-flash-fin:free": {
+      "status": "ok",
+      "elapsed": 1.68,
+      "finish_reason": "stop",
+      "content_len": 48,
+      "content_head": "你好，我是百灵（Ling），由蚂蚁集团研发的语言模型，擅长用自然、灵活的方式理解和回应各类问题。",
+      "reasoning_len": 137,
+      "provider": "Novita",
+      "routed_model": "inclusionai/ling-3.0-flash-fin:free",
+      "usage": {
+        "prompt_tokens": 28,
+        "completion_tokens": 99,
+        "total_tokens": 127,
+        "cost": 0
+      }
+    },
+    "google/gemma-4-26b-a4b-it:free": {
+      "status": "http_error",
+      "code": 429,
+      "elapsed": 1.15,
+      "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"is_byok\":false,\"provider_error_code\":\"429\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hi",
+      "retried": true,
+      "first_attempt": {
+        "status": "http_error",
+        "code": 429,
+        "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"is_byok\":false,\"provider_error_code\":\"429\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hi"
+      },
+      "retest": {
+        "status": "http_error",
+        "code": 429,
+        "elapsed": 1.19,
+        "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"is_byok\":false,\"provider_error_code\":\"429\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hi",
+        "retried": true
+      },
+      "retest2": {
+        "status": "http_error",
+        "code": 429,
+        "elapsed": 1.2,
+        "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"",
+        "retried": true
+      }
+    },
+    "inclusionai/ling-3.0-flash-sante:free": {
+      "status": "ok",
+      "elapsed": 1.72,
+      "finish_reason": "stop",
+      "content_len": 58,
+      "content_head": "你好，我是百灵大模型（Ling），基于专家混合架构的通用语言大模型，擅长自然语言理解与生成，并支持多任务交互与推理。",
+      "reasoning_len": 150,
+      "provider": "Novita",
+      "routed_model": "inclusionai/ling-3.0-flash-sante:free",
+      "usage": {
+        "prompt_tokens": 28,
+        "completion_tokens": 115,
+        "total_tokens": 143,
+        "cost": 0
+      }
+    },
+    "liquid/lfm-2.5-2.6b:free": {
+      "status": "ok",
+      "elapsed": 1.54,
+      "finish_reason": "stop",
+      "content_len": 88,
+      "content_head": "我是 Liquid Foundation Model (LFM)，由 Liquid AI 开发，这是一个专为高效本地部署设计的混合架构模型，能够在手机、笔记本等设备上快速响应。",
+      "reasoning_len": 182,
+      "provider": "Liquid",
+      "routed_model": "liquid/lfm-2.5-2.6b:free",
+      "usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 159,
+        "total_tokens": 182,
+        "cost": 0
+      }
+    },
+    "google/gemma-4-31b-it:free": {
+      "status": "http_error",
+      "code": 429,
+      "elapsed": 1.16,
+      "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"is_byok\":false,\"provider_error_code\":\"429\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":",
+      "retried": true,
+      "first_attempt": {
+        "status": "http_error",
+        "code": 429,
+        "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"is_byok\":false,\"provider_error_code\":\"429\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":"
+      },
+      "retest": {
+        "status": "http_error",
+        "code": 429,
+        "elapsed": 1.11,
+        "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"is_byok\":false,\"provider_error_code\":\"429\",\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":",
+        "retried": true
+      },
+      "retest2": {
+        "status": "http_error",
+        "code": 429,
+        "elapsed": 1.18,
+        "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"is_b",
+        "retried": true
+      }
+    },
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+      "status": "ok",
+      "elapsed": 1.54,
+      "finish_reason": "stop",
+      "content_len": 26,
+      "content_head": "我是Nemotron，由NVIDIA创建的AI助手。",
+      "reasoning_len": 224,
+      "provider": "Nvidia",
+      "routed_model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 89,
+        "total_tokens": 118,
+        "cost": 0
+      }
+    },
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+      "status": "ok",
+      "elapsed": 1.44,
+      "finish_reason": "stop",
+      "content_len": 52,
+      "content_head": "我是由 NVIDIA 创造的大语言模型 Nemotron 3 Super，擅长理解和生成多种语言的文本。",
+      "reasoning_len": 402,
+      "provider": "Nvidia",
+      "routed_model": "nvidia/nemotron-3-super-120b-a12b:free",
+      "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 161,
+        "total_tokens": 190,
+        "cost": 0
+      }
+    },
+    "minimax/minimax-m2.7:free": {
+      "status": "ok",
+      "elapsed": 2.51,
+      "finish_reason": "stop",
+      "content_len": 46,
+      "content_head": "我是MiniMax‑M2.7，由MiniMax打造的AI助手，专注于帮助您快速解答各类问题。",
+      "reasoning_len": 783,
+      "provider": "GMICloud",
+      "routed_model": "minimax/minimax-m2.7:free",
+      "usage": {
+        "prompt_tokens": 49,
+        "completion_tokens": 241,
+        "total_tokens": 290,
+        "cost": 0
+      }
+    },
+    "nvidia/nemotron-3-ultra-550b-a55b:free": {
+      "status": "ok",
+      "elapsed": 1.63,
+      "finish_reason": "stop",
+      "content_len": 43,
+      "content_head": "我是GLM，Z.ai训练的大语言模型，致力于为用户提供有用、安全、准确的智能助手服务。",
+      "reasoning_len": 20,
+      "provider": "Nvidia",
+      "routed_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 59,
+        "total_tokens": 88,
+        "cost": 0
+      }
+    },
+    "nvidia/nemotron-3.5-content-safety:free": {
+      "status": "ok",
+      "elapsed": 1.85,
+      "finish_reason": "stop",
+      "content_len": 17,
+      "content_head": "User Safety: safe",
+      "reasoning_len": 581,
+      "provider": "Nvidia",
+      "routed_model": "nvidia/nemotron-3.5-content-safety:free",
+      "usage": {
+        "prompt_tokens": 474,
+        "completion_tokens": 147,
+        "total_tokens": 621,
+        "cost": 0
+      }
+    },
+    "minimax/minimax-m3:free": {
+      "status": "ok",
+      "elapsed": 10.92,
+      "finish_reason": "stop",
+      "content_len": 52,
+      "content_head": "你好！我是 MiniMax-M3，一个由 MiniMax 开发的 AI 助手，致力于为你提供信息和支持。",
+      "reasoning_len": 0,
+      "provider": "GMICloud",
+      "routed_model": "minimax/minimax-m3:free",
+      "usage": {
+        "prompt_tokens": 171,
+        "completion_tokens": 23,
+        "total_tokens": 194,
+        "cost": 0
+      }
+    },
+    "poolside/laguna-s-2.1:free": {
+      "status": "ok",
+      "elapsed": 2.1,
+      "finish_reason": "stop",
+      "content_len": 50,
+      "content_head": "I'm Poolside, an AI assistant made by Poolside AI.",
+      "reasoning_len": 0,
+      "provider": "Poolside",
+      "routed_model": "poolside/laguna-s-2.1:free",
+      "usage": {
+        "prompt_tokens": 56,
+        "completion_tokens": 15,
+        "total_tokens": 71,
+        "cost": 0
+      }
+    },
+    "openrouter/free": {
+      "status": "ok",
+      "elapsed": 1.5,
+      "finish_reason": "stop",
+      "content_len": 17,
+      "content_head": "User Safety: safe",
+      "reasoning_len": 318,
+      "provider": "Nvidia",
+      "routed_model": "nvidia/nemotron-3.5-content-safety:free",
+      "usage": {
+        "prompt_tokens": 474,
+        "completion_tokens": 96,
+        "total_tokens": 570,
+        "cost": 0
+      }
+    },
+    "nvidia/nemotron-3.5-lightning:free": {
+      "status": "ok",
+      "elapsed": 1.53,
+      "finish_reason": "length",
+      "content_len": 1500,
+      "content_head": "Here's a thinking process:  1.  **Analyze User Input:**    - User says: \"你好，请用一句话简短介绍我自己。\"    - Tran",
+      "reasoning_len": 1500,
+      "provider": "Nvidia",
+      "routed_model": "nvidia/nemotron-3.5-lightning:free",
+      "usage": {
+        "prompt_tokens": 29,
+        "completion_tokens": 400,
+        "total_tokens": 429,
+        "cost": 0
+      }
+    },
+    "thinkingmachines/inkling-small:free": {
+      "status": "http_error",
+      "code": 403,
+      "elapsed": 1.45,
+      "body": "{\"error\":{\"message\":\"thinkingmachines/inkling-small:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps\",\"code\":403,\"metadata\":{\"routing_funnel\":[{\"step\":\"Initial Endpoints\",\"endpoint_count\":1}],\"failed_routing_step\":\"Gate Free Endpoints by Agentic Harness\"}}}",
+      "retried": true,
+      "first_attempt": {
+        "status": "http_error",
+        "code": 403,
+        "body": "{\"error\":{\"message\":\"thinkingmachines/inkling-small:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps\",\"code\":403,\"metadata\":{\"routing_funnel\":[{\"step\":\"Initial Endpoints\",\"endpoint_count\":1}],\"failed_routing_step\":\"Gate Free Endpoints by Agentic Harness\"}}}"
+      }
+    },
+    "thinkingmachines/inkling:free": {
+      "status": "http_error",
+      "code": 403,
+      "elapsed": 1.08,
+      "body": "{\"error\":{\"message\":\"thinkingmachines/inkling:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps\",\"code\":403,\"metadata\":{\"routing_funnel\":[{\"step\":\"Initial Endpoints\",\"endpoint_count\":1}],\"failed_routing_step\":\"Gate Free Endpoints by Agentic Harness\"}}}",
+      "retried": true,
+      "first_attempt": {
+        "status": "http_error",
+        "code": 403,
+        "body": "{\"error\":{\"message\":\"thinkingmachines/inkling:free is only available on agentic harnesses. Try plugging it into a coding agent or productivity app listed on https://openrouter.ai/apps\",\"code\":403,\"metadata\":{\"routing_funnel\":[{\"step\":\"Initial Endpoints\",\"endpoint_count\":1}],\"failed_routing_step\":\"Gate Free Endpoints by Agentic Harness\"}}}"
+      }
+    },
+    "poolside/laguna-xs-2.1:free": {
+      "status": "http_error",
+      "code": 429,
+      "elapsed": 1.36,
+      "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"poolside/laguna-xs-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Poolside\",\"is_byok\":false,\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provid",
+      "retried": true,
+      "first_attempt": {
+        "status": "http_error",
+        "code": 429,
+        "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"poolside/laguna-xs-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Poolside\",\"is_byok\":false,\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provid"
+      },
+      "retest": {
+        "status": "http_error",
+        "code": 429,
+        "elapsed": 1.31,
+        "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"poolside/laguna-xs-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Poolside\",\"is_byok\":false,\"limit_source\":\"upstream_provider_shared_pool\",\"remedy_hint\":\"Retry shortly, add your own provid",
+        "retried": true
+      },
+      "retest2": {
+        "status": "ok",
+        "elapsed": 1.56,
+        "finish": "stop",
+        "content": "你好，我是GLM，这是一款由智谱AI训练的大语言模型，能够理解和生成人类语言，支持多种语言，广泛适用于文本理解、写作和代码生成等任务，欢迎随时提问。",
+        "reasoning_len": 824,
+        "provider": "Poolside",
+        "routed": "poolside/laguna-xs-2.1:free",
+        "usage": {
+          "prompt_tokens": 56,
+          "completion_tokens": 276,
+          "total_tokens": 332,
+          "cost": 0,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 32,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0,
+            "upstream_inference_prompt_cost": 0,
+            "upstream_inference_completions_cost": 0
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 217,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        "retried": true
+      }
+    }
+  },
+  "final_ok_models": 14
+}

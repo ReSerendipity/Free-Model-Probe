@@ -1,0 +1,396 @@
+
+########## Qwen3.5-397B-A17B (readme_0) ##########
+--- TABLE 0 (50 rows) ---
+ | GPT5.2 | Claude 4.5 Opus | Gemini-3 Pro | Qwen3-Max-Thinking | K2.5-1T-A32B | Qwen3.5-397B-A17B
+Knowledge
+MMLU-Pro | 87.4 | 89.5 | 89.8 | 85.7 | 87.1 | 87.8
+MMLU-Redux | 95.0 | 95.6 | 95.9 | 92.8 | 94.5 | 94.9
+SuperGPQA | 67.9 | 70.6 | 74.0 | 67.3 | 69.2 | 70.4
+C-Eval | 90.5 | 92.2 | 93.4 | 93.7 | 94.0 | 93.0
+Instruction Following
+IFEval | 94.8 | 90.9 | 93.5 | 93.4 | 93.9 | 92.6
+IFBench | 75.4 | 58.0 | 70.4 | 70.9 | 70.2 | 76.5
+MultiChallenge | 57.9 | 54.2 | 64.2 | 63.3 | 62.7 | 67.6
+Long Context
+AA-LCR | 72.7 | 74.0 | 70.7 | 68.7 | 70.0 | 68.7
+LongBench v2 | 54.5 | 64.4 | 68.2 | 60.6 | 61.0 | 63.2
+STEM
+GPQA | 92.4 | 87.0 | 91.9 | 87.4 | 87.6 | 88.4
+HLE | 35.5 | 30.8 | 37.5 | 30.2 | 30.1 | 28.7
+HLE-Verified鹿 | 43.3 | 38.8 | 48 | 37.6 | -- | 37.6
+Reasoning
+LiveCodeBench v6 | 87.7 | 84.8 | 90.7 | 85.9 | 85.0 | 83.6
+HMMT Feb 25 | 99.4 | 92.9 | 97.3 | 98.0 | 95.4 | 94.8
+HMMT Nov 25 | 100 | 93.3 | 93.3 | 94.7 | 91.1 | 92.7
+IMOAnswerBench | 86.3 | 84.0 | 83.3 | 83.9 | 81.8 | 80.9
+AIME26 | 96.7 | 93.3 | 90.6 | 93.3 | 93.3 | 91.3
+General Agent
+BFCL-V4 | 63.1 | 77.5 | 72.5 | 67.7 | 68.3 | 72.9
+TAU2-Bench | 87.1 | 91.6 | 85.4 | 84.6 | 77.0 | 86.7
+VITA-Bench | 38.2 | 56.3 | 51.6 | 40.9 | 41.9 | 49.7
+DeepPlanning | 44.6 | 33.9 | 23.3 | 28.7 | 14.5 | 34.3
+Tool Decathlon | 43.8 | 43.5 | 36.4 | 18.8 | 27.8 | 38.3
+MCP-Mark | 57.5 | 42.3 | 53.9 | 33.5 | 29.5 | 46.1
+Search Agent鲁
+HLE w/ tool | 45.5 | 43.4 | 45.8 | 49.8 | 50.2 | 48.3
+BrowseComp | 65.8 | 67.8 | 59.2 | 53.9 | --/74.9 | 69.0/78.6
+BrowseComp-zh | 76.1 | 62.4 | 66.8 | 60.9 | -- | 70.3
+WideSearch | 76.8 | 76.4 | 68.0 | 57.9 | 72.7 | 74.0
+Seal-0 | 45.0 | 47.7 | 45.5 | 46.9 | 57.4 | 46.9
+Multilingualism
+MMMLU | 89.5 | 90.1 | 90.6 | 84.4 | 86.0 | 88.5
+MMLU-ProX | 83.7 | 85.7 | 87.7 | 78.5 | 82.3 | 84.7
+NOVA-63 | 54.6 | 56.7 | 56.7 | 54.2 | 56.0 | 59.1
+INCLUDE | 87.5 | 86.2 | 90.5 | 82.3 | 83.3 | 85.6
+Global PIQA | 90.9 | 91.6 | 93.2 | 86.0 | 89.3 | 89.8
+PolyMATH | 62.5 | 79.0 | 81.6 | 64.7 | 43.1 | 73.3
+WMT24++ | 78.8 | 79.7 | 80.7 | 77.6 | 77.6 | 78.9
+MAXIFE | 88.4 | 79.2 | 87.5 | 84.0 | 72.8 | 88.2
+Coding Agent
+SWE-bench Verified | 80.0 | 80.9 | 76.2 | 75.3 | 76.8 | 76.4
+SWE-bench Multilingual | 72.0 | 77.5 | 65.0 | 66.7 | 73.0 | 69.3
+SecCodeBench | 68.7 | 68.6 | 62.4 | 57.5 | 61.3 | 68.3
+Terminal Bench 2 | 54.0 | 59.3 | 54.2 | 22.5 | 50.8 | 52.5
+
+########## Qwen3.6-35B-A3B (readme_1) ##########
+--- TABLE 0 (34 rows) ---
+ | Qwen3.5-27B | Gemma4-31B | Qwen3.5-35BA3B | Gemma4-26BA4B | Qwen3.6-35BA3B
+Coding Agent
+SWE-bench Verified | 75.0 | 52.0 | 70.0 | 17.4 | 73.4
+SWE-bench Multilingual | 69.3 | 51.7 | 60.3 | 17.3 | 67.2
+SWE-bench Pro | 51.2 | 35.7 | 44.6 | 13.8 | 49.5
+Terminal-Bench 2.0 | 41.6 | 42.9 | 40.5 | 34.2 | 51.5
+Claw-Eval Avg | 64.3 | 48.5 | 65.4 | 58.8 | 68.7
+Claw-Eval Pass^3 | 46.2 | 25.0 | 51.0 | 28.0 | 50.0
+SkillsBench Avg5 | 27.2 | 23.6 | 4.4 | 12.3 | 28.7
+QwenClawBench | 52.2 | 41.7 | 47.7 | 38.7 | 52.6
+NL2Repo | 27.3 | 15.5 | 20.5 | 11.6 | 29.4
+QwenWebBench | 1068 | 1197 | 978 | 1178 | 1397
+General Agent
+TAU3-Bench | 68.4 | 67.5 | 68.9 | 59.0 | 67.2
+VITA-Bench | 41.8 | 43.0 | 29.1 | 36.9 | 35.6
+DeepPlanning | 22.6 | 24.0 | 22.8 | 16.2 | 25.9
+Tool Decathlon | 31.5 | 21.2 | 28.7 | 12.0 | 26.9
+MCPMark | 36.3 | 18.1 | 27.0 | 14.2 | 37.0
+MCP-Atlas | 68.4 | 57.2 | 62.4 | 50.0 | 62.8
+WideSearch | 66.4 | 35.2 | 59.1 | 38.3 | 60.1
+Knowledge
+MMLU-Pro | 86.1 | 85.2 | 85.3 | 82.6 | 85.2
+MMLU-Redux | 93.2 | 93.7 | 93.3 | 92.7 | 93.3
+SuperGPQA | 65.6 | 65.7 | 63.4 | 61.4 | 64.7
+C-Eval | 90.5 | 82.6 | 90.2 | 82.5 | 90.0
+STEM & Reasoning
+GPQA | 85.5 | 84.3 | 84.2 | 82.3 | 86.0
+HLE | 24.3 | 19.5 | 22.4 | 8.7 | 21.4
+LiveCodeBench v6 | 80.7 | 80.0 | 74.6 | 77.1 | 80.4
+HMMT Feb 25 | 92.0 | 88.7 | 89.0 | 91.7 | 90.7
+HMMT Nov 25 | 89.8 | 87.5 | 89.2 | 87.5 | 89.1
+HMMT Feb 26 | 84.3 | 77.2 | 78.7 | 79.0 | 83.6
+IMOAnswerBench | 79.9 | 74.5 | 76.8 | 74.3 | 78.9
+AIME26 | 92.6 | 89.2 | 91.0 | 88.3 | 92.7
+
+########## DeepSeek-V4-Pro (readme_4) ##########
+--- MD TABLE ---
+| **Model** | **#Total Params** | **#Activated Params** | **Context Length** | **Precision** | **Download** |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| DeepSeek-V4-Flash-Base | 284B | 13B | 1M | FP8 Mixed | [HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Base) \| [ModelScope](https://modelscope.cn/models/deepseek-ai/DeepSeek-V4-Flash-Base) |
+| DeepSeek-V4-Flash | 284B | 13B | 1M | FP4 + FP8 Mixed* | [HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash) \| [ModelScope](https://modelscope.cn/models/deepseek-ai/DeepSeek-V4-Flash) |
+| DeepSeek-V4-Pro-Base | 1.6T | 49B | 1M | FP8 Mixed | [HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-Base) \| [ModelScope](https://modelscope.cn/models/deepseek-ai/DeepSeek-V4-Pro-Base) |
+| DeepSeek-V4-Pro | 1.6T | 49B | 1M | FP4 + FP8 Mixed* | [HuggingFace](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro) \| [ModelScope](https://modelscope.cn/models/deepseek-ai/DeepSeek-V4-Pro) |
+
+--- MD TABLE ---
+| Benchmark (Metric) | # Shots | DeepSeek-V3.2-Base | DeepSeek-V4-Flash-Base | DeepSeek-V4-Pro-Base |
+| :--- | :---: | :---: | :---: | :---: |
+| Architecture | - | MoE | MoE | MoE |
+| # Activated Params | - | 37B | 13B | 49B |
+| # Total Params | - | 671B | 284B | 1.6T |
+| **World Knowledge** | | | | |
+| AGIEval (EM) | 0-shot | 80.1 | 82.6 | **83.1** |
+| MMLU (EM) | 5-shot | 87.8 | 88.7 | **90.1** |
+| MMLU-Redux (EM) | 5-shot | 87.5 | 89.4 | **90.8** |
+| MMLU-Pro (EM) | 5-shot | 65.5 | 68.3 | **73.5** |
+| MMMLU (EM) | 5-shot | 87.9 | 88.8 | **90.3** |
+| C-Eval (EM) | 5-shot | 90.4 | 92.1 | **93.1** |
+| CMMLU (EM) | 5-shot | 88.9 | 90.4 | **90.8** |
+| MultiLoKo (EM) | 5-shot | 38.7 | 42.2 | **51.1** |
+| Simple-QA verified (EM) | 25-shot | 28.3 | 30.1 | **55.2** |
+| SuperGPQA (EM) | 5-shot | 45.0 | 46.5 | **53.9** |
+| FACTS Parametric (EM) | 25-shot | 27.1 | 33.9 | **62.6** |
+| TriviaQA (EM) | 5-shot | 83.3 | 82.8 | **85.6** |
+| **Language & Reasoning** | | | | |
+| BBH (EM) | 3-shot | **87.6** | 86.9 | 87.5 |
+| DROP (F1) | 1-shot | 88.2 | 88.6 | **88.7** |
+| HellaSwag (EM) | 0-shot | 86.4 | 85.7 | **88.0** |
+| WinoGrande (EM) | 0-shot | 78.9 | 79.5 | **81.5** |
+| CLUEWSC (EM) | 5-shot | 83.5 | 82.2 | **85.2** |
+| **Code & Math** | | | | |
+| BigCodeBench (Pass@1) | 3-shot | **63.9** | 56.8 | 59.2 |
+| HumanEval (Pass@1) | 0-shot | 62.8 | 69.5 | **76.8** |
+| GSM8K (EM) | 8-shot | 91.1 | 90.8 | **92.6** |
+| MATH (EM) | 4-shot | 60.5 | 57.4 | **64.5** |
+| MGSM (EM) | 8-shot | 81.3 | **85.7** | 84.4 |
+| CMath (EM) | 3-shot | 92.6 | **93.6** | 90.9 |
+| **Long Context** | | | | |
+| LongBench-V2 (EM) | 1-shot | 40.2 | 44.7 | **51.5** |
+
+--- MD TABLE ---
+| Reasoning Mode | Characteristics | Typical Use Cases | Response Format |
+| :--- | :--- | :--- | :--- |
+| Non-think | Fast, intuitive responses | Routine daily tasks, low-risk decisions | `</think>` summary |
+| Think High | Conscious logical analysis, slower but more accurate | Complex problem-solving, planning | `<think>` thinking `</think>` summary |
+| Think Max | Push reasoning to its fullest extent | Exploring the boundary of model reasoning capability | Special system prompt + `<think>` thinking `</think>` summary |
+
+--- MD TABLE ---
+| Benchmark (Metric) | Opus-4.6 Max | GPT-5.4 xHigh | Gemini-3.1-Pro High | K2.6 Thinking | GLM-5.1 Thinking | DS-V4-Pro Max |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Knowledge & Reasoning** | | | | | | |
+| MMLU-Pro (EM) | 89.1 | 87.5 | **91.0** | 87.1 | 86.0 | 87.5 |
+| SimpleQA-Verified (Pass@1) | 46.2 | 45.3 | **75.6** | 36.9 | 38.1 | 57.9 |
+| Chinese-SimpleQA (Pass@1) | 76.4 | 76.8 | **85.9** | 75.9 | 75.0 | 84.4 |
+| GPQA Diamond (Pass@1) | 91.3 | 93.0 | **94.3** | 90.5 | 86.2 | 90.1 |
+| HLE (Pass@1) | 40.0 | 39.8 | **44.4** | 36.4 | 34.7 | 37.7 |
+| LiveCodeBench (Pass@1) | 88.8 | - | 91.7 | 89.6 | - | **93.5** |
+| Codeforces (Rating) | - | 3168 | 3052 | - | - | **3206** |
+| HMMT 2026 Feb (Pass@1) | 96.2 | **97.7** | 94.7 | 92.7 | 89.4 | 95.2 |
+| IMOAnswerBench (Pass@1) | 75.3 | **91.4** | 81.0 | 86.0 | 83.8 | 89.8 |
+| Apex (Pass@1) | 34.5 | 54.1 | **60.9** | 24.0 | 11.5 | 38.3 |
+| Apex Shortlist (Pass@1) | 85.9 | 78.1 | 89.1 | 75.5 | 72.4 | **90.2** |
+| **Long Context** | | | | | | |
+| MRCR 1M (MMR) | **92.9** | - | 76.3 | - | - | 83.5 |
+| CorpusQA 1M (ACC) | **71.7** | - | 53.8 | - | - | 62.0 |
+| **Agentic** | | | | | | |
+| Terminal Bench 2.0 (Acc) | 65.4 | **75.1** | 68.5 | 66.7 | 63.5 | 67.9 |
+| SWE Verified (Resolved) | **80.8** | - | 80.6 | 80.2 | - | 80.6 |
+| SWE Pro (Resolved) | 57.3 | 57.7 | 54.2 | **58.6** | 58.4 | 55.4 |
+| SWE Multilingual (Resolved) | **77.5** | - | - | 76.7 | 73.3 | 76.2 |
+| BrowseComp (Pass@1) | 83.7 | 82.7 | **85.9** | 83.2 | 79.3 | 83.4 |
+| HLE w/ tools (Pass@1) | 53.1 | 52.0 | 51.6 | **54.0** | 50.4 | 48.2 |
+| GDPval-AA (Elo) | 1619 | **1674** | 1314 | 1482 | 1535 | 1554 |
+| MCPAtlas Public (Pass@1) | **73.8** | 67.2 | 69.2 | 66.6 | 71.8 | 73.6 |
+| Toolathlon (Pass@1) | 47.2 | **54.6** | 48.8 | 50.0 | 40.7 | 51.8 |
+
+--- MD TABLE ---
+| Benchmark (Metric) | V4-Flash Non-Think | V4-Flash High | V4-Flash Max | V4-Pro Non-Think | V4-Pro High | V4-Pro Max |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Knowledge & Reasoning** | | | | | | |
+| MMLU-Pro (EM) | 83.0 | 86.4 | 86.2 | 82.9 | 87.1 | **87.5** |
+| SimpleQA-Verified (Pass@1) | 23.1 | 28.9 | 34.1 | 45.0 | 46.2 | **57.9** |
+| Chinese-SimpleQA (Pass@1) | 71.5 | 73.2 | 78.9 | 75.8 | 77.7 | **84.4** |
+| GPQA Diamond (Pass@1) | 71.2 | 87.4 | 88.1 | 72.9 | 89.1 | **90.1** |
+| HLE (Pass@1) | 8.1 | 29.4 | 34.8 | 7.7 | 34.5 | **37.7** |
+| LiveCodeBench (Pass@1) | 55.2 | 88.4 | 91.6 | 56.8 | 89.8 | **93.5** |
+| Codeforces (Rating) | - | 2816 | 3052 | - | 2919 | **3206** |
+| HMMT 2026 Feb (Pass@1) | 40.8 | 91.9 | 94.8 | 31.7 | 94.0 | **95.2** |
+| IMOAnswerBench (Pass@1) | 41.9 | 85.1 | 88.4 | 35.3 | 88.0 | **89.8** |
+| Apex (Pass@1) | 1.0 | 19.1 | 33.0 | 0.4 | 27.4 | **38.3** |
+| Apex Shortlist (Pass@1) | 9.3 | 72.1 | 85.7 | 9.2 | 85.5 | **90.2** |
+| **Long Context** | | | | | | |
+| MRCR 1M (MMR) | 37.5 | 76.9 | 78.7 | 44.7 | 83.3 | **83.5** |
+| CorpusQA 1M (ACC) | 15.5 | 59.3 | 60.5 | 35.6 | 56.5 | **62.0** |
+| **Agentic** | | | | | | |
+| Terminal Bench 2.0 (Acc) | 49.1 | 56.6 | 56.9 | 59.1 | 63.3 | **67.9** |
+| SWE Verified (Resolved) | 73.7 | 78.6 | 79.0 | 73.6 | 79.4 | **80.6** |
+| SWE Pro (Resolved) | 49.1 | 52.3 | 52.6 | 52.1 | 54.4 | **55.4** |
+| SWE Multilingual (Resolved) | 69.7 | 70.2 | 73.3 | 69.8 | 74.1 | **76.2** |
+| BrowseComp (Pass@1) | - | 53.5 | 73.2 | - | 80.4 | **83.4** |
+| HLE w/ tools (Pass@1) | - | 40.3 | 45.1 | - | 44.7 | **48.2** |
+| MCPAtlas (Pass@1) | 64.0 | 67.4 | 69.0 | 69.4 | **74.2** | 73.6 |
+| GDPval-AA (Elo) | - | - | 1395 | - | - | **1554** |
+| Toolathlon (Pass@1) | 40.7 | 43.5 | 47.8 | 46.3 | 49.0 | **51.8** |
+
+LINE: | HumanEval (Pass@1) | 0-shot | 62.8 | 69.5 | **76.8** |
+LINE: | LiveCodeBench (Pass@1) | 88.8 | - | 91.7 | 89.6 | - | **93.5** |
+LINE: | LiveCodeBench (Pass@1) | 55.2 | 88.4 | 91.6 | 56.8 | 89.8 | **93.5** |
+LINE: | Terminal Bench 2.0 (Acc) | 65.4 | **75.1** | 68.5 | 66.7 | 63.5 | 67.9 |
+LINE: | Terminal Bench 2.0 (Acc) | 49.1 | 56.6 | 56.9 | 59.1 | 63.3 | **67.9** |
+
+########## DeepSeek-V4-Flash-0731 (readme_5) ##########
+--- MD TABLE ---
+| Benchmark | DeepSeek-V4-Flash-0731 | DeepSeek-V4-Flash (Preview) | DeepSeek-V4-Pro (Preview) | GLM-5.2 | Opus-4.8 |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| Terminal Bench 2.1 | 82.7 | 61.8 | 72.1 | 81.0 | 85.0 |
+| NL2Repo | 54.2 | 39.4 | 38.5 | 48.9 | 69.7 |
+| Cybergym | 76.7 | 38.7 | 52.7 | - | 83.1 |
+| DeepSWE | 54.4 | 7.3 | 12.8 | 46.2 | 58.0 |
+| Toolathlon-Verified | 70.3 | 49.7 | 55.9 | 59.9 | 76.2 |
+| Agents' Last Exam | 25.2 | 15.8 | 16.5 | 23.8 | 25.7 |
+| AutomationBench Public | 25.1 | 10.8 | 12.8 | 12.9 | 27.2 |
+| DSBench-FullStack 鈥?| 68.7 | 37.0 | 41.8 | 61.8 | 71.6 |
+| DSBench-Hard 鈥?| 59.6 | 25.8 | 31.1 | 54.5 | 71.7 |
+
+LINE: | Terminal Bench 2.1 | 82.7 | 61.8 | 72.1 | 81.0 | 85.0 |
+
+########## GLM-5.2 (readme_6) ##########
+--- MD TABLE ---
+|Benchmark|GLM-5.2|GLM-5.1|Qwen3.7-Max|MiniMax M3|DeepSeek-V4-Pro|Claude Opus 4.8|GPT-5.5|Gemini 3.1 Pro|
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Reasoning|||||||||||
+|HLE|40.5|31|41.4|37|37.7|49.8*|41.4*|45|
+|HLE (w/ Tools)|54.7|52.3|53.5|-|48.2|57.9*|52.2*|51.4*|
+|CritPt|20.9|4.6|13.4|3.7|12.9|20.9|27.1|17.7|
+|AIME 2026|99.2|95.3|97|-|94.6|95.7|98.3|98.2|
+|HMMT Nov. 2025|94.4|94|95|84.4|94.4|96.5|96.5|94.8|
+|HMMT Feb. 2026|92.5|82.6|97.1|84.4|95.2|96.7|96.7|87.3|
+|IMOAnswerBench|91.0|83.8|90|-|89.8|83.5|-|81|
+|GPQA-Diamond|91.2|86.2|90|93|90.1|93.6|93.6|94.3|
+|Coding|||||||||||
+|SWE-bench Pro|62.1|58.4|60.6|59|55.4|69.2|58.6|54.2|
+|NL2Repo|48.9|42.7|47.2|42.1|35.5|69.7|50.7|33.4|
+|DeepSWE|46.2|18|18|20|8|58|70|10|
+|ProgramBench|63.7|50.9|-|-|47.8|71.9|70.8|39.5|
+|Terminal Bench 2.1 (Terminus-2)|81.0|63.5|75|65|64| 85|84|74|
+|Terminal Bench 2.1 (Best Reported Harness)|82.7|69|-|-|-|78.9|83.4|70.7|
+|FrontierSWE (Dominance)|74.4|30.5|-|-|29.0|75.1|72.6|39.6|
+|PostTrainBench|34.3|20.1|-|-|-|37.2|28.4|21.6|
+|SWE-Marathon|13.0|1.0|-|-|-|26.0|12.0|4.0|
+|Agentic|||||||||||
+|MCP-Atlas (Public Set)|76.8|71.8|76.4|74.2|73.6|77.8|75.3|69.2|
+|Tool-Decathlon|48.2|40.7|-|-|52.8|59.9|55.6|48.8|
+
+LINE: |SWE-bench Pro|62.1|58.4|60.6|59|55.4|69.2|58.6|54.2|
+LINE: |Terminal Bench 2.1 (Terminus-2)|81.0|63.5|75|65|64| 85|84|74|
+LINE: |Terminal Bench 2.1 (Best Reported Harness)|82.7|69|-|-|-|78.9|83.4|70.7|
+LINE: |AIME 2026|99.2|95.3|97|-|94.6|95.7|98.3|98.2|
+LINE: * **Humanity鈥檚 Last Exam (HLE) & other reasoning tasks**: We use sampling parameters of `temperature=1.0`, `top_p=0.95` for evaluation. We evaluate with a maximum generation length of `163,840` tokens. By default, we report the text-only subset; results marked with * are from the full set. For AIME,
+
+########## GLM-5 (readme_7) ##########
+--- MD TABLE ---
+|                                  | GLM-5                  | GLM-4.7   | DeepSeek-V3.2 | Kimi K2.5 | Claude Opus 4.5 | Gemini 3 Pro | GPT-5.2 (xhigh) |
+| -------------------------------- | ---------------------- | --------- | ------------- |-----------| --------------- | ------------ | --------------- |
+| HLE                              | 30.5                   | 24.8      | 25.1          | 31.5      | 28.4            | 37.2         | 35.4            |
+| HLE (w/ Tools)                   | 50.4                   | 42.8      | 40.8          | 51.8      | 43.4*           | 45.8*        | 45.5*           |
+| AIME 2026 I                      | 92.7                   | 92.9      | 92.7          | 92.5      | 93.3            | 90.6         | -               |
+| HMMT Nov. 2025                   | 96.9                   | 93.5      | 90.2          | 91.1      | 91.7            | 93.0         | 97.1            |
+| IMOAnswerBench                   | 82.5                   | 82.0      | 78.3          | 81.8      | 78.5            | 83.3         | 86.3            |
+| GPQA-Diamond                     | 86.0                   | 85.7      | 82.4          | 87.6      | 87.0            | 91.9         | 92.4            |
+| SWE-bench Verified               | 77.8                   | 73.8      | 73.1          | 76.8      | 80.9            | 76.2         | 80.0            |
+| SWE-bench Multilingual           | 73.3                   | 66.7      | 70.2          | 73.0      | 77.5            | 65.0         | 72.0            |
+| Terminal-Bench 2.0 (Terminus 2)  | 56.2 / 60.7 鈥?| 41.0      | 39.3          | 50.8      | 59.3            | 54.2         | 54.0            |
+| Terminal-Bench 2.0 (Claude Code) | 56.2 / 61.1 鈥? | 32.8      | 46.4          | -         | 57.9            | -            | -               |
+| CyberGym                         | 43.2                   | 23.5      | 17.3          | 41.3      | 50.6            | 39.9         | -               |
+| BrowseComp                       | 62.0                   | 52.0      | 51.4          | 60.6      | 37.0            | 37.8         | -               |
+| BrowseComp (w/ Context Manage)   | 75.9                   | 67.5      | 67.6          | 74.9      | 67.8            | 59.2         | 65.8            |
+| BrowseComp-Zh                    | 72.7                   | 66.6      | 65.0          | 62.3      | 62.4            | 66.8         | 76.1            |
+| 蟿虏-Bench                         | 89.7                   | 87.4      | 85.3          | 80.2      | 91.6            | 90.7         | 85.5            |
+| MCP-Atlas (Public Set)           | 67.8                   | 52.0      | 62.2          | 63.8      | 65.2            | 66.6         | 68.0            |
+| Tool-Decathlon                   | 38.0                   | 23.8      | 35.2          | 27.8      | 43.5            | 36.4         | 46.3            |
+| Vending Bench 2                  | $4,432.12              | $2,376.82 | $1,034.00     | $1,198.46 | $4,967.06       | $5,478.16    | $3,591.33       |
+
+LINE: | SWE-bench Verified               | 77.8                   | 73.8      | 73.1          | 76.8      | 80.9            | 76.2         | 80.0            |
+LINE: | SWE-bench Multilingual           | 73.3                   | 66.7      | 70.2          | 73.0      | 77.5            | 65.0         | 72.0            |
+LINE: | Terminal-Bench 2.0 (Terminus 2)  | 56.2 / 60.7 鈥?| 41.0      | 39.3          | 50.8      | 59.3            | 54.2         | 54.0            |
+LINE: | Terminal-Bench 2.0 (Claude Code) | 56.2 / 61.1 鈥? | 32.8      | 46.4          | -         | 57.9            | -            | -               |
+LINE: | AIME 2026 I                      | 92.7                   | 92.9      | 92.7          | 92.5      | 93.3            | 90.6         | -               |
+
+########## GLM-4.7 (readme_8) ##########
+--- MD TABLE ---
+| Benchmark                      | GLM-4.7 | GLM-4.6 | Kimi K2 Thinking | DeepSeek-V3.2 | Gemini 3.0 Pro | Claude Sonnet 4.5 | GPT-5-High | GPT-5.1-High |
+|:-------------------------------|:-------:|:-------:|:----------------:|:-------------:|:--------------:|:-----------------:|:----------:|:------------:|
+| MMLU-Pro                       |  84.3   |  83.2   |       84.6       |     85.0      |      90.1      |       88.2        |    87.5    |     87.0     |
+| GPQA-Diamond                   |  85.7   |  81.0   |       84.5       |     82.4      |      91.9      |       83.4        |    85.7    |     88.1     |
+| HLE                            |  24.8   |  17.2   |       23.9       |     25.1      |      37.5      |       13.7        |    26.3    |     25.7     |
+| HLE (w/ Tools)                 |  42.8   |  30.4   |       44.9       |     40.8      |      45.8      |       32.0        |    35.2    |     42.7     |
+| AIME 2025                      |  95.7   |  93.9   |       94.5       |     93.1      |      95.0      |       87.0        |    94.6    |     94.0     |
+| HMMT Feb. 2025                 |  97.1   |  89.2   |       89.4       |     92.5      |      97.5      |       79.2        |    88.3    |     96.3     |
+| HMMT Nov. 2025                 |  93.5   |  87.7   |       89.2       |     90.2      |      93.3      |       81.7        |    89.2    |      -       |
+| IMOAnswerBench                 |  82.0   |  73.5   |       78.6       |     78.3      |      83.3      |       65.8        |    76.0    |      -       |
+| LiveCodeBench-v6               |  84.9   |  82.8   |       83.1       |     83.3      |      90.7      |       64.0        |    87.0    |     87.0     |
+| SWE-bench Verified             |  73.8   |  68.0   |       71.3       |     73.1      |      76.2      |       77.2        |    74.9    |     76.3     |
+| SWE-bench Multilingual         |  66.7   |  53.8   |       61.1       |     70.2      |       -        |       68.0        |    55.3    |      -       |
+| Terminal Bench Hard            |  33.3   |  23.6   |       30.6       |   35.4   |      39.0      |       33.3        |    30.5    |     43.0     |
+| Terminal Bench 2.0             |  41.0   |  24.5   |       35.7       |     46.4      |      54.2      |       42.8        |    35.2    |     47.6     |
+| BrowseComp                     |  52.0   |  45.1   |        -         |     51.4      |       -        |       24.1        |    54.9    |     50.8     |
+| BrowseComp (w/ Context Manage) |  67.5   |  57.5   |       60.2       |     67.6      |      59.2      |         -         |     -      |      -       |
+| BrowseComp-Zh                  |  66.6   |  49.5   |       62.3       |     65.0      |       -        |       42.4        |    63.0    |      -       |
+| 蟿虏-Bench                       |  87.4   |  75.2   |       74.3       |     85.3      |      90.7      |       87.2        |    82.4    |     82.7     |
+
+LINE: - **Core Coding**: GLM-4.7 brings clear gains, compared to its predecessor GLM-4.6, in multilingual agentic coding and terminal-based tasks, including (73.8%, +5.8%) on SWE-bench, (66.7%, +12.9%) on SWE-bench Multilingual, and (41%, +16.5%) on Terminal Bench 2.0. GLM-4.7 also supports thinking befor
+LINE: | SWE-bench Verified             |  73.8   |  68.0   |       71.3       |     73.1      |      76.2      |       77.2        |    74.9    |     76.3     |
+LINE: | SWE-bench Multilingual         |  66.7   |  53.8   |       61.1       |     70.2      |       -        |       68.0        |    55.3    |      -       |
+LINE: | LiveCodeBench-v6               |  84.9   |  82.8   |       83.1       |     83.3      |      90.7      |       64.0        |    87.0    |     87.0     |
+LINE: - **Core Coding**: GLM-4.7 brings clear gains, compared to its predecessor GLM-4.6, in multilingual agentic coding and terminal-based tasks, including (73.8%, +5.8%) on SWE-bench, (66.7%, +12.9%) on SWE-bench Multilingual, and (41%, +16.5%) on Terminal Bench 2.0. GLM-4.7 also supports thinking befor
+LINE: | Terminal Bench Hard            |  33.3   |  23.6   |       30.6       |   35.4   |      39.0      |       33.3        |    30.5    |     43.0     |
+LINE: | Terminal Bench 2.0             |  41.0   |  24.5   |       35.7       |     46.4      |      54.2      |       42.8        |    35.2    |     47.6     |
+LINE: | AIME 2025                      |  95.7   |  93.9   |       94.5       |     93.1      |      95.0      |       87.0        |    94.6    |     94.0     |
+
+########## Kimi-K2.7-Code (readme_9) ##########
+--- TABLE 0 (9 rows) ---
+Benchmark | Kimi K2.6 | Kimi K2.7 Code | GPT-5.5 | Claude Opus 4.8
+Coding
+Kimi Code Bench v2 | 50.9 | 62.0 | 69.0 | 67.4
+Program Bench | 48.3 | 53.6 | 69.1 | 63.8
+MLS Bench Lite | 26.7 | 35.1 | 35.5 | 42.8
+Agentic
+Kimi Claw 24/7 Bench | 42.9 | 46.9 | 52.8 | 50.4
+MCP Atlas | 69.4 | 76.0 | 79.4 | 81.3
+MCP Mark Verified | 72.8 | 81.1 | 92.9 | 76.4
+
+########## Kimi-K3 (readme_10) ##########
+--- TABLE 1 (50 rows) ---
+Benchmark | Kimi K3(max) | Claude Fable 5(max, w/ fallback) | GPT-5.6 Sol(max) | Claude Opus 4.8(max) | GPT-5.5(xhigh) | GLM-5.2(max)
+Reasoning & Knowledge
+GPQA Diamond | 93.5 | 92.6 | 94.1 | 91.0 | 93.5 | 91.2
+CritPt | 23.4 | 28.6 | 32.3 | 20.9 | 27.1 | 20.9
+AA-LCR | 74.7 | 70.0 | 73.7 | 67.7 | 74.3 | 71.3
+HLE-Full | 43.5 / 56.0 | 53.3 / 63.0 | 44.5 / 58.0 | 49.8 / 57.9 | 41.4 / 52.2 | 鈥?
+Coding
+DeepSWE | 67.5 | 70.0 | 73.0 | 59.0 | 67.0 | 46.2
+ProgramBench | 77.8 | 76.8 | 77.6 | 71.9 | 70.8 | 63.7
+Terminal-Bench 2.1 | 88.3 | 88.0 | 88.8 | 84.6 | 83.4 | 82.7
+FrontierSWE | 81.2 | 86.6 | 71.3 | 66.7 | 64.9 | 67.3
+SWE-Marathon | 42.0 | 35.0 | 39.0 | 40.0 | 14.0 | 13.0
+PostTrainBench | 36.6 | 41.4 | 34.6 | 34.1 | 28.4 | 34.3
+MLS-Bench-Lite | 48.3 | 49.9 | 46.2 | 42.8 | 35.5 | 40.4
+SciCode | 58.7 | 60.2 | 56.1 | 53.5 | 56.1 | 50.5
+Kimi Code Bench 2.0 | 72.9 | 76.9 | 64.8 | 71.7 | 69.0 | 64.2
+Agentic
+BrowseComp | 91.2 | 88.0 | 90.4 | 84.3 | 84.4 | 鈥?
+DeepSearchQA (F1) | 95.0 | 94.2 | 鈥?| 93.1 | 鈥?| 鈥?
+ResearchRubrics | 76.2 | 鈥?| 73.8 | 73.5 | 64.0 | 71.1
+GDPval-AA v2 (Elo) | 1686 | 1747 | 1736 | 1593 | 1491 | 1510
+Toolathlon-Verified | 76.5 | 77.9 | 74.9 | 76.2 | 73.5 | 59.9
+MCPMark-Verified | 94.5 | 87.4 | 92.9 | 76.4 | 92.9 | 鈥?
+MCP-Atlas | 84.2 | 84.7 | 83.6 | 83.6 | 82.8 | 82.6
+AutomationBench | 30.8 | 29.1 | 29.7 | 27.2 | 22.7 | 12.9
+JobBench | 54.3 | 57.4 | 45.4 | 48.4 | 38.3 | 43.4
+AA-Briefcase (Elo) | 1548 | 1583 | 1495 | 1354 | 1158 | 1260
+Agents' Last Exam | 28.3 | 25.7鈥?| 29.6 | 27.0 | 26.6 | 20.4
+APEX-Agents | 41.0 | 43.3 | 39.9 | 39.4 | 38.5 | 35.6
+OfficeQA Pro | 63.3 | 69.9 | 63.2 | 63.9 | 60.9 | 41.4
+SpreadsheetBench 2 | 34.8 | 34.7 | 32.4 | 31.6 | 29.1 | 28.1
+OSWorld-Verified | 84.8 | 85.0 | 83.0 | 83.4 | 79.0 | 鈥?
+OSWorld 2.0 | 58.3 | 66.1 | 62.6 | 55.7 | 49.5 | 鈥?
+SaaS-Bench | 60.1 | 鈥?| 61.4 | 56.1 | 43.8 | 鈥?
+蟿鲁-Banking | 33.4 | 26.8 | 33.0 | 27.6 | 31.3 | 26.8
+Harvey Lab-AA | 94.6 | 93.6 | 87.2 | 91.1 | 86.3 | 91.0
+CorpFin v2 | 71.6 | 71.8 | 64.4 | 66.7 | 68.4 | 66.1
+Finance Agent v2 | 54.4 | 56.3 | 53.8 | 53.9 | 51.8 | 49.7
+Legal Research Bench | 44.2 | 49.5 | 48.1 | 43.8 | 40.4 | 31.3
+Vision
+WorldVQA ForceAnswer | 51.0 | 56.7 | 41.8 | 39.1 | 38.5 | 鈥?
+OmniDocBench | 91.1 | 89.8 | 85.8 | 87.9 | 89.4 | 鈥?
+PerceptionBench | 58.5 | 57.2 | 59.7 | 47.2 | 55.8 | 鈥?
+Video-MME (w. sub) | 90.0 | 鈥?| 89.5 | 86.0 | 89.3 | 鈥?
+MMVU | 82.1 | 鈥?| 81.2 | 79.2 | 81.7 | 鈥?
+BabyVision w/ python | 85.7 | 90.5 | 88.9 | 81.2 | 83.6 | 鈥?
+MMMU-Pro | 81.6 / 83.4 | 81.2 / 86.5 | 83.0 / 84.6 | 78.9 / 82.7 | 81.2 / 83.2 | 鈥?
+CharXiv (RQ) | 84.8 / 91.3 | 88.9 / 93.5 | 84.6 / 89.1 | 80.5 / 89.9 | 84.1 / 89.0 | 鈥?
+MathVision | 94.3 / 97.8 | 94.8 / 98.6 | 95.8 / 97.8 | 86.7 / 97.1 | 92.2 / 96.8 | 鈥?
+ZeroBench (pass@5) | 23.0 / 41.0 | 23.0 / 46.0 | 17.0 / 35.0 | 17.0 / 34.0 | 22.0 / 41.0 | 鈥?
+
+########## Step-3.7-Flash (readme_11) ##########
+--- MD TABLE ---
+| Token Type | Price |
+|---|---|
+| Input (cache miss) | $0.20 / M tokens |
+| Input (cache hit) | $0.04 / M tokens |
+| Output | $1.15 / M tokens |
+
+--- MD TABLE ---
+| Component | Quantization | File Size |
+|---|---|---|
+| Language Model | Q4_K_S | 111.5 GB |
+| Language Model | IQ4_XS | 104.99 GB |
+| Language Model | Q3_K_L | 102.5 GB |
+| Multimodal Projector | FP16 | 3.97 GB |
+

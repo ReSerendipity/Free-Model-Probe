@@ -1,0 +1,11 @@
+# 网站核验补充清单（一行一个 model id；# 开头为注释）
+#
+# 背景：fetch_data.py 的 LIST_API（api-inference.modelscope.cn/v1/models）是
+# OpenAI 兼容部署清单，并不等于 ModelScope 全部免费推理模型。部分模型有
+# 魔搭社区免费推理（魔粒计价），却不在该 OpenAI 清单里，导致裸跑工具时被漏掉。
+# 这些模型经 modelscope.cn/models 网站核验发现后，手动列入本文件，
+# fetch_data.py 会自动把它们并入清单，避免重跑时被丢弃。
+#
+# 新增"网站发现"模型时，在此追加一行 owner/Name 即可（需确有魔搭社区免费推理）。
+deepseek-ai/DeepSeek-V4-Flash-Vision-Exp
+ZhipuAI/GLM-5.3-Flash

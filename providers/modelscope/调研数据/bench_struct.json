@@ -1,0 +1,312 @@
+[
+  {
+    "id": "Qwen/Qwen3.5-397B-A17B",
+    "LCB": "Y",
+    "SWEV": "80.0",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "26",
+    "Codeforces": "",
+    "Raw": "LiveCodeBench v6 || AIME26 || SWE-bench Verified 80.0 || SWE-bench Multilingual 72.0"
+  },
+  {
+    "id": "Qwen/Qwen3.6-35B-A3B",
+    "LCB": "Y",
+    "SWEV": "75.0",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "26",
+    "Codeforces": "",
+    "Raw": "SWE-bench Verified 75.0 || SWE-bench Multilingual 69.3 || SWE-bench Pro 51.2 || LiveCodeBench v6 || AIME26 || SWE-bench Pro and evaluate all baselines on the refined benchmark. * Terminal-Bench 2.0 || AIME 26 || AIME 2026"
+  },
+  {
+    "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+    "LCB": "Y",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "25",
+    "Codeforces": "",
+    "Raw": "AIME25 || LiveCodeBench v6"
+  },
+  {
+    "id": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "Qwen/Qwen3.5-122B-A10B",
+    "LCB": "Y",
+    "SWEV": "72.0",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": "SWE-bench Verified 72.0 || LiveCodeBench v6"
+  },
+  {
+    "id": "Qwen/Qwen3.5-35B-A3B",
+    "LCB": "Y",
+    "SWEV": "72.0",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": "SWE-bench Verified 72.0 || LiveCodeBench v6"
+  },
+  {
+    "id": "Qwen/Qwen3-32B",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-V4-Pro",
+    "LCB": "Y",
+    "SWEV": "",
+    "HumanEval": "1",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "3168",
+    "Raw": "HumanEval (Pass@1 || LiveCodeBench (Pass@1 || Codeforces (Rating) | - | 3168 || Codeforces (Rating) | - | 2816"
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-V4-Flash",
+    "LCB": "Y",
+    "SWEV": "",
+    "HumanEval": "1",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "3168",
+    "Raw": "HumanEval (Pass@1 || LiveCodeBench (Pass@1 || Codeforces (Rating) | - | 3168 || Codeforces (Rating) | - | 2816"
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-V3.2",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "ZhipuAI/GLM-5.2",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "2026",
+    "Codeforces": "",
+    "Raw": "AIME 2026 || SWE-bench Pro|62.1"
+  },
+  {
+    "id": "ZhipuAI/GLM-5.1",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "2026",
+    "Codeforces": "",
+    "Raw": "AIME 2026"
+  },
+  {
+    "id": "ZhipuAI/GLM-5",
+    "LCB": "",
+    "SWEV": "77.8",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "2026",
+    "Codeforces": "",
+    "Raw": "AIME 2026 || SWE-bench Verified | 77.8 || SWE-bench Multilingual | 73.3"
+  },
+  {
+    "id": "ZhipuAI/GLM-4.7",
+    "LCB": "Y",
+    "SWEV": "73.8",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "2025",
+    "Codeforces": "",
+    "Raw": "SWE-bench, (66.7 || SWE-bench Multilingual, and (41 || AIME 2025 || LiveCodeBench-v6 || SWE-bench Verified | 73.8 || SWE-bench Multilingual | 66.7"
+  },
+  {
+    "id": "moonshotai/Kimi-K3",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "moonshotai/Kimi-K2.7-Code",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "moonshotai/Kimi-K2.6",
+    "LCB": "Y",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "2026",
+    "Codeforces": "",
+    "Raw": "LiveCodeBench (v6 || AIME 2026"
+  },
+  {
+    "id": "moonshotai/Kimi-K2.5",
+    "LCB": "Y",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "2025",
+    "Codeforces": "",
+    "Raw": "AIME 2025 || LiveCodeBench (v6 || AIME and HMMT are averaged over 32"
+  },
+  {
+    "id": "MiniMax/MiniMax-M3",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "MiniMax/MiniMax-M2.7",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "MiniMax/MiniMax-M2.5",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "25",
+    "Codeforces": "",
+    "Raw": "AIME25"
+  },
+  {
+    "id": "Tencent-Hunyuan/Hy3",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "stepfun-ai/Step-3.7-Flash",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
+    "LCB": "",
+    "SWEV": "69.40",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": "SWE-bench Verified 69.40 || SWE-bench Multilingual 63.00 || SWE-bench Pro 45.96 || SWE-bench Verified / Multilingual / Pro, KAT-Code-Bench: agent=claude_code@2.1 || SWE-bench Pro test sets, our test results this time have an approximate 10"
+  },
+  {
+    "id": "Shanghai_AI_Laboratory/Intern-S1-Pro",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "MiniMax/MiniMax-M1-80k",
+    "LCB": "Y",
+    "SWEV": "56.0",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "2024",
+    "Codeforces": "",
+    "Raw": "AIME 2024 || AIME 2025 || LiveCodeBench *(24 || SWE-bench Verified| 56.0"
+  },
+  {
+    "id": "openai-mirror/gpt-oss-20b",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  },
+  {
+    "id": "openai-mirror/gpt-oss-120b",
+    "LCB": "",
+    "SWEV": "",
+    "HumanEval": "",
+    "MBPP": "",
+    "AIME": "",
+    "Codeforces": "",
+    "Raw": ""
+  }
+]

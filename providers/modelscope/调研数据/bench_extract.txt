@@ -1,0 +1,63 @@
+### Qwen/Qwen3.5-397B-A17B
+LiveCodeBench v6 || AIME26 || SWE-bench Verified 80.0 || SWE-bench Multilingual 72.0
+### Qwen/Qwen3.6-35B-A3B
+SWE-bench Verified 75.0 || SWE-bench Multilingual 69.3 || SWE-bench Pro 51.2 || LiveCodeBench v6 || AIME26 || SWE-bench Pro and evaluate all baselines on the refined benchmark. * Terminal-Bench 2.0 || AIME 26 || AIME 2026
+### Qwen/Qwen3-Coder-480B-A35B-Instruct
+
+### Qwen/Qwen3-Coder-30B-A3B-Instruct
+
+### Qwen/Qwen3-Next-80B-A3B-Instruct
+AIME25 || LiveCodeBench v6
+### Qwen/Qwen2.5-Coder-32B-Instruct
+
+### Qwen/Qwen3.5-122B-A10B
+SWE-bench Verified 72.0 || LiveCodeBench v6
+### Qwen/Qwen3.5-35B-A3B
+SWE-bench Verified 72.0 || LiveCodeBench v6
+### Qwen/Qwen3-32B
+
+### deepseek-ai/DeepSeek-V4-Pro
+HumanEval (Pass@1 || LiveCodeBench (Pass@1 || Codeforces (Rating) | - | 3168 || Codeforces (Rating) | - | 2816
+### deepseek-ai/DeepSeek-V4-Flash
+HumanEval (Pass@1 || LiveCodeBench (Pass@1 || Codeforces (Rating) | - | 3168 || Codeforces (Rating) | - | 2816
+### deepseek-ai/DeepSeek-V4-Flash-0731
+
+### deepseek-ai/DeepSeek-V3.2
+
+### ZhipuAI/GLM-5.2
+AIME 2026 || SWE-bench Pro|62.1
+### ZhipuAI/GLM-5.1
+AIME 2026
+### ZhipuAI/GLM-5
+AIME 2026 || SWE-bench Verified | 77.8 || SWE-bench Multilingual | 73.3
+### ZhipuAI/GLM-4.7
+SWE-bench, (66.7 || SWE-bench Multilingual, and (41 || AIME 2025 || LiveCodeBench-v6 || SWE-bench Verified | 73.8 || SWE-bench Multilingual | 66.7
+### moonshotai/Kimi-K3
+
+### moonshotai/Kimi-K2.7-Code
+
+### moonshotai/Kimi-K2.6
+LiveCodeBench (v6 || AIME 2026
+### moonshotai/Kimi-K2.5
+AIME 2025 || LiveCodeBench (v6 || AIME and HMMT are averaged over 32
+### MiniMax/MiniMax-M3
+
+### MiniMax/MiniMax-M2.7
+
+### MiniMax/MiniMax-M2.5
+AIME25
+### Tencent-Hunyuan/Hy3
+
+### stepfun-ai/Step-3.7-Flash
+
+### Kwaipilot/KAT-Coder-V2.5-Dev
+SWE-bench Verified 69.40 || SWE-bench Multilingual 63.00 || SWE-bench Pro 45.96 || SWE-bench Verified / Multilingual / Pro, KAT-Code-Bench: agent=claude_code@2.1 || SWE-bench Pro test sets, our test results this time have an approximate 10
+### Shanghai_AI_Laboratory/Intern-S1-Pro
+
+### MiniMax/MiniMax-M1-80k
+AIME 2024 || AIME 2025 || LiveCodeBench *(24 || SWE-bench Verified| 56.0
+### openai-mirror/gpt-oss-20b
+
+### openai-mirror/gpt-oss-120b
+
+

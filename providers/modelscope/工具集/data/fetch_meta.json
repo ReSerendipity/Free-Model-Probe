@@ -1,0 +1,9 @@
+{
+ "fetched_at": "2026-09-21T07:10:54Z",
+ "list_total": 37,
+ "kept_after_filter": 24,
+ "non_agent_excluded": 13,
+ "failures": [
+  "early-access/EA-29B-A4B"
+ ]
+}

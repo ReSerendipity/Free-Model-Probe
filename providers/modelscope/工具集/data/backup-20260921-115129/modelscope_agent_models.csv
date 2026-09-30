@@ -1,0 +1,35 @@
+﻿排名,模型ID,发布方/机构,魔搭社区魔粒/次,CostTier,计费口径,编程基准,下载量,核对时间
+1,deepseek-ai/DeepSeek-V4-Pro-0813,deepseek-ai,2,ultra,每次调用,Terminal Bench 2.1 87.9,3947,2026-08-25T15:33:07Z
+2,deepseek-ai/DeepSeek-V4-Flash-0731,deepseek-ai,2,ultra,每次调用,Terminal Bench 2.1 82.7,90212,2026-08-25T15:33:07Z
+3,Qwen/Qwen3.5-397B-A17B,Qwen,2,ultra,每次调用,SWE-bench Verified 80,209417,2026-08-25T15:33:07Z
+4,Qwen/Qwen3.8-27B,Qwen,1,standard,每次调用,Terminal Bench 2.1 73；SWE-Bench Pro 61.7,82971,2026-08-25T15:33:07Z
+5,Qwen/Qwen3.5-35B-A3B,Qwen,1,standard,每次调用,SWE-bench Verified 72,3223967,2026-08-25T15:33:07Z
+6,Qwen/Qwen3.5-27B,Qwen,1,standard,每次调用,SWE-bench Verified 72,1803745,2026-08-25T15:33:07Z
+7,Qwen/Qwen3.5-122B-A10B,Qwen,1,standard,每次调用,SWE-bench Verified 72,294674,2026-08-25T15:33:07Z
+8,stepfun-ai/Step-3.7-Flash,stepfun-ai,1,standard,每次调用,Terminal Bench 2.1 59.5；SWE-Bench Pro 56.3,13326,2026-08-25T15:33:07Z
+9,ZhipuAI/GLM-4.7-Flash,ZhipuAI,1,standard,每次调用,SWE-bench Verified 59.2；AIME 25,698250,2026-08-25T15:33:07Z
+10,MiniMax/MiniMax-M1-80k,MiniMax,1,standard,每次调用,SWE-bench Verified 56；LiveCodeBench 24,721135,2026-08-25T15:33:07Z
+11,stepfun-ai/Step-3.5-Flash,stepfun-ai,1,standard,每次调用,SWE-bench Verified 51,5027636,2026-08-25T15:33:07Z
+12,ZhipuAI/GLM-5.2,ZhipuAI,2,ultra,每次调用,Terminal Bench 2.1 2；SWE-Bench Pro 62.1,190326,2026-08-25T15:33:07Z
+13,Qwen/Qwen3-8B,Qwen,1,standard,每次调用,无公开编程基准,7340487,2026-08-25T15:33:07Z
+14,Qwen/Qwen3-4B,Qwen,,,每次调用,无公开编程基准,3516112,2026-08-25T15:33:07Z
+15,Qwen/Qwen3-30B-A3B,Qwen,1,standard,每次调用,无公开编程基准,2237234,2026-08-25T15:33:07Z
+16,Qwen/Qwen3-Next-80B-A3B-Instruct,Qwen,1,standard,每次调用,无公开编程基准,2189599,2026-08-25T15:33:07Z
+17,Qwen/Qwen3-14B,Qwen,1,standard,每次调用,无公开编程基准,1158371,2026-08-25T15:33:07Z
+18,Qwen/Qwen3-235B-A22B,Qwen,1,standard,每次调用,无公开编程基准,922480,2026-08-25T15:33:07Z
+19,Qwen/Qwen3-Coder-30B-A3B-Instruct,Qwen,1,standard,每次调用,无公开编程基准,772246,2026-08-25T15:33:07Z
+20,Qwen/Qwen3-235B-A22B-Instruct-2507,Qwen,1,standard,每次调用,无公开编程基准,300799,2026-08-25T15:33:07Z
+21,deepseek-ai/DeepSeek-V4-Pro,deepseek-ai,2,ultra,每次调用,无公开编程基准,241476,2026-08-25T15:33:07Z
+22,Qwen/Qwen3-30B-A3B-Thinking-2507,Qwen,1,standard,每次调用,无公开编程基准,194365,2026-08-25T15:33:07Z
+23,mistralai/Mistral-Large-Instruct-2407,mistralai,1,standard,每次调用,无公开编程基准,76604,2026-08-25T15:33:07Z
+24,Qwen/Qwen3-235B-A22B-Thinking-2507,Qwen,1,standard,每次调用,无公开编程基准,60553,2026-08-25T15:33:07Z
+25,Qwen/Qwen3-Next-80B-A3B-Thinking,Qwen,1,standard,每次调用,无公开编程基准,32972,2026-08-25T15:33:07Z
+26,Tencent-Hunyuan/Hy3,Tencent-Hunyuan,2,ultra,每次调用,无公开编程基准,18286,2026-08-25T15:33:07Z
+27,PaddlePaddle/ERNIE-4.5-0.3B-PT,PaddlePaddle,1,standard,每次调用,无公开编程基准,8714,2026-08-25T15:33:07Z
+28,Shanghai_AI_Laboratory/Intern-S1-mini,Shanghai_AI_Laboratory,1,standard,每次调用,无公开编程基准,7392,2026-08-25T15:33:07Z
+29,PaddlePaddle/ERNIE-4.5-21B-A3B-PT,PaddlePaddle,1,standard,每次调用,无公开编程基准,5886,2026-08-25T15:33:07Z
+30,Shanghai_AI_Laboratory/Intern-S1,Shanghai_AI_Laboratory,1,standard,每次调用,无公开编程基准,4088,2026-08-25T15:33:07Z
+31,MiniMax/MiniMax-M3,MiniMax,,,每次调用,无公开编程基准,3421,2026-08-25T15:33:07Z
+32,PaddlePaddle/ERNIE-4.5-300B-A47B-PT,PaddlePaddle,1,standard,每次调用,无公开编程基准,2499,2026-08-25T15:33:07Z
+33,Shanghai_AI_Laboratory/Intern-S2-Preview,Shanghai_AI_Laboratory,1,standard,每次调用,无公开编程基准,439,2026-08-25T15:33:07Z
+34,early-access/EA-29B-A4B,early-access,0.5,lite,每次调用,无公开编程基准,,2026-08-25T15:33:07Z

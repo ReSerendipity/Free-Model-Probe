@@ -1,0 +1,174 @@
+[
+  {
+    "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "Providers": "魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-V4-Pro",
+    "Providers": "魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/ | DeepSeek:魔粒/"
+  },
+  {
+    "id": "MedAIBase/AntAngelMed",
+    "Providers": "魔搭社区:1魔粒/standard | 蚂蚁百灵:魔粒/"
+  },
+  {
+    "id": "meituan-longcat/LongCat-Flash-Lite",
+    "Providers": "魔搭社区:1魔粒/standard | 美团-龙猫:魔粒/"
+  },
+  {
+    "id": "MiniMax/MiniMax-M1-80k",
+    "Providers": "魔搭社区:1魔粒/standard | MiniMax:魔粒/"
+  },
+  {
+    "id": "MiniMax/MiniMax-M3",
+    "Providers": "魔搭社区:1魔粒/standard | MiniMax:魔粒/"
+  },
+  {
+    "id": "mistralai/Mistral-Large-Instruct-2407",
+    "Providers": "魔搭社区:1魔粒/standard"
+  },
+  {
+    "id": "MusePublic/Qwen-Image-Edit",
+    "Providers": "魔搭社区:2魔粒/ultra"
+  },
+  {
+    "id": "opencompass/CompassJudger-1-32B-Instruct",
+    "Providers": "魔搭社区:1魔粒/standard"
+  },
+  {
+    "id": "OpenGVLab/InternVL3_5-241B-A28B",
+    "Providers": "魔搭社区:1魔粒/standard | 书生:魔粒/"
+  },
+  {
+    "id": "PaddlePaddle/ERNIE-4.5-0.3B-PT",
+    "Providers": "魔搭社区:1魔粒/standard"
+  },
+  {
+    "id": "PaddlePaddle/ERNIE-4.5-21B-A3B-PT",
+    "Providers": "魔搭社区:1魔粒/standard"
+  },
+  {
+    "id": "PaddlePaddle/ERNIE-4.5-300B-A47B-PT",
+    "Providers": "魔搭社区:1魔粒/standard"
+  },
+  {
+    "id": "PaddlePaddle/ERNIE-4.5-VL-28B-A3B-PT",
+    "Providers": "魔搭社区:1魔粒/standard"
+  },
+  {
+    "id": "Qwen/Qwen-Image-Edit",
+    "Providers": "魔搭社区:2魔粒/ultra"
+  },
+  {
+    "id": "Qwen/Qwen3-14B",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-235B-A22B",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-30B-A3B",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-30B-A3B-Thinking-2507",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-4B",
+    "Providers": "阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-8B",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-Next-80B-A3B-Thinking",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-VL-8B-Instruct",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3-VL-8B-Thinking",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3.5-122B-A10B",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3.5-27B",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3.5-35B-A3B",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "Qwen/Qwen3.5-397B-A17B",
+    "Providers": "魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/ | 阿里云百炼-Coding:魔粒/"
+  },
+  {
+    "id": "Shanghai_AI_Laboratory/Intern-S1",
+    "Providers": "魔搭社区:1魔粒/standard | 书生:魔粒/"
+  },
+  {
+    "id": "Shanghai_AI_Laboratory/Intern-S1-mini",
+    "Providers": "魔搭社区:1魔粒/standard | 书生:魔粒/"
+  },
+  {
+    "id": "Shanghai_AI_Laboratory/Intern-S2-Preview",
+    "Providers": "魔搭社区:1魔粒/standard | 书生:魔粒/"
+  },
+  {
+    "id": "stepfun-ai/Step-3.5-Flash",
+    "Providers": "魔搭社区:1魔粒/standard | 阶跃星辰:魔粒/"
+  },
+  {
+    "id": "stepfun-ai/Step-3.7-Flash",
+    "Providers": "魔搭社区:1魔粒/standard | 阶跃星辰:魔粒/"
+  },
+  {
+    "id": "Tencent-Hunyuan/Hy3",
+    "Providers": "魔搭社区:2魔粒/ultra"
+  },
+  {
+    "id": "XGenerationLab/XiYanSQL-QwenCoder-32B-2412",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "XGenerationLab/XiYanSQL-QwenCoder-32B-2504",
+    "Providers": "魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/"
+  },
+  {
+    "id": "ZhipuAI/GLM-4.7-Flash",
+    "Providers": "魔搭社区:1魔粒/standard | 智谱:魔粒/"
+  },
+  {
+    "id": "ZhipuAI/GLM-5.2",
+    "Providers": "魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/ | 智谱-Coding:魔粒/ | 智谱:魔粒/"
+  }
+]

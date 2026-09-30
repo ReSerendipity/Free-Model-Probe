@@ -1,0 +1,321 @@
+<!DOCTYPE html><html lang="zh"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><script src="//o.alicdn.com/captcha-frontend/aliyunCaptcha/AliyunCaptcha.js" crossorigin="anonymous" async=""></script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K9CSTSKFC5" crossorigin="anonymous"></script><link rel="icon" type="image/x-icon" href="//cdn.modelscope.cn/static/favicon.ico"/><title>AIGC 专区 - 首页</title><meta name="description" content="ModelScope AIGC 创作中心：提供文生图、文生视频、模型训练等一站式 AI 创作能力，探索灵感、生成作品、共享模型，与社区一起释放创造力。"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/entry.client-Lsl6l2Qu.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/rolldown-runtime-CJJwijRH.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/vendor-react-CrhOJanH.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/vendor-markdown-DTEDMFUB.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/chunkRecovery-BJ00jA6r.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/root-6ErjB_dT.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/root-DQOPtCV_.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/i18n-448CusIj.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/vendor-ui-C79psNqQ.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/useMemoizedFn-CS9wE-mh.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/classnames-wY8h2b1M.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/traceFetch-D0XMa1Kk.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/light_common-CwGShczo.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/MSIcon-CjjV_du1.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/createStyles-uP3__uV1.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/useH5-UxLHARzS.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/core-Bq75eWSf.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/styles-BQhoxc0U.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/utils-oYifhtqe.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/ui-tokens-N1vJazBz.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/index-BJcjFS_j.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/aigc-Aq-zEJ8Z.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/auth-DN77Rwzx.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/medal-CLdj4mtV.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/internal-pAcfyCnH.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/aigc-DWjESa9c.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/medal-BL7eBSNA.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/useStore-Dh9jhtMd.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/isObject-CuyTkb7v.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/index-Cuw0JlS8.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/pickBy-CQrylYdg.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/UserInfo-DcH6c0qj.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/commonStyle-DQD7DtWx.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/upload-8O35Gl0f.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/usePendingSubmit-C-WqWpCB.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/ossType-vMUbgUmS.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/useAigcBreakpoint-BbbLY2CU.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/useHistory-CwSFpvDV.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/aigc-path-DrnXT2pb.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/_getTag-y8vEmeq7.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/_Uint8Array-BLqoFhg5.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/_baseIteratee-BiU1KpUt.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/_baseClone-Dt3532S7.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/_baseGet-2-m2jbDT.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/dist-BkxBtdE1.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/_baseEach-CksE3b__.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/string-DTlz1LIO.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/magicImage_light-BKD2dn1O.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/organization-BJ3bMMzn.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/AvatarWidget-RTO0ZNyS.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/MaasToolTips-B6I1QTwF.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/loginUrl-5geU7QHt.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/omit-Bt9aZ9zA.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/dist-BzgLplyz.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/last-OBmz3jT8.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/components-C24_013P.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/utils-CpNGWBZc.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/isEmpty-D-5zxb1O.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/ClientOnly-Ci8AYtNG.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/index-DgP86qSv.js"/><link rel="modulepreload" href="//cdn.modelscope.cn/static/assets/not-found-CUTbB527.js"/><link rel="stylesheet" href="//cdn.modelscope.cn/static/assets/antd.44070558.css"/><link rel="stylesheet" href="//cdn.modelscope.cn/static/assets/dynamic-css/f01d05b1.css"></head><body><script src="//at.alicdn.com/t/a/font_3466851_wtkf8tzidm8.js" crossorigin="anonymous"></script><script>window.__SITE_MODE__="COMMON";window.AES_CONFIG={"uid":"","username":""};</script><script src="//o.alicdn.com/frontend-lib/common-lib/jquery.min.js" crossorigin="anonymous" integrity="sha384-+sWzDb9n5yTvunt5E+YwfCow3M3X+Xkd8kzWollQgrHphsICERmOKI0fFivzLRIP"></script><script src="//g.alicdn.com/alilog/mlog/aplus_v2.js" id="beacon-aplus" crossorigin="anonymous"></script><script src="//g.alicdn.com/vip/havana-login/0.3.2/js/mini-login-embedder-min.js" crossorigin="anonymous" integrity="sha384-raq8fE+7GoTMzww1TpqKKafFCFOZnVbkdWIMN+IuGkbw92N8SSNMIJXT5hsmLJ0N"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-K9CSTSKFC5');</script><style data-emotion="css-global 1d2tp9w">@font-face{font-family:Roboto Mono;src:url(//cdn.modelscope.cn/static/assets/RobotoMono-VariableFont_wght-Be6w_Krw.ttf);font-display:swap;}@font-face{font-weight:400;font-family:Alibaba-PuHuiTi;src:url(//cdn.modelscope.cn/static/assets/Alibaba-PuHuiTi-Regular.subset-GQ0kpEAx.woff2)format("woff2"),url(//cdn.modelscope.cn/static/assets/Alibaba-PuHuiTi-Regular.subset-Bt_6ZEax.ttf);font-display:swap;}@font-face{font-weight:500;font-family:Alibaba-PuHuiTi;src:url(//cdn.modelscope.cn/static/assets/Alibaba-PuHuiTi-Medium.subset-Dw2osZ6w.woff2)format("woff2"),url(//cdn.modelscope.cn/static/assets/Alibaba-PuHuiTi-Medium.subset-CxBTo02V.ttf);font-display:swap;}@font-face{font-family:Alibaba-PuHuiTi-Medium;src:url(//cdn.modelscope.cn/static/assets/Alibaba-PuHuiTi-Medium-C_ooBl_Z.woff2)format("woff2"),url(//cdn.modelscope.cn/static/assets/Alibaba-PuHuiTi-Medium-DrobX_ui.woff)format("woff"),url(//cdn.modelscope.cn/static/assets/Alibaba-PuHuiTi-Medium-fVtDBTxz.ttf);font-display:swap;}@font-face{font-family:Alibaba-PuHuiTi-Regular;src:url(//cdn.modelscope.cn/static/assets/Alibaba-PuHuiTi-Regular-C2vuNrAH.woff2)format("woff2"),url(//cdn.modelscope.cn/static/assets/Alibaba-PuHuiTi-Regular-BSTYxQX2.woff)format("woff"),url(//cdn.modelscope.cn/static/assets/Alibaba-PuHuiTi-Regular-Bt4JbhD9.ttf);font-display:swap;}html,body{overscroll-behavior:none;font-variant:tabular-nums;font-feature-settings:"tnum","tnum";width:100%;margin:0;padding:0;font-family:PingFang SC,Microsoft Yahei,Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,-apple-system,sans-serif;font-size:14px;}.wd3-popover{z-index:1001!important;}.ms-title-font-gallery{font-family:Alibaba-PuHuiTi,PingFang SC,Microsoft Yahei,Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,-apple-system,sans-serif;}.bi-link-portal>div,.__wdn_pop_anchor,.__wdn_pop_anchor:before,.__wdn_pop_anchor:after,:has(>.__wdn_pop_anchor){z-index:1001!important;}.aes-survey-pop{-webkit-print-color-scheme:light;color-scheme:light;}:is(:has(>video:fullscreen),:has(>video:full-screen),:has(>:has(>video:fullscreen)),:has(>:has(>video:full-screen))){aspect-ratio:auto!important;max-width:none!important;max-height:none!important;overflow:visible!important;}:root{-webkit-print-color-scheme:light;color-scheme:light;}</style><div class="css-ypkju9 ant-app acss-i6bazn css-var-_R_19tl5_"><main class="acss-1cs20ec"><aside class="acss-eoifv2 is-expanded" aria-label="Primary navigation"><nav class="acss-a3912p"><div class="acss-1rhhsh8" aria-hidden="true"></div><a class="acss-3t8ymh  acss-1poo0zv" style="--left-navi-delay:0ms" href="/home" data-tooltip="返回主站" aria-label="返回主站"><span role="img" class="anticon acss-1uz6vk9"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maasreturn-main"></use></svg></span><span class="acss-a9qkk3">返回主站</span></a><button class="acss-3t8ymh is-active " style="--left-navi-delay:0ms" type="button" data-navi-key="home" data-tooltip="首页" aria-label="首页"><span role="img" class="anticon acss-k1u9j1"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-home"></use></svg></span><span class="acss-a9qkk3">首页</span></button><button class="acss-3t8ymh  " style="--left-navi-delay:50ms" type="button" data-navi-key="creative" data-tooltip="创意广场" aria-label="创意广场"><span role="img" class="anticon acss-k1u9j1"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-creative-library"></use></svg></span><span class="acss-a9qkk3">创意广场</span></button><button class="acss-3t8ymh  " style="--left-navi-delay:100ms" type="button" data-navi-key="model-library" data-tooltip="模型库" aria-label="模型库"><span role="img" class="anticon acss-k1u9j1"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-model-library"></use></svg></span><span class="acss-a9qkk3">模型库</span></button><div class="acss-dgeifc" aria-hidden="true"></div><div class="acss-1xqz50i" style="--left-navi-delay:0ms"><span class="acss-1y1awhn">创意工具</span></div><button class="acss-3t8ymh  " style="--left-navi-delay:150ms" type="button" data-navi-key="image-generation" data-tooltip="图片生成" aria-label="图片生成"><span role="img" class="anticon acss-k1u9j1"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-image-generation"></use></svg></span><span class="acss-a9qkk3">图片生成</span></button><button class="acss-3t8ymh  " style="--left-navi-delay:200ms" type="button" data-navi-key="video-generation" data-tooltip="视频生成" aria-label="视频生成"><span role="img" class="anticon acss-k1u9j1"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-video-generation"></use></svg></span><span class="acss-a9qkk3">视频生成</span></button><button class="acss-3t8ymh  " style="--left-navi-delay:250ms" type="button" data-navi-key="model-training" data-tooltip="模型训练" aria-label="模型训练"><span role="img" class="anticon acss-k1u9j1"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-model-training"></use></svg></span><span class="acss-a9qkk3">模型训练</span></button><div class="acss-dgeifc" aria-hidden="true"></div><div class="acss-1xqz50i" style="--left-navi-delay:0ms"><span class="acss-1y1awhn">资源库</span></div><button class="acss-3t8ymh  " style="--left-navi-delay:300ms" type="button" data-navi-key="assets" data-tooltip="资源库" aria-label="资源库"><span role="img" class="anticon acss-k1u9j1"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-assets"></use></svg></span><span class="acss-a9qkk3">资源库</span></button></nav><div class="acss-10g23kk"><button class="acss-1xfi5kr" type="button" aria-label="Collapse LeftNaviBar" aria-expanded="true"><span role="img" class="anticon acss-kii1ku"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maasline-panel-collapse-01"></use></svg></span></button></div></aside><div class="acss-g4bjal "><div class="acss-13rbzo3 is-nav-expanded"><div class="acss-1d9yj1v"><div class="acss-1h5gbf3"><div class="acss-m0rxd8"><button class="acss-12hi2yy" type="button" aria-label="Open menu" aria-expanded="false"><span role="img" class="anticon acss-vj06w2"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maasline-panel-expand-01"></use></svg></span></button></div><a href="/aigc" aria-label="ModelScope CIVISION"><span role="img" class="anticon acss-w6w8du"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maastopbar-logo-light"></use></svg></span></a></div><div class="acss-f1eikd"><div class="acss-1a9x2b4"><button class="acss-1fmtqwk search-btn" type="button" aria-label="搜索" title="搜索"><span role="img" style="font-size:28px" class="anticon acss-pfapq4"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maasline-search-01"></use></svg></span></button><div class="acss-xelhpk search-panel" aria-label="搜索"><div class="acss-9gf1f5"><button class="acss-1504cmx" type="button" aria-label="开启图搜"><span role="img" class="anticon"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maasline-image-upload-01"></use></svg></span></button></div><input class="acss-1smcrvb" type="text" placeholder="输入关键词搜索"/></div><div class="acss-12kl4x7" aria-hidden="true"><div class="acss-1xo3wz2">开启图搜</div><span class="ant-upload-wrapper css-ypkju9 css-var-_R_19tl5_"><div class="ant-upload ant-upload-select"><span class="ant-upload"><input type="file" style="display:none" accept=".jpg,.jpeg,.png,.webp,.bmp" name="file"/><div class="ant-spin css-ypkju9 css-var-_R_19tl5_" aria-live="polite" aria-busy="false"><div class="ant-spin-container"><div class="acss-8bwmzh"><span class="acss-qp0d77"><span role="img" class="anticon"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maasline-image-upload-01"></use></svg></span></span><span class="acss-12tg81a">点击上传或拖拽图片到这里</span><span class="acss-n1luve">支持 jpg、png 等常见图片格式</span><span class="acss-n1luve">图片大小不超过 10MB</span></div></div></div></span></div></span><button class="acss-6945qb" type="button" disabled="">搜索</button></div><div class="acss-1bvgt4c" aria-hidden="true"><div class="ant-spin css-ypkju9 css-var-_R_19tl5_" aria-live="polite" aria-busy="false"><div class="ant-spin-container"></div></div></div></div><button class="acss-124d6xj" type="button" aria-label="Magic Cube"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAHvSURBVFiF7ZdfbtpAEIe/cVL6Sm/gnqD0BvCWQqQ6J6jrJlIe4QQNJwiPlVJZzglCpGLljdygzgnKEXgtUTx9CFSA/y2OHbVSfm/rnZ39tDs7M4YX/UOSXRd4XXUR3gFYwvX3H3L7rBBeT89R+lufh34oZ88CcXyo7ThmmuFl4E9kVBbCMjWMlY85019PutqqHUIgexOl+QBX7oHatUJoHsSjbMti6jra3BXCKCZOHbUXC34Z+pwBl6JEr14TfRvLrBKILx/UUeHKEGJ7h7lApBBlPWmj61ApvIqcxTRVaaP045ip19PzJGeBXEeb1oKfQKmgy9BnP5RgNcg9CfdA7RoAWGXcQoiTrrYsi2nlAClKhfB62n+ghhNYbSpc50J4XT1DSQRPhRpuv5CNwMytD0+VMAeGaTVmf31QUB+eotmecnQRSpQ2uZ/2sWqAOKbj32Rnzk0I5a5ygAbvg7HM84w2AtMPJUAo3Rek6LIIIAEB4E9kYFl0EEYi3C4DqpRESY2BhJ2J0amj9v1vWssa8sk0fzQavK2siq7LuJYIc38ib0x8Gjc1KwVjmccxnWXfkMNgdhWlIACCG5ntwVGejdYNAXARSoQwyHS8VR9qgeDxJY2AYWJCGO3yU7RzYKbp+FDbf1O+crfesLzov9MfHZKlZ4eUFWcAAAAASUVORK5CYII=" alt="Magic Cube" class="acss-12bv4n3"/></button><button class="acss-16itkxs" type="button" aria-label="切换主题" title="切换主题"><span role="img" style="font-size:28px" class="anticon acss-pfapq4"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maasline-lighttheme-01"></use></svg></span></button><button class="acss-12p9ea3" type="button" aria-label="切换语言" title="切换语言"><span class="acss-zuqjv7" aria-hidden="true"><span class="acss-7tighj is-zh"><span class="acss-ckacid">EN</span><span class="acss-ckacid">CN</span></span></span></button><div class="acss-qyhkk6"><div class="acss-1dmwa74"><div><button type="button" class="ant-btn css-ypkju9 css-var-_R_19tl5_ ant-btn-default ant-btn-color-default ant-btn-variant-outlined acss-1ttegf7"><span>登录 / 注册</span></button></div><!--$--><!--/$--></div></div></div></div></div><div class="acss-17uc61n " role="menu" aria-label="Primary navigation"><a class="acss-1ekedc9 " href="/home" role="menuitem" aria-label="返回主站"><span role="img" class="anticon acss-mqtstl"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maasreturn-main"></use></svg></span><span class="acss-1dm3r9z">返回主站</span></a><button class="acss-1ekedc9 is-active" type="button" role="menuitem" aria-label="首页"><span role="img" class="anticon acss-mqtstl"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-home"></use></svg></span><span class="acss-1dm3r9z">首页</span></button><button class="acss-1ekedc9 " type="button" role="menuitem" aria-label="创意广场"><span role="img" class="anticon acss-mqtstl"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-creative-library"></use></svg></span><span class="acss-1dm3r9z">创意广场</span></button><button class="acss-1ekedc9 " type="button" role="menuitem" aria-label="模型库"><span role="img" class="anticon acss-mqtstl"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-model-library"></use></svg></span><span class="acss-1dm3r9z">模型库</span></button><div class="acss-17cfcev" aria-hidden="true"></div><div class="acss-1ruhj0e">创意工具</div><button class="acss-1ekedc9 " type="button" role="menuitem" aria-label="图片生成"><span role="img" class="anticon acss-mqtstl"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-image-generation"></use></svg></span><span class="acss-1dm3r9z">图片生成</span></button><button class="acss-1ekedc9 " type="button" role="menuitem" aria-label="视频生成"><span role="img" class="anticon acss-mqtstl"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-video-generation"></use></svg></span><span class="acss-1dm3r9z">视频生成</span></button><button class="acss-1ekedc9 " type="button" role="menuitem" aria-label="模型训练"><span role="img" class="anticon acss-mqtstl"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-model-training"></use></svg></span><span class="acss-1dm3r9z">模型训练</span></button><div class="acss-17cfcev" aria-hidden="true"></div><div class="acss-1ruhj0e">资源库</div><button class="acss-1ekedc9 " type="button" role="menuitem" aria-label="资源库"><span role="img" class="anticon acss-mqtstl"><svg width="1em" height="1em" fill="currentColor" aria-hidden="true" focusable="false" class=""><use xlink:href="#icon-maassidebar-assets"></use></svg></span><span class="acss-1dm3r9z">资源库</span></button></div></div><div class="acss-1wcor9b" style="--left-navi-width:160px"><div class="acss-1p0rfs"><h1 class="acss-1oihbzh">404</h1><p class="acss-6u4vd6">Page not found</p><a href="/aigc" data-discover="true">Back to Home</a></div></div></main></div><script>((storageKey2, restoreKey) => {
+    if (!window.history.state || !window.history.state.key) {
+      let key = Math.random().toString(32).slice(2);
+      window.history.replaceState({ key }, "");
+    }
+    try {
+      let positions = JSON.parse(sessionStorage.getItem(storageKey2) || "{}");
+      let storedY = positions[restoreKey || window.history.state.key];
+      if (typeof storedY === "number") {
+        window.scrollTo(0, storedY);
+      }
+    } catch (error) {
+      console.error(error);
+      sessionStorage.removeItem(storageKey2);
+    }
+  })("react-router-scroll-positions", null)</script><script>window.__reactRouterContext = {"basename":"/","future":{"unstable_optimizeDeps":false,"v8_passThroughRequests":false,"unstable_trailingSlashAwareDataRequests":false,"unstable_previewServerPrerendering":false,"v8_middleware":true,"v8_splitRouteModules":false,"v8_viteEnvironmentApi":false},"routeDiscovery":{"mode":"lazy","manifestPath":"/__manifest"},"ssr":true,"isSpaMode":false};window.__reactRouterContext.stream = new ReadableStream({start(controller){window.__reactRouterContext.streamController = controller;}}).pipeThrough(new TextEncoderStream());</script><script type="module" async="">;
+import * as route0 from "//cdn.modelscope.cn/static/assets/root-6ErjB_dT.js";
+import * as route1 from "//cdn.modelscope.cn/static/assets/index-BJcjFS_j.js";
+import * as route2 from "//cdn.modelscope.cn/static/assets/index-Cuw0JlS8.js";
+import * as route3 from "//cdn.modelscope.cn/static/assets/index-DgP86qSv.js";
+import * as route4 from "//cdn.modelscope.cn/static/assets/not-found-CUTbB527.js";
+  window.__reactRouterManifest = {
+  "entry": {
+    "module": "//cdn.modelscope.cn/static/assets/entry.client-Lsl6l2Qu.js",
+    "imports": [
+      "//cdn.modelscope.cn/static/assets/rolldown-runtime-CJJwijRH.js",
+      "//cdn.modelscope.cn/static/assets/vendor-react-CrhOJanH.js",
+      "//cdn.modelscope.cn/static/assets/vendor-markdown-DTEDMFUB.js",
+      "//cdn.modelscope.cn/static/assets/chunkRecovery-BJ00jA6r.js"
+    ],
+    "css": []
+  },
+  "routes": {
+    "root": {
+      "id": "root",
+      "path": "",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": true,
+      "module": "//cdn.modelscope.cn/static/assets/root-6ErjB_dT.js",
+      "imports": [
+        "//cdn.modelscope.cn/static/assets/rolldown-runtime-CJJwijRH.js",
+        "//cdn.modelscope.cn/static/assets/vendor-react-CrhOJanH.js",
+        "//cdn.modelscope.cn/static/assets/vendor-markdown-DTEDMFUB.js",
+        "//cdn.modelscope.cn/static/assets/chunkRecovery-BJ00jA6r.js",
+        "//cdn.modelscope.cn/static/assets/root-DQOPtCV_.js",
+        "//cdn.modelscope.cn/static/assets/i18n-448CusIj.js",
+        "//cdn.modelscope.cn/static/assets/vendor-ui-C79psNqQ.js",
+        "//cdn.modelscope.cn/static/assets/useMemoizedFn-CS9wE-mh.js",
+        "//cdn.modelscope.cn/static/assets/classnames-wY8h2b1M.js",
+        "//cdn.modelscope.cn/static/assets/traceFetch-D0XMa1Kk.js",
+        "//cdn.modelscope.cn/static/assets/light_common-CwGShczo.js",
+        "//cdn.modelscope.cn/static/assets/MSIcon-CjjV_du1.js",
+        "//cdn.modelscope.cn/static/assets/createStyles-uP3__uV1.js",
+        "//cdn.modelscope.cn/static/assets/useH5-UxLHARzS.js",
+        "//cdn.modelscope.cn/static/assets/core-Bq75eWSf.js",
+        "//cdn.modelscope.cn/static/assets/styles-BQhoxc0U.js",
+        "//cdn.modelscope.cn/static/assets/utils-oYifhtqe.js",
+        "//cdn.modelscope.cn/static/assets/ui-tokens-N1vJazBz.js"
+      ],
+      "css": []
+    },
+    "wrappers/auth-wrapper/index": {
+      "id": "wrappers/auth-wrapper/index",
+      "parentId": "root",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "//cdn.modelscope.cn/static/assets/index-BJcjFS_j.js",
+      "imports": [
+        "//cdn.modelscope.cn/static/assets/vendor-react-CrhOJanH.js",
+        "//cdn.modelscope.cn/static/assets/vendor-markdown-DTEDMFUB.js",
+        "//cdn.modelscope.cn/static/assets/aigc-Aq-zEJ8Z.js",
+        "//cdn.modelscope.cn/static/assets/auth-DN77Rwzx.js",
+        "//cdn.modelscope.cn/static/assets/medal-CLdj4mtV.js",
+        "//cdn.modelscope.cn/static/assets/rolldown-runtime-CJJwijRH.js",
+        "//cdn.modelscope.cn/static/assets/i18n-448CusIj.js",
+        "//cdn.modelscope.cn/static/assets/vendor-ui-C79psNqQ.js",
+        "//cdn.modelscope.cn/static/assets/useMemoizedFn-CS9wE-mh.js",
+        "//cdn.modelscope.cn/static/assets/internal-pAcfyCnH.js",
+        "//cdn.modelscope.cn/static/assets/aigc-DWjESa9c.js",
+        "//cdn.modelscope.cn/static/assets/medal-BL7eBSNA.js",
+        "//cdn.modelscope.cn/static/assets/useStore-Dh9jhtMd.js",
+        "//cdn.modelscope.cn/static/assets/utils-oYifhtqe.js",
+        "//cdn.modelscope.cn/static/assets/traceFetch-D0XMa1Kk.js",
+        "//cdn.modelscope.cn/static/assets/isObject-CuyTkb7v.js"
+      ],
+      "css": []
+    },
+    "aigc-layout": {
+      "id": "aigc-layout",
+      "parentId": "wrappers/auth-wrapper/index",
+      "path": "/aigc",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "//cdn.modelscope.cn/static/assets/index-Cuw0JlS8.js",
+      "imports": [
+        "//cdn.modelscope.cn/static/assets/rolldown-runtime-CJJwijRH.js",
+        "//cdn.modelscope.cn/static/assets/vendor-react-CrhOJanH.js",
+        "//cdn.modelscope.cn/static/assets/i18n-448CusIj.js",
+        "//cdn.modelscope.cn/static/assets/vendor-ui-C79psNqQ.js",
+        "//cdn.modelscope.cn/static/assets/vendor-markdown-DTEDMFUB.js",
+        "//cdn.modelscope.cn/static/assets/internal-pAcfyCnH.js",
+        "//cdn.modelscope.cn/static/assets/classnames-wY8h2b1M.js",
+        "//cdn.modelscope.cn/static/assets/pickBy-CQrylYdg.js",
+        "//cdn.modelscope.cn/static/assets/UserInfo-DcH6c0qj.js",
+        "//cdn.modelscope.cn/static/assets/root-DQOPtCV_.js",
+        "//cdn.modelscope.cn/static/assets/aigc-Aq-zEJ8Z.js",
+        "//cdn.modelscope.cn/static/assets/commonStyle-DQD7DtWx.js",
+        "//cdn.modelscope.cn/static/assets/upload-8O35Gl0f.js",
+        "//cdn.modelscope.cn/static/assets/usePendingSubmit-C-WqWpCB.js",
+        "//cdn.modelscope.cn/static/assets/MSIcon-CjjV_du1.js",
+        "//cdn.modelscope.cn/static/assets/createStyles-uP3__uV1.js",
+        "//cdn.modelscope.cn/static/assets/ossType-vMUbgUmS.js",
+        "//cdn.modelscope.cn/static/assets/useStore-Dh9jhtMd.js",
+        "//cdn.modelscope.cn/static/assets/auth-DN77Rwzx.js",
+        "//cdn.modelscope.cn/static/assets/useAigcBreakpoint-BbbLY2CU.js",
+        "//cdn.modelscope.cn/static/assets/useH5-UxLHARzS.js",
+        "//cdn.modelscope.cn/static/assets/useHistory-CwSFpvDV.js",
+        "//cdn.modelscope.cn/static/assets/styles-BQhoxc0U.js",
+        "//cdn.modelscope.cn/static/assets/ui-tokens-N1vJazBz.js",
+        "//cdn.modelscope.cn/static/assets/aigc-path-DrnXT2pb.js",
+        "//cdn.modelscope.cn/static/assets/traceFetch-D0XMa1Kk.js",
+        "//cdn.modelscope.cn/static/assets/isObject-CuyTkb7v.js",
+        "//cdn.modelscope.cn/static/assets/_getTag-y8vEmeq7.js",
+        "//cdn.modelscope.cn/static/assets/_Uint8Array-BLqoFhg5.js",
+        "//cdn.modelscope.cn/static/assets/_baseIteratee-BiU1KpUt.js",
+        "//cdn.modelscope.cn/static/assets/_baseClone-Dt3532S7.js",
+        "//cdn.modelscope.cn/static/assets/_baseGet-2-m2jbDT.js",
+        "//cdn.modelscope.cn/static/assets/useMemoizedFn-CS9wE-mh.js",
+        "//cdn.modelscope.cn/static/assets/dist-BkxBtdE1.js",
+        "//cdn.modelscope.cn/static/assets/_baseEach-CksE3b__.js",
+        "//cdn.modelscope.cn/static/assets/string-DTlz1LIO.js",
+        "//cdn.modelscope.cn/static/assets/medal-BL7eBSNA.js",
+        "//cdn.modelscope.cn/static/assets/magicImage_light-BKD2dn1O.js",
+        "//cdn.modelscope.cn/static/assets/organization-BJ3bMMzn.js",
+        "//cdn.modelscope.cn/static/assets/AvatarWidget-RTO0ZNyS.js",
+        "//cdn.modelscope.cn/static/assets/MaasToolTips-B6I1QTwF.js",
+        "//cdn.modelscope.cn/static/assets/medal-CLdj4mtV.js",
+        "//cdn.modelscope.cn/static/assets/core-Bq75eWSf.js",
+        "//cdn.modelscope.cn/static/assets/loginUrl-5geU7QHt.js",
+        "//cdn.modelscope.cn/static/assets/utils-oYifhtqe.js",
+        "//cdn.modelscope.cn/static/assets/aigc-DWjESa9c.js",
+        "//cdn.modelscope.cn/static/assets/omit-Bt9aZ9zA.js",
+        "//cdn.modelscope.cn/static/assets/dist-BzgLplyz.js",
+        "//cdn.modelscope.cn/static/assets/last-OBmz3jT8.js",
+        "//cdn.modelscope.cn/static/assets/light_common-CwGShczo.js",
+        "//cdn.modelscope.cn/static/assets/chunkRecovery-BJ00jA6r.js",
+        "//cdn.modelscope.cn/static/assets/components-C24_013P.js",
+        "//cdn.modelscope.cn/static/assets/utils-CpNGWBZc.js",
+        "//cdn.modelscope.cn/static/assets/isEmpty-D-5zxb1O.js",
+        "//cdn.modelscope.cn/static/assets/ClientOnly-Ci8AYtNG.js"
+      ],
+      "css": []
+    },
+    "aigc-h5-fallback-wrapper": {
+      "id": "aigc-h5-fallback-wrapper",
+      "parentId": "aigc-layout",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "//cdn.modelscope.cn/static/assets/index-DgP86qSv.js",
+      "imports": [
+        "//cdn.modelscope.cn/static/assets/vendor-react-CrhOJanH.js",
+        "//cdn.modelscope.cn/static/assets/i18n-448CusIj.js",
+        "//cdn.modelscope.cn/static/assets/vendor-ui-C79psNqQ.js",
+        "//cdn.modelscope.cn/static/assets/vendor-markdown-DTEDMFUB.js",
+        "//cdn.modelscope.cn/static/assets/isObject-CuyTkb7v.js",
+        "//cdn.modelscope.cn/static/assets/light_common-CwGShczo.js",
+        "//cdn.modelscope.cn/static/assets/useH5-UxLHARzS.js",
+        "//cdn.modelscope.cn/static/assets/aigc-path-DrnXT2pb.js",
+        "//cdn.modelscope.cn/static/assets/rolldown-runtime-CJJwijRH.js"
+      ],
+      "css": []
+    },
+    "aigc-not-found": {
+      "id": "aigc-not-found",
+      "parentId": "aigc-h5-fallback-wrapper",
+      "path": "*",
+      "hasAction": false,
+      "hasLoader": false,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "//cdn.modelscope.cn/static/assets/not-found-CUTbB527.js",
+      "imports": [
+        "//cdn.modelscope.cn/static/assets/vendor-react-CrhOJanH.js",
+        "//cdn.modelscope.cn/static/assets/i18n-448CusIj.js",
+        "//cdn.modelscope.cn/static/assets/vendor-ui-C79psNqQ.js",
+        "//cdn.modelscope.cn/static/assets/vendor-markdown-DTEDMFUB.js",
+        "//cdn.modelscope.cn/static/assets/rolldown-runtime-CJJwijRH.js"
+      ],
+      "css": []
+    },
+    "routes/_global/index-redirect": {
+      "id": "routes/_global/index-redirect",
+      "parentId": "root",
+      "path": "/",
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": false,
+      "hasErrorBoundary": false,
+      "module": "//cdn.modelscope.cn/static/assets/index-redirect-BvRk9kiK.js",
+      "imports": [],
+      "css": []
+    },
+    "aigc-home": {
+      "id": "aigc-home",
+      "parentId": "aigc-h5-fallback-wrapper",
+      "index": true,
+      "hasAction": false,
+      "hasLoader": true,
+      "hasClientAction": false,
+      "hasClientLoader": false,
+      "hasClientMiddleware": false,
+      "hasDefaultExport": true,
+      "hasErrorBoundary": false,
+      "module": "//cdn.modelscope.cn/static/assets/index-BpGkNtEr.js",
+      "imports": [
+        "//cdn.modelscope.cn/static/assets/rolldown-runtime-CJJwijRH.js",
+        "//cdn.modelscope.cn/static/assets/vendor-react-CrhOJanH.js",
+        "//cdn.modelscope.cn/static/assets/i18n-448CusIj.js",
+        "//cdn.modelscope.cn/static/assets/vendor-ui-C79psNqQ.js",
+        "//cdn.modelscope.cn/static/assets/vendor-markdown-DTEDMFUB.js",
+        "//cdn.modelscope.cn/static/assets/internal-pAcfyCnH.js",
+        "//cdn.modelscope.cn/static/assets/aigc-DWjESa9c.js",
+        "//cdn.modelscope.cn/static/assets/MasonryGallery-DYSxU-k8.js",
+        "//cdn.modelscope.cn/static/assets/usePendingSubmit-C-WqWpCB.js",
+        "//cdn.modelscope.cn/static/assets/imageUrl-CpJ_qek2.js",
+        "//cdn.modelscope.cn/static/assets/createStyles-uP3__uV1.js",
+        "//cdn.modelscope.cn/static/assets/useStore-Dh9jhtMd.js",
+        "//cdn.modelscope.cn/static/assets/auth-DN77Rwzx.js",
+        "//cdn.modelscope.cn/static/assets/useAigcBreakpoint-BbbLY2CU.js",
+        "//cdn.modelscope.cn/static/assets/core-Bq75eWSf.js",
+        "//cdn.modelscope.cn/static/assets/traceFetch-D0XMa1Kk.js",
+        "//cdn.modelscope.cn/static/assets/isObject-CuyTkb7v.js",
+        "//cdn.modelscope.cn/static/assets/RecommendTags-DVUk57QB.js",
+        "//cdn.modelscope.cn/static/assets/classnames-wY8h2b1M.js",
+        "//cdn.modelscope.cn/static/assets/color-Se34lC41.js",
+        "//cdn.modelscope.cn/static/assets/dist-BkxBtdE1.js",
+        "//cdn.modelscope.cn/static/assets/cloneDeep-s-HGMBkV.js",
+        "//cdn.modelscope.cn/static/assets/isEmpty-D-5zxb1O.js",
+        "//cdn.modelscope.cn/static/assets/root-DQOPtCV_.js",
+        "//cdn.modelscope.cn/static/assets/components-C24_013P.js",
+        "//cdn.modelscope.cn/static/assets/staff-Und7refg.js",
+        "//cdn.modelscope.cn/static/assets/common-D2QJkMjl.js",
+        "//cdn.modelscope.cn/static/assets/EditorReader-C6EALB_K.js",
+        "//cdn.modelscope.cn/static/assets/profile-02GvnVuo.js",
+        "//cdn.modelscope.cn/static/assets/organization-BJ3bMMzn.js",
+        "//cdn.modelscope.cn/static/assets/AvatarWidget-RTO0ZNyS.js",
+        "//cdn.modelscope.cn/static/assets/CommonCardBottom-C73gj7fM.js",
+        "//cdn.modelscope.cn/static/assets/CustomPagination-CjwYWEwM.js",
+        "//cdn.modelscope.cn/static/assets/MSIcon-CjjV_du1.js",
+        "//cdn.modelscope.cn/static/assets/MaasToolTips-B6I1QTwF.js",
+        "//cdn.modelscope.cn/static/assets/GlobalStyle-we7ayIO0.js",
+        "//cdn.modelscope.cn/static/assets/utils-CpNGWBZc.js",
+        "//cdn.modelscope.cn/static/assets/useHistory-CwSFpvDV.js",
+        "//cdn.modelscope.cn/static/assets/styles-BQhoxc0U.js",
+        "//cdn.modelscope.cn/static/assets/InlineConfigProvider-RnLZoJnA.js",
+        "//cdn.modelscope.cn/static/assets/common-DZ4-IU-S.js",
+        "//cdn.modelscope.cn/static/assets/upload-8O35Gl0f.js",
+        "//cdn.modelscope.cn/static/assets/links-BIE37TTC.js",
+        "//cdn.modelscope.cn/static/assets/ossType-vMUbgUmS.js",
+        "//cdn.modelscope.cn/static/assets/_baseClone-Dt3532S7.js",
+        "//cdn.modelscope.cn/static/assets/_getTag-y8vEmeq7.js",
+        "//cdn.modelscope.cn/static/assets/_Uint8Array-BLqoFhg5.js",
+        "//cdn.modelscope.cn/static/assets/ClientOnly-Ci8AYtNG.js",
+        "//cdn.modelscope.cn/static/assets/useH5-UxLHARzS.js",
+        "//cdn.modelscope.cn/static/assets/ui-tokens-N1vJazBz.js",
+        "//cdn.modelscope.cn/static/assets/useMemoizedFn-CS9wE-mh.js",
+        "//cdn.modelscope.cn/static/assets/light_common-CwGShczo.js",
+        "//cdn.modelscope.cn/static/assets/chunkRecovery-BJ00jA6r.js",
+        "//cdn.modelscope.cn/static/assets/utils-oYifhtqe.js",
+        "//cdn.modelscope.cn/static/assets/useClickAway-CsStGuM5.js",
+        "//cdn.modelscope.cn/static/assets/omit-Bt9aZ9zA.js",
+        "//cdn.modelscope.cn/static/assets/commonStyle-DQD7DtWx.js",
+        "//cdn.modelscope.cn/static/assets/loginUrl-5geU7QHt.js",
+        "//cdn.modelscope.cn/static/assets/isBrowser-BHUfnD5M.js",
+        "//cdn.modelscope.cn/static/assets/useEffectWithTarget-BpaO5jvu.js",
+        "//cdn.modelscope.cn/static/assets/_baseGet-2-m2jbDT.js",
+        "//cdn.modelscope.cn/static/assets/last-OBmz3jT8.js",
+        "//cdn.modelscope.cn/static/assets/throttle-DkeIhrgL.js",
+        "//cdn.modelscope.cn/static/assets/topic-xkbuQtMl.js",
+        "//cdn.modelscope.cn/static/assets/dist-BzgLplyz.js"
+      ],
+      "css": [
+        "//cdn.modelscope.cn/static/assets/RecommendTags-CErV7xzj.css#"
+      ]
+    }
+  },
+  "url": "//cdn.modelscope.cn/static/assets/manifest-74ff1fc7.js",
+  "version": "74ff1fc7"
+};
+  window.__reactRouterRouteModules = {"root":route0,"wrappers/auth-wrapper/index":route1,"aigc-layout":route2,"aigc-h5-fallback-wrapper":route3,"aigc-not-found":route4};
+
+import("//cdn.modelscope.cn/static/assets/entry.client-Lsl6l2Qu.js");</script><!--$--><script>window.__reactRouterContext.streamController.enqueue("[{\"_1\":2,\"_3\":-5,\"_4\":-5},\"loaderData\",{\"_5\":6,\"_7\":8,\"_9\":10},\"actionData\",\"errors\",\"root\",{\"_28\":29,\"_30\":31,\"_32\":33,\"_34\":35,\"_36\":-7,\"_37\":23,\"_38\":39},\"wrappers/auth-wrapper/index\",{\"_11\":12,\"_13\":14,\"_15\":12,\"_16\":12,\"_17\":12,\"_18\":12,\"_19\":12,\"_20\":12,\"_21\":12,\"_22\":23,\"_24\":25},\"aigc-layout\",{},\"isLogin\",false,\"userInfo\",{},\"showLoginModal\",\"getUserInfoLoading\",\"isCertificationUser\",\"logoutLoading\",\"isBindAliyun\",\"isAliyunAuth\",\"isAuthAliyunVerified\",\"watermarkWebembedUrl\",\"\",\"consoleConfig\",{\"_26\":12,\"_27\":12},\"ModifyAvatar\",\"ModifyProfile\",\"mode\",\"COMMON\",\"lang\",\"zh_CN\",\"themeMode\",\"auto\",\"themeAppearance\",\"light\",\"traceId\",\"hUid\",\"antdCssFilename\",\"antd.44070558.css\"]\n");</script><!--$--><script>window.__reactRouterContext.streamController.close();</script><!--/$--><!--/$--></body></html>

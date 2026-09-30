@@ -1,0 +1,43 @@
+deepseek-ai/DeepSeek-V4-Flash-0731	魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/
+deepseek-ai/DeepSeek-V4-Pro	魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/ | DeepSeek:魔粒/
+MedAIBase/AntAngelMed	魔搭社区:1魔粒/standard | 蚂蚁百灵:魔粒/
+meituan-longcat/LongCat-Flash-Lite	魔搭社区:1魔粒/standard | 美团-龙猫:魔粒/
+MiniMax/MiniMax-M1-80k	魔搭社区:1魔粒/standard | MiniMax:魔粒/
+MiniMax/MiniMax-M3	魔搭社区:1魔粒/standard | MiniMax:魔粒/
+mistralai/Mistral-Large-Instruct-2407	魔搭社区:1魔粒/standard
+MusePublic/Qwen-Image-Edit	魔搭社区:2魔粒/ultra
+opencompass/CompassJudger-1-32B-Instruct	魔搭社区:1魔粒/standard
+OpenGVLab/InternVL3_5-241B-A28B	魔搭社区:1魔粒/standard | 书生:魔粒/
+PaddlePaddle/ERNIE-4.5-0.3B-PT	魔搭社区:1魔粒/standard
+PaddlePaddle/ERNIE-4.5-21B-A3B-PT	魔搭社区:1魔粒/standard
+PaddlePaddle/ERNIE-4.5-300B-A47B-PT	魔搭社区:1魔粒/standard
+PaddlePaddle/ERNIE-4.5-VL-28B-A3B-PT	魔搭社区:1魔粒/standard
+Qwen/Qwen-Image-Edit	魔搭社区:2魔粒/ultra
+Qwen/Qwen3-14B	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-235B-A22B	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-235B-A22B-Instruct-2507	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-235B-A22B-Thinking-2507	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-30B-A3B	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-30B-A3B-Thinking-2507	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-4B	阿里云百炼:魔粒/
+Qwen/Qwen3-8B	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-Coder-30B-A3B-Instruct	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-Next-80B-A3B-Instruct	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-Next-80B-A3B-Thinking	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-VL-235B-A22B-Instruct	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-VL-8B-Instruct	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3-VL-8B-Thinking	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3.5-122B-A10B	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3.5-27B	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3.5-35B-A3B	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+Qwen/Qwen3.5-397B-A17B	魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/ | 阿里云百炼-Coding:魔粒/
+Shanghai_AI_Laboratory/Intern-S1	魔搭社区:1魔粒/standard | 书生:魔粒/
+Shanghai_AI_Laboratory/Intern-S1-mini	魔搭社区:1魔粒/standard | 书生:魔粒/
+Shanghai_AI_Laboratory/Intern-S2-Preview	魔搭社区:1魔粒/standard | 书生:魔粒/
+stepfun-ai/Step-3.5-Flash	魔搭社区:1魔粒/standard | 阶跃星辰:魔粒/
+stepfun-ai/Step-3.7-Flash	魔搭社区:1魔粒/standard | 阶跃星辰:魔粒/
+Tencent-Hunyuan/Hy3	魔搭社区:2魔粒/ultra
+XGenerationLab/XiYanSQL-QwenCoder-32B-2412	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+XGenerationLab/XiYanSQL-QwenCoder-32B-2504	魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/
+ZhipuAI/GLM-4.7-Flash	魔搭社区:1魔粒/standard | 智谱:魔粒/
+ZhipuAI/GLM-5.2	魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/ | 智谱-Coding:魔粒/ | 智谱:魔粒/

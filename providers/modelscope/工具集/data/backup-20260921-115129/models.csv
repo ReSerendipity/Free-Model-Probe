@@ -1,0 +1,35 @@
+﻿model_id,organization,api_callable,mainstream,non_agent,magic_cost_per_call,cost_tier,billing_unit,providers,downloads,tasks,support_inference,experience,swe_bench_verified,swe_bench_pro,terminal_bench,livecodebench,humaneval,aime,fetched_at
+MiniMax/MiniMax-M1-80k,MiniMax,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | MiniMax:魔粒/,721135,text-generation,txt2txt,1,56.0,,,24.0,,,2026-08-25T15:33:07Z
+MiniMax/MiniMax-M3,MiniMax,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,,,每次调用,MiniMax:魔粒/,3421,image-text-to-text,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+PaddlePaddle/ERNIE-4.5-0.3B-PT,PaddlePaddle,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard,8714,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+PaddlePaddle/ERNIE-4.5-21B-A3B-PT,PaddlePaddle,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard,5886,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+PaddlePaddle/ERNIE-4.5-300B-A47B-PT,PaddlePaddle,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard,2499,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-14B,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,1158371,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-235B-A22B,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,922480,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-235B-A22B-Instruct-2507,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,300799,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-235B-A22B-Thinking-2507,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,60553,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-30B-A3B,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,2237234,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-30B-A3B-Thinking-2507,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,194365,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-4B,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,,,每次调用,阿里云百炼:魔粒/,3516112,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-8B,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,7340487,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-Coder-30B-A3B-Instruct,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,772246,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-Next-80B-A3B-Instruct,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,2189599,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3-Next-80B-A3B-Thinking,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,32972,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3.5-122B-A10B,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,294674,image-text-to-text,txt2txt,1,72.0,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3.5-27B,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,1803745,image-text-to-text,txt2txt,1,72.0,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3.5-35B-A3B,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,3223967,image-text-to-text,txt2txt,1,72.0,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3.5-397B-A17B,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,2,ultra,每次调用,魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/ | 阿里云百炼-Coding:魔粒/,209417,image-text-to-text,txt2txt,1,80.0,,,,,,2026-08-25T15:33:07Z
+Qwen/Qwen3.8-27B,Qwen,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阿里云百炼:魔粒/,82971,image-text-to-text,txt2txt,1,,61.7,73.0,,,,2026-08-25T15:33:07Z
+Shanghai_AI_Laboratory/Intern-S1,Shanghai_AI_Laboratory,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 书生:魔粒/,4088,image-text-to-text,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Shanghai_AI_Laboratory/Intern-S1-mini,Shanghai_AI_Laboratory,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 书生:魔粒/,7392,image-text-to-text,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Shanghai_AI_Laboratory/Intern-S2-Preview,Shanghai_AI_Laboratory,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 书生:魔粒/,439,image-text-to-text,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+Tencent-Hunyuan/Hy3,Tencent-Hunyuan,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,2,ultra,每次调用,魔搭社区:2魔粒/ultra,18286,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+ZhipuAI/GLM-4.7-Flash,ZhipuAI,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 智谱:魔粒/,698250,text-generation,txt2txt,1,59.2,,,,,25.0,2026-08-25T15:33:07Z
+ZhipuAI/GLM-5.2,ZhipuAI,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,2,ultra,每次调用,魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/ | 智谱-Coding:魔粒/ | 智谱:魔粒/,190326,text-generation,txt2txt,1,,62.1,2.0,,,,2026-08-25T15:33:07Z
+deepseek-ai/DeepSeek-V4-Flash-0731,deepseek-ai,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,2,ultra,每次调用,魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/,90212,text-generation,txt2txt,1,,,82.7,,,,2026-08-25T15:33:07Z
+deepseek-ai/DeepSeek-V4-Pro,deepseek-ai,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,2,ultra,每次调用,魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/ | DeepSeek:魔粒/,241476,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+deepseek-ai/DeepSeek-V4-Pro-0813,deepseek-ai,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,2,ultra,每次调用,魔搭社区:2魔粒/ultra | 阿里云百炼:魔粒/,3947,text-generation,txt2txt,1,,,87.9,,,,2026-08-25T15:33:07Z
+early-access/EA-29B-A4B,early-access,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,0.5,lite,每次调用,魔搭社区:0.5魔粒/lite,,,,,,,,,,,2026-08-25T15:33:07Z
+mistralai/Mistral-Large-Instruct-2407,mistralai,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard,76604,text-generation,txt2txt,1,,,,,,,2026-08-25T15:33:07Z
+stepfun-ai/Step-3.5-Flash,stepfun-ai,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阶跃星辰:魔粒/,5027636,,txt2txt,1,51.0,,,,,,2026-08-25T15:33:07Z
+stepfun-ai/Step-3.7-Flash,stepfun-ai,True,官方机构发布 + ModelScope 官方 API-Inference 清单在列,False,1,standard,每次调用,魔搭社区:1魔粒/standard | 阶跃星辰:魔粒/,13326,image-text-to-text,txt2txt,1,,56.3,59.5,,,,2026-08-25T15:33:07Z

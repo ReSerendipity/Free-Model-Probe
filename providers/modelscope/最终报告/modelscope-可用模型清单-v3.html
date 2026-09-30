@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ModelScope 可用模型清单 v3.0 — 连通性实测修订版（2026-08-11）</title>
+<style>
+  :root{--navy:#1b2a4a;--gray-900:#222831;--gray-700:#4a5568;--gray-500:#8a94a6;
+    --gray-200:#e4e8ef;--gray-100:#f2f4f8;--bg:#fafbfd;--accent:#c8a24a;--green:#2e7d5b;--red:#b23b3b;--amber:#b07d2b;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--gray-900);line-height:1.65;font-size:15px;}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 32px 80px;}
+  header{border-bottom:3px solid var(--navy);padding-bottom:24px;margin-bottom:36px;}
+  .kicker{font-size:12px;letter-spacing:.18em;color:var(--gray-500);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:28px;color:var(--navy);font-weight:700;line-height:1.3;}
+  .subtitle{color:var(--gray-700);margin-top:10px;font-size:15px;}
+  .meta-line{margin-top:14px;font-size:12.5px;color:var(--gray-500);}
+  .meta-line span{display:inline-block;margin-right:18px;}
+  h2{font-size:20px;color:var(--navy);margin:44px 0 16px;padding-left:12px;border-left:4px solid var(--accent);font-weight:600;}
+  h3{font-size:15px;color:var(--gray-900);margin:24px 0 10px;font-weight:600;}
+  table{width:100%;border-collapse:collapse;background:#fff;margin:14px 0;font-size:13.5px;}
+  th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;font-size:12.5px;}
+  td{padding:9px 12px;border-bottom:1px solid var(--gray-200);vertical-align:top;}
+  tr:nth-child(even) td{background:var(--gray-100);}
+  .rank{font-weight:700;color:var(--navy);}
+  .muted{color:var(--gray-500);font-size:12px;}
+  .cost-badge{display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;white-space:nowrap;}
+  .cost-2{background:#e8edf7;color:var(--navy);}
+  .cost-1{background:#f0f4f1;color:var(--green);}
+  .status{display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;}
+  .s-ok{background:#e6f2ec;color:var(--green);}
+  .s-warn{background:#f7efe0;color:var(--amber);}
+  .s-fail{background:#f9efef;color:var(--red);}
+  .metrics{display:flex;gap:16px;flex-wrap:wrap;margin:20px 0;}
+  .metric{flex:1;min-width:150px;background:#fff;border:1px solid var(--gray-200);border-top:3px solid var(--navy);padding:16px 18px;}
+  .metric .num{font-size:24px;font-weight:700;color:var(--navy);}
+  .metric .lbl{font-size:12.5px;color:var(--gray-500);margin-top:4px;}
+  .note{background:#fff;border:1px solid var(--gray-200);padding:16px 20px;margin:14px 0;font-size:13.5px;color:var(--gray-700);}
+  .note b{color:var(--gray-900);}
+  .lead{font-size:15.5px;background:#fff;border:1px solid var(--gray-200);border-left:4px solid var(--navy);padding:18px 22px;}
+  .footnotes{border-top:1px solid var(--gray-200);margin-top:40px;padding-top:16px;font-size:12px;color:var(--gray-500);}
+  code{background:var(--gray-100);border:1px solid var(--gray-200);padding:1px 6px;border-radius:3px;font-size:12.5px;}
+  @media(max-width:760px){.wrap{padding:24px 14px 60px;}h1{font-size:22px;}table{font-size:12px;}}
+</style>
+</head>
+<body><div class="wrap">
+<header>
+  <div class="kicker">ModelScope Model Survey · 可用清单 v3.0</div>
+  <h1>可接 Agent 的编程模型：连通性实测可用清单（v3 修订版）</h1>
+  <div class="subtitle">整合 v1 基准与魔粒费用 + v2 连通性实测（11 个可用）+ 2026-08-11 复测修正：<b>实测可用 9 个</b>、确认不可用 <b>5 个</b>、未实测 <b>17 个</b>。</div>
+  <div class="meta-line">
+    <span>📅 复测：2026-08-11 11:24 (UTC+8)</span>
+    <span>🔗 端点：api-inference.modelscope.cn/v1</span>
+    <span>🧪 本版新增：用户 Key 实测 + 状态修正</span>
+  </div>
+</header>
+
+<p class="lead">核心结论：<b>1 魔粒档最优解 = Qwen3.5-122B-A10B</b>（实测可用 ✅ + SWE-bench Verified 72.4 全场最高）。1 魔粒档 7 个模型<b>全部实测可用</b>（含 Step 系列、MiniMax-M1-80k），并非只有千问可用；2 魔粒档实测可用 <b>DeepSeek-V4-Flash-0731</b> 与 <b>Qwen3.5-397B-A17B</b>——v1 排第一的 DeepSeek-V4-Pro 与 GLM-5.2 <b>复测 4 次全空响应，当前不可用</b>（v2 时仍间歇可用，稳定性在变差）。</p>
+
+<div class="metrics">
+  <div class="metric"><div class="num">9</div><div class="lbl">实测可用（2 魔粒 2 个 + 1 魔粒 7 个）</div></div>
+  <div class="metric"><div class="num">5</div><div class="lbl">确认不可用（含 2 个状态恶化）</div></div>
+  <div class="metric"><div class="num">17</div><div class="lbl">未实测（建议接入前先测）</div></div>
+  <div class="metric"><div class="num">72.4</div><div class="lbl">1 魔粒档最强 SWEV（Qwen3.5-122B-A10B）</div></div>
+</div>
+
+<h2>一、实测可用（9 个）— 推荐优先选择</h2>
+<h3>2 魔粒/次（ultra 档，2 个）</h3>
+<table>
+  <tr><th style="width:5%">#</th><th style="width:22%">模型</th><th style="width:11%">费用</th><th style="width:22%">连通性</th><th>编程基准</th><th style="width:13%">来源</th></tr>
+  <tr><td class="rank">1</td><td><b>DeepSeek-V4-Flash-0731</b><br><span class="muted">deepseek-ai</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td><span class="status s-ok">首测即通 ✅</span></td><td>Terminal Bench 2.1 82.7；NL2Repo 54.2；DeepSWE 54.4</td><td class="muted">模型卡+flowtivity</td></tr><tr><td class="rank">2</td><td><b>Qwen3.5-397B-A17B</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td><span class="status s-ok">首测即通 ✅</span></td><td>SWE-bench Verified 76.4；LiveCodeBench v6 83.6；AIME26 91.3</td><td class="muted">模型卡+morphllm</td></tr>
+</table>
+<h3>1 魔粒/次（standard 档，7 个）</h3>
+<table>
+  <tr><th style="width:5%">#</th><th style="width:22%">模型</th><th style="width:11%">费用</th><th style="width:22%">连通性</th><th>编程基准</th><th style="width:13%">来源</th></tr>
+  <tr><td class="rank">1</td><td><b>Qwen3.5-122B-A10B</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td><span class="status s-ok">稳定可用 ✅｜1 魔粒档最强</span></td><td>SWE-bench Verified 72.4</td><td class="muted">HF 模型卡+digitalapplied</td></tr><tr><td class="rank">2</td><td><b>Qwen3.5-35B-A3B</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td><span class="status s-ok">稳定可用 ✅</span></td><td>SWE-bench Verified 72.0</td><td class="muted">ModelScope 模型卡</td></tr><tr><td class="rank">3</td><td><b>Qwen3.5-27B</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td><span class="status s-ok">稳定可用 ✅</span></td><td>SWE-bench Verified 72.0</td><td class="muted">ModelScope 模型卡</td></tr><tr><td class="rank">4</td><td><b>Step-3.7-Flash</b><br><span class="muted">stepfun-ai 阶跃星辰</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td><span class="status s-ok">稳定可用 ✅（推理模型）</span></td><td>SWE-Bench PRO 56.3；Terminal-Bench 2.1 59.5</td><td class="muted">ModelScope 模型卡</td></tr><tr><td class="rank">5</td><td><b>MiniMax-M1-80k</b><br><span class="muted">MiniMax</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td><span class="status s-ok">稳定可用 ✅</span></td><td>SWE-bench Verified 56.0</td><td class="muted">ModelScope 模型卡</td></tr><tr><td class="rank">6</td><td><b>Step-3.5-Flash</b><br><span class="muted">stepfun-ai 阶跃星辰</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td><span class="status s-ok">稳定可用 ✅</span></td><td>SWE-bench Verified 51.0</td><td class="muted">ModelScope 模型卡</td></tr><tr><td class="rank">7</td><td><b>Qwen3-Coder-30B-A3B-Instruct</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td><span class="status s-ok">稳定可用 ✅（代码专用）</span></td><td>SWE-bench Verified 51.6（OpenHands）</td><td class="muted">HF Discussion #30</td></tr>
+</table>
+
+<h2>二、确认不可用（5 个）— 接入前不要选</h2>
+<table>
+  <tr><th style="width:5%">#</th><th style="width:22%">模型</th><th style="width:11%">费用</th><th style="width:26%">不可用原因（实测）</th><th>编程基准（仅参考）</th><th style="width:13%">来源</th></tr>
+  <tr><td class="rank">1</td><td><b>MiniMax-M3</b><br><span class="muted">MiniMax</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td><span class="status s-fail">❌ has no provider supported</span></td><td>SWE-Bench Pro 59.0</td><td class="muted">官方博客</td></tr><tr><td class="rank">2</td><td><b>GLM-4.7-Flash</b><br><span class="muted">ZhipuAI 智谱</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td><span class="status s-fail">❌ 持续空响应（v2 10 次 + 复测 2 次）</span></td><td>SWE-bench Verified 59.2</td><td class="muted">ModelScope 模型卡</td></tr><tr><td class="rank">3</td><td><b>Tencent-Hunyuan/Hy3</b><br><span class="muted">腾讯混元</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td><span class="status s-fail">❌ 免费通道关闭（v2 + 复测均空响应）</span></td><td>SWE-bench（提及无数值）</td><td class="muted">ModelScope 模型卡</td></tr><tr><td class="rank">4</td><td><b>DeepSeek-V4-Pro</b><br><span class="muted">deepseek-ai</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td><span class="status s-fail">⚠️ v2 间歇 2/5，复测 4 次全空 → 当前不可用</span></td><td>SWE-bench Verified 80.6（Max）</td><td class="muted">模型卡+morphllm</td></tr><tr><td class="rank">5</td><td><b>GLM-5.2</b><br><span class="muted">ZhipuAI 智谱</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td><span class="status s-fail">⚠️ v2 间歇 2/8，复测 4 次全空 → 当前不可用</span></td><td>SWE-bench Pro 62.1（开源第一）</td><td class="muted">模型卡+morphllm</td></tr>
+</table>
+<div class="note"><b>状态变化警告</b>：DeepSeek-V4-Pro 与 GLM-5.2 在 v2 测试（2026-08-11 10:40~11:05）仍为「间歇可用」，本次复测（11:24，间隔 15s + max_tokens=1024 重试）<b>连续 4 次空响应</b>（HTTP 200 但 choices=null、usage 全 0）。空响应为网关吞请求，可能随时恢复，接入前务必先跑连通性测试。</div>
+
+<h2>三、未实测（17 个）— 预算允许时可逐一验证</h2>
+<table>
+  <tr><th style="width:5%">#</th><th style="width:34%">模型</th><th style="width:11%">费用</th><th>备注</th></tr>
+  <tr><td class="rank">1</td><td><b>Qwen3-Next-80B-A3B-Instruct / -Thinking</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td>standard</td></tr><tr><td class="rank">2</td><td><b>Qwen3-235B-A22B-Instruct-2507 / -Thinking-2507</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td>standard</td></tr><tr><td class="rank">3</td><td><b>Qwen3-235B-A22B</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td>standard</td></tr><tr><td class="rank">4</td><td><b>Qwen3-30B-A3B / -Thinking-2507</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td>standard</td></tr><tr><td class="rank">5</td><td><b>Qwen3-14B / 8B</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td>standard</td></tr><tr><td class="rank">6</td><td><b>Qwen3-4B</b><br><span class="muted">Qwen</span></td><td><span class="cost-badge cost-1">—（仅百炼）</span></td><td>—</td></tr><tr><td class="rank">7</td><td><b>Intern-S1 / S1-mini / S2-Preview</b><br><span class="muted">上海AI实验室</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td>standard</td></tr><tr><td class="rank">8</td><td><b>ERNIE-4.5-300B/21B/0.3B-PT</b><br><span class="muted">百度文心</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td>standard</td></tr><tr><td class="rank">9</td><td><b>Mistral-Large-Instruct-2407</b><br><span class="muted">Mistral AI</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td>standard</td></tr>
+</table>
+
+<h2>四、魔粒扣费规则（历版一致）</h2>
+<div class="note">
+魔粒 = 用户所称「魔力」。按<b>每次调用</b>扣费（非按 token）：<b>ultra = 2 魔粒/次，standard = 1 魔粒/次</b>；魔搭社区自营提供方计价，第三方（百炼/智谱/Moonshot 等）走各自 API Key。每日累计 <b>2000 次免费调用</b>（UTC+8 0:00 重置，超额 429）；绑定阿里云每日登录 +150 魔粒，任务最高 +450/日——免费额度内实际支出为 0。
+</div>
+
+<h2>五、接入建议</h2>
+<div class="note">
+1. <b>1 魔粒预算</b>：选 Qwen3.5-122B-A10B（可用 + 最强，无争议最优解）。<br>
+2. <b>2 魔粒预算</b>：选 DeepSeek-V4-Flash-0731（TB2.1 82.7）或 Qwen3.5-397B-A17B（SWEV 76.4），两者首测即通。<br>
+3. <b>所有模型加连通性重试</b>：空响应（choices=null）或 429 时退避重试 2~3 次；推理模型（DeepSeek/GLM/Step 系）max_tokens 建议 ≥1024，否则回复被思考过程截断。<br>
+4. 接入方式：<code>base_url=https://api-inference.modelscope.cn/v1</code>，OpenAI SDK 兼容（亦支持 Anthropic beta），API Key 用 ModelScope Token。
+</div>
+
+<div class="footnotes">
+  <b>数据来源与版本演进</b>
+  <ol>
+    <li>v1（2026-08-08）：31 个对话/推理 LLM 全量基准 + 魔粒费用（modelscope.cn 公开接口逐模型实测）</li>
+    <li>v2（2026-08-11 10:40~11:05）：第一梯队 14 模型连通性实测，剔除 3 个（MiniMax-M3 / GLM-4.7-Flash / Hy3）</li>
+    <li>v3（2026-08-11 11:24）：用户 Key 复测 14 模型（含重试），修正 DeepSeek-V4-Pro / GLM-5.2 为当前不可用，确认 9 个可用</li>
+    <li>原始响应留存：.cluster/live_test/（本次复测）、用户 v2 报告</li>
+  </ol>
+</div>
+</div></body></html>

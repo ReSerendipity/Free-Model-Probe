@@ -1,0 +1,125 @@
+{
+  "test_time": "2026-08-25 23:55:00",
+  "base_url": "https://api-inference.modelscope.cn/v1",
+  "api_key_masked": "ms-****-8777",
+  "total_models": 8,
+  "ok_count": 7,
+  "fail_count": 1,
+  "results": [
+    {
+      "model": "deepseek-v4-pro",
+      "label": "DeepSeek-V4-Pro (最新版)",
+      "result": {
+        "status": "http_error",
+        "code": 400,
+        "reason": "Bad Request",
+        "body": "{\"error\":{\"message\":\"Invalid model id: deepseek-v4-pro\",\"request_id\":\"1d8857d3-1056-4770-a99c-24937ee392e4\"}}"
+      }
+    },
+    {
+      "model": "qwen/Qwen3.5-397B-A17B",
+      "label": "Qwen3.5-397B-A17B",
+      "result": {
+        "status": "ok",
+        "elapsed": 11.5,
+        "content_length": 16,
+        "usage": {
+          "prompt_tokens": 11,
+          "completion_tokens": 666,
+          "total_tokens": 677
+        },
+        "attempts": 1
+      }
+    },
+    {
+      "model": "qwen/Qwen3.5-122B-A10B",
+      "label": "Qwen3.5-122B-A10B",
+      "result": {
+        "status": "ok",
+        "elapsed": 3.96,
+        "content_length": 21,
+        "usage": {
+          "prompt_tokens": 11,
+          "completion_tokens": 548,
+          "total_tokens": 559
+        },
+        "attempts": 1
+      }
+    },
+    {
+      "model": "qwen/Qwen3.5-35B-A3B",
+      "label": "Qwen3.5-35B-A3B",
+      "result": {
+        "status": "ok",
+        "elapsed": 5.68,
+        "content_length": 60,
+        "usage": {
+          "prompt_tokens": 11,
+          "completion_tokens": 605,
+          "total_tokens": 616
+        },
+        "attempts": 1
+      }
+    },
+    {
+      "model": "qwen/Qwen3.5-27B",
+      "label": "Qwen3.5-27B",
+      "result": {
+        "status": "ok",
+        "elapsed": 11.05,
+        "content_length": 62,
+        "usage": {
+          "prompt_tokens": 11,
+          "completion_tokens": 955,
+          "total_tokens": 966
+        },
+        "attempts": 1
+      }
+    },
+    {
+      "model": "stepfun-ai/Step-3.7-Flash",
+      "label": "Step-3.7-Flash",
+      "result": {
+        "status": "ok",
+        "elapsed": 1.76,
+        "content_length": 0,
+        "usage": {
+          "prompt_tokens": 13,
+          "completion_tokens": 100,
+          "total_tokens": 113
+        },
+        "attempts": 1
+      }
+    },
+    {
+      "model": "minimax/MiniMax-M1-80k",
+      "label": "MiniMax-M1-80k",
+      "result": {
+        "status": "ok",
+        "elapsed": 1.59,
+        "content_length": 149,
+        "usage": {
+          "prompt_tokens": 375,
+          "completion_tokens": 68,
+          "total_tokens": 443
+        },
+        "attempts": 1
+      }
+    },
+    {
+      "model": "stepfun-ai/Step-3.5-Flash",
+      "label": "Step-3.5-Flash",
+      "result": {
+        "status": "ok",
+        "elapsed": 1.85,
+        "content_length": 30,
+        "usage": {
+          "prompt_tokens": 13,
+          "completion_tokens": 100,
+          "total_tokens": 113
+        },
+        "attempts": 1
+      }
+    }
+  ]
+}

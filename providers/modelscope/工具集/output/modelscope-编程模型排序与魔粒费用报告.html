@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ModelScope 可接 Agent 模型：编程能力排序与魔粒费用（自动生成 2026-09-21T07:10:54Z）</title>
+<style>
+  :root{--navy:#1b2a4a;--gray-900:#222831;--gray-700:#4a5568;--gray-500:#8a94a6;
+    --gray-200:#e4e8ef;--gray-100:#f2f4f8;--bg:#fafbfd;--accent:#c8a24a;--green:#2e7d5b;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);
+    color:var(--gray-900);line-height:1.65;font-size:15px;}
+  .wrap{max-width:1100px;margin:0 auto;padding:48px 32px 80px;}
+  header{border-bottom:3px solid var(--navy);padding-bottom:24px;margin-bottom:36px;}
+  .kicker{font-size:12px;letter-spacing:.18em;color:var(--gray-500);text-transform:uppercase;margin-bottom:10px;}
+  h1{font-size:28px;color:var(--navy);font-weight:700;line-height:1.3;}
+  .subtitle{color:var(--gray-700);margin-top:10px;font-size:15px;}
+  .meta-line{margin-top:14px;font-size:12.5px;color:var(--gray-500);}
+  h2{font-size:20px;color:var(--navy);margin:44px 0 16px;padding-left:12px;border-left:4px solid var(--accent);font-weight:600;}
+  h3{font-size:15px;color:var(--gray-900);margin:24px 0 10px;font-weight:600;}
+  table{width:100%;border-collapse:collapse;background:#fff;margin:14px 0;font-size:13.5px;}
+  th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;font-size:12.5px;}
+  td{padding:9px 12px;border-bottom:1px solid var(--gray-200);vertical-align:top;}
+  tr:nth-child(even) td{background:var(--gray-100);}
+  .rank{font-weight:700;color:var(--navy);font-size:14px;}
+  .muted{color:var(--gray-500);font-size:12px;}
+  .mod{font-size:12px;color:var(--gray-700);white-space:nowrap;}
+  .stab{font-size:12px;white-space:nowrap;}
+  .stab-exp{color:#b23b3b;font-weight:600;}
+  .stab-stable{color:var(--green);}
+  .score{font-weight:700;color:var(--navy);font-size:14px;white-space:nowrap;}
+  .fam{font-size:11px;color:#b23b3b;}
+  .cmpwarn{font-size:11px;color:#b23b3b;background:#fdeaea;padding:1px 6px;border-radius:6px;}
+  .cost-badge{display:inline-block;padding:2px 10px;border-radius:10px;font-size:12px;font-weight:600;white-space:nowrap;}
+  .cost-2{background:#e8edf7;color:var(--navy);}
+  .cost-1{background:#f0f4f1;color:var(--green);}
+  .cost-0{background:#f9efef;color:#b23b3b;}
+  .metrics{display:flex;gap:16px;flex-wrap:wrap;margin:20px 0;}
+  .metric{flex:1;min-width:150px;background:#fff;border:1px solid var(--gray-200);
+    border-top:3px solid var(--navy);padding:16px 18px;}
+  .metric .num{font-size:24px;font-weight:700;color:var(--navy);}
+  .metric .lbl{font-size:12.5px;color:var(--gray-500);margin-top:4px;}
+  .note{background:#fff;border:1px solid var(--gray-200);padding:16px 20px;margin:14px 0;
+    font-size:13.5px;color:var(--gray-700);}
+  .footnotes{border-top:1px solid var(--gray-200);margin-top:40px;padding-top:16px;
+    font-size:12px;color:var(--gray-500);}
+  @media(max-width:760px){.wrap{padding:24px 14px 60px;}h1{font-size:22px;}table{font-size:12px;}}
+</style>
+</head>
+<body><div class="wrap">
+<header>
+  <div class="kicker">ModelScope Model Survey · 自动生成</div>
+  <h1>可接 Agent 的对话/推理模型：编程能力排序与魔粒费用</h1>
+  <div class="subtitle">数据来自 ModelScope 公开接口（api-inference / list_model_providers / 模型详情），
+  由 fetch_data.py + build_report.py 自动更新。</div>
+  <div class="meta-line">📅 抓取时间：2026-09-21T07:10:54Z ｜ 🧮 模型数：24 ｜ 💳 有魔粒价：24 ｜ 📊 有编程基准：17</div>
+</header>
+
+<div class="metrics">
+  <div class="metric"><div class="num">24</div><div class="lbl">API 可调用模型（已剔除专用模型）</div></div>
+  <div class="metric"><div class="num">24</div><div class="lbl">魔搭社区自营提供方（魔粒计价）</div></div>
+  <div class="metric"><div class="num">17</div><div class="lbl">有公开编程基准分数</div></div>
+  <div class="metric"><div class="num">6</div><div class="lbl">2 魔粒/次（ultra 档）</div></div>
+</div>
+
+<h2>一、编程能力排序（从高到低）</h2>
+<table><tr><th style='width:5%'>#</th><th style='width:26%'>模型</th><th style='width:10%'>计费</th><th style='width:12%'>模态</th><th style='width:10%'>稳定性</th><th style='width:9%'>编程总分</th><th>编程基准（官方/权威）</th></tr><tr><td class="rank">1</td><td><b>deepseek-ai/DeepSeek-V4-Pro-0813</b><br><span class="muted">下载 7,794 · ultra</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td class="mod">文本</td><td class="stab stab-stable">稳定</td><td class="score">87.9</td><td>Terminal Bench 2.1 87.9 <span class="cmpwarn">⚠ 对比表取值待核验（terminal_bench）</span></td></tr><tr><td class="rank">2</td><td><b>deepseek-ai/DeepSeek-V4-Flash-Vision-Exp</b><br><span class="muted">下载 26,385 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-exp">实验/预览</td><td class="score">83.9</td><td>Terminal Bench 2.1 83.9</td></tr><tr><td class="rank">3</td><td><b>deepseek-ai/DeepSeek-V4-Flash-0731</b><br><span class="muted">下载 115,293 · ultra</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td class="mod">文本</td><td class="stab stab-stable">稳定</td><td class="score">82.7</td><td>Terminal Bench 2.1 82.7</td></tr><tr><td class="rank">4</td><td><b>Qwen/Qwen3.8-Flash-Next</b><br><span class="muted">下载 61,988 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-exp">实验/预览</td><td class="score">77.2</td><td>SWE-Bench Pro 62.5；LiveCodeBench 91.9 <span class="cmpwarn">⚠ 对比表取值待核验（livecodebench）</span></td></tr><tr><td class="rank">5</td><td><b>Qwen/Qwen3.8-27B</b><br><span class="muted">下载 444,494 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-stable">稳定</td><td class="score">75.0</td><td>Terminal Bench 2.1 73；SWE-Bench Pro 61.7；LiveCodeBench 90.3</td></tr><tr><td class="rank">6</td><td><b>Qwen/Qwen3.5-397B-A17B</b><br><span class="muted">下载 215,839 · ultra</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-stable">稳定</td><td class="score">73.9</td><td>SWE-bench Verified 80；Terminal Bench 2.1 54；LiveCodeBench 87.7</td></tr><tr><td class="rank">7</td><td><b>deepseek-ai/DeepSeek-V4-Pro</b><br><span class="muted">下载 241,968 · ultra</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td class="mod">文本</td><td class="stab stab-stable">稳定</td><td class="score">65.4</td><td>Terminal Bench 2.1 65.4</td></tr><tr><td class="rank">8</td><td><b>ZhipuAI/GLM-5.2</b><br><span class="muted">下载 192,837 · ultra</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td class="mod">文本</td><td class="stab stab-stable">稳定</td><td class="score">62.1</td><td>SWE-Bench Pro 62.1</td></tr><tr><td class="rank">9</td><td><b>Qwen/Qwen3.5-35B-A3B</b><br><span class="muted">下载 3,248,576 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-stable">稳定</td><td class="score">61.5</td><td>SWE-bench Verified 72；Terminal Bench 2.1 31.9；LiveCodeBench 80.5 <span class="fam">⚠ 同族共享基准（Qwen/Qwen3.5-27B, Qwen/Qwen3.5-122B-A10B）</span></td></tr><tr><td class="rank">10</td><td><b>Qwen/Qwen3.5-27B</b><br><span class="muted">下载 1,900,846 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-stable">稳定</td><td class="score">61.5</td><td>SWE-bench Verified 72；Terminal Bench 2.1 31.9；LiveCodeBench 80.5 <span class="fam">⚠ 同族共享基准（Qwen/Qwen3.5-35B-A3B, Qwen/Qwen3.5-122B-A10B）</span></td></tr><tr><td class="rank">11</td><td><b>Qwen/Qwen3.5-122B-A10B</b><br><span class="muted">下载 322,882 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-stable">稳定</td><td class="score">61.5</td><td>SWE-bench Verified 72；Terminal Bench 2.1 31.9；LiveCodeBench 80.5 <span class="fam">⚠ 同族共享基准（Qwen/Qwen3.5-35B-A3B, Qwen/Qwen3.5-27B）</span></td></tr><tr><td class="rank">12</td><td><b>ZhipuAI/GLM-4.7-Flash</b><br><span class="muted">下载 698,863 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">文本</td><td class="stab stab-stable">稳定</td><td class="score">59.2</td><td>SWE-bench Verified 59.2；AIME 25</td></tr><tr><td class="rank">13</td><td><b>nex-agi/Nex-N2.5-mini</b><br><span class="muted">下载 114 · lite</span></td><td><span class="cost-badge cost-1">0.5 魔粒/次</span></td><td class="mod">文本</td><td class="stab stab-stable">稳定</td><td class="score">58.6</td><td>Terminal Bench 2.1 73.4；SWE-Bench Pro 43.8 <span class="fam">⚠ 同族共享基准（nex-agi/Nex-N2.5-Pro）</span></td></tr><tr><td class="rank">14</td><td><b>nex-agi/Nex-N2.5-Pro</b><br><span class="muted">下载 56 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">文本</td><td class="stab stab-stable">稳定</td><td class="score">58.6</td><td>Terminal Bench 2.1 73.4；SWE-Bench Pro 43.8 <span class="fam">⚠ 同族共享基准（nex-agi/Nex-N2.5-mini）</span></td></tr><tr><td class="rank">15</td><td><b>stepfun-ai/Step-3.7-Flash</b><br><span class="muted">下载 14,140 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-stable">稳定</td><td class="score">57.9</td><td>Terminal Bench 2.1 59.5；SWE-Bench Pro 56.3</td></tr><tr><td class="rank">16</td><td><b>stepfun-ai/Step-3.5-Flash</b><br><span class="muted">下载 5,031,466 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">—</td><td class="stab stab-stable">稳定</td><td class="score">51.0</td><td>SWE-bench Verified 51；Terminal Bench 2.1 51</td></tr><tr><td class="rank">17</td><td><b>MiniMax/MiniMax-M1-80k</b><br><span class="muted">下载 725,212 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">文本</td><td class="stab stab-stable">稳定</td><td class="score">40.0</td><td>SWE-bench Verified 56；LiveCodeBench 24</td></tr></table>
+<h3>无公开基准（按下载量排序）</h3><table><tr><th style='width:5%'>#</th><th style='width:26%'>模型</th><th style='width:10%'>计费</th><th style='width:12%'>模态</th><th style='width:10%'>稳定性</th><th style='width:9%'>编程总分</th><th>备注</th></tr><tr><td class="rank">18</td><td><b>mistralai/Mistral-Large-Instruct-2407</b><br><span class="muted">下载 76,609 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">文本</td><td class="stab stab-stable">稳定</td><td class="score">—</td><td>无公开编程基准</td></tr><tr><td class="rank">19</td><td><b>ZhipuAI/GLM-5.3-Flash</b><br><span class="muted">下载 68,666 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-stable">稳定</td><td class="score">—</td><td>无公开编程基准</td></tr><tr><td class="rank">20</td><td><b>deepseek-ai/DeepSeek-V4.1-Flash</b><br><span class="muted">下载 17,706 · ultra</span></td><td><span class="cost-badge cost-2">2 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-stable">稳定</td><td class="score">—</td><td>无公开编程基准</td></tr><tr><td class="rank">21</td><td><b>Shanghai_AI_Laboratory/Intern-S1-mini</b><br><span class="muted">下载 7,411 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-stable">稳定</td><td class="score">—</td><td>无公开编程基准</td></tr><tr><td class="rank">22</td><td><b>Shanghai_AI_Laboratory/Intern-S1</b><br><span class="muted">下载 4,104 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-stable">稳定</td><td class="score">—</td><td>无公开编程基准</td></tr><tr><td class="rank">23</td><td><b>Shanghai_AI_Laboratory/Intern-S2-Preview</b><br><span class="muted">下载 460 · standard</span></td><td><span class="cost-badge cost-1">1 魔粒/次</span></td><td class="mod">多模态(图文)</td><td class="stab stab-exp">实验/预览</td><td class="score">—</td><td>无公开编程基准</td></tr><tr><td class="rank">24</td><td><b>early-access/EA-29B-A4B</b><br><span class="muted">下载 - · lite</span></td><td><span class="cost-badge cost-1">0.5 魔粒/次</span></td><td class="mod">—</td><td class="stab stab-exp">实验/预览</td><td class="score">—</td><td>无公开编程基准</td></tr></table>
+
+<h2>二、费用与数据说明</h2>
+<div class="note">
+<b>魔粒 = 魔搭社区的「魔力」</b>。魔搭社区自营提供方按<b>每次调用</b>扣费：
+ultra 档 2 魔粒/次、standard 档 1 魔粒/次；第三方提供方（百炼/智谱/Moonshot 等）走各自 API Key 计费。
+每日累计 2000 次免费调用（UTC+8 0:00 重置，超额返回 429），魔粒可通过每日登录（+150）与任务（最高 +450/日）获取。
+接入方式：base_url = <code>https://api-inference.modelscope.cn/v1</code>，OpenAI SDK 兼容（亦支持 Anthropic beta 协议）。
+</div>
+
+<div class="footnotes">
+  生成工具：tools/modelscope-updater/fetch_data.py + build_report.py ｜
+  <b>排序规则</b>：按「编程总分」降序（编程总分 = 各编码类 harness 分数 SWE-bench Verified / Pro、Terminal Bench、LiveCodeBench、HumanEval 的 0-100 均值，AIME 数学不计入）；无编码基准模型按下载量排后。
+  <b>同族共享基准</b>：当多个模型基准 dict 完全相同（README 家族级共享表被抓取为同一行），表中以 ⚠ 标注并列出同族成员，应按「同族按尺寸/价格选」而非当作各自独立分数。
+  <b>对比表取值待核验</b>：标 ⚠ 的模型，其部分基准在 README 中仅见于「多模型对比表」、且无法定位到该模型自身章节（可能是竞品分数），仅供粗览，精确排序请以官方模型卡为准。
+  基准分数从模型卡 README 提取，跨厂商 harness 差异请以官方报告为准。
+</div>
+</div></body></html>

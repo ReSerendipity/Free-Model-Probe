@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>模型连通性测试台</title>
+<style>
+  :root{
+    --bg:#f4f6f9; --panel:#fff; --border:#e1e5ec; --text:#1f2733; --muted:#6b7686;
+    --accent:#2563eb; --accent-d:#1d4ed8; --ok:#15803d; --warn:#b45309; --bad:#b91c1c;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}
+  #app{display:flex;flex-direction:column;min-height:100vh}
+  header{padding:12px 18px;background:var(--panel);border-bottom:1px solid var(--border);
+    display:flex;align-items:center;gap:14px;flex:none;flex-wrap:wrap}
+  header .title{font-weight:700;font-size:17px}
+  header .title small{font-weight:400;color:var(--muted);font-size:12px;margin-left:6px}
+  .prov{display:flex;gap:6px;align-items:center}
+  .prov span{color:var(--muted);font-size:12px}
+  .prov button{border:1px solid var(--border);background:#fff;color:var(--accent-d);
+    padding:5px 11px;border-radius:7px;cursor:pointer;font-size:12px}
+  header .spacer{flex:1}
+  .main{flex:1;display:flex;gap:14px;padding:14px;align-items:flex-start;flex-wrap:wrap}
+  .col-left{flex:1 1 420px;min-width:360px;display:flex;flex-direction:column;gap:14px}
+  .col-right{flex:1 1 480px;min-width:360px;display:flex;flex-direction:column;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px}
+  .card h3{margin:0 0 10px;font-size:14px;display:flex;align-items:center;gap:8px}
+  .card h3 .tag{font-size:11px;font-weight:500;color:var(--muted);background:var(--bg);
+    padding:2px 8px;border-radius:10px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .field{display:flex;flex-direction:column;gap:3px}
+  .field.full{grid-column:1 / -1}
+  .field label{font-size:12px;color:var(--muted)}
+  input,select,textarea{font-family:inherit;font-size:13px;padding:7px 9px;border:1px solid var(--border);
+    border-radius:7px;background:#fff;color:var(--text);width:100%}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+  textarea{resize:vertical;min-height:60px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px}
+  .row-btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+  button.btn{border:1px solid var(--border);background:#fff;color:var(--text);padding:7px 14px;
+    border-radius:8px;cursor:pointer;font-size:13px}
+  button.btn:hover{border-color:var(--accent);color:var(--accent)}
+  button.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  button.btn.danger:hover{border-color:var(--bad);color:var(--bad)}
+  button.btn:disabled{opacity:.45;cursor:not-allowed}
+  .radio-row{display:flex;gap:14px;font-size:13px;color:var(--text);margin-bottom:6px}
+  .radio-row label{display:flex;align-items:center;gap:5px;cursor:pointer}
+  /* summary */
+  #summary{background:#0f172a;color:#e2e8f0;border-radius:10px;padding:12px 14px;font-size:13px;
+    font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;min-height:44px}
+  #summary:empty::before{content:"（汇总将显示在这里）";color:#64748b}
+  /* table */
+  .tbl-wrap{max-height:300px;overflow:auto;border:1px solid var(--border);border-radius:10px}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--border);white-space:nowrap}
+  th{position:sticky;top:0;background:#f8fafc;color:var(--muted);font-weight:600;z-index:1}
+  td.model{font-family:ui-monospace,Menlo,Consolas,monospace;max-width:320px;overflow:hidden;text-overflow:ellipsis}
+  td.preview{max-width:360px;overflow:hidden;text-overflow:ellipsis;color:var(--muted)}
+  .badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:600}
+  .b-ok{background:#dcfce7;color:var(--ok)}
+  .b-err{background:#fee2e2;color:var(--bad)}
+  .b-warn{background:#fef3c7;color:var(--warn)}
+  .b-new{background:#dbeafe;color:var(--accent-d);margin-left:5px}
+  /* console */
+  #console{background:#0f172a;color:#cbd5e1;border-radius:10px;padding:10px 12px;height:180px;overflow:auto;
+    font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;white-space:pre-wrap;word-break:break-word}
+  .snap-list{font-size:12px;color:var(--muted);margin-top:8px}
+  .snap-list div{padding:2px 0}
+  .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;
+    padding:8px 16px;border-radius:8px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .25s;z-index:50}
+  .toast.show{opacity:.95}
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="title">模型连通性测试台 <small>单轮 · 多轮负载 · 扫描新增</small></div>
+    <div class="prov">
+      <span>地址预设：</span>
+      <button data-base="https://openrouter.ai/api/v1">OpenRouter</button>
+      <button data-base="https://api-inference.modelscope.cn/v1">ModelScope</button>
+    </div>
+    <div class="spacer"></div>
+    <button class="btn danger" id="btnStop" disabled>■ 停止</button>
+  </header>
+
+  <div class="main">
+    <!-- 左列：配置 + 三种测试 -->
+    <div class="col-left">
+      <div class="card">
+        <h3>连接配置</h3>
+        <div class="grid">
+          <div class="field full">
+            <label>Base URL（接口地址，如 https://openrouter.ai/api/v1）</label>
+            <input id="cfgBase" placeholder="https://openrouter.ai/api/v1">
+          </div>
+          <div class="field full">
+            <label>API Key（钥匙，仅本地使用，不落盘）</label>
+            <input id="cfgKey" type="password" placeholder="sk-... / ms-...">
+          </div>
+          <div class="field">
+            <label>默认过滤</label>
+            <select id="cfgFilter">
+              <option value="all">全部模型</option>
+              <option value="free">仅免费</option>
+              <option value="free_text" selected>免费 + 文本输出</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>最小请求间隔(s，免费层限速用)</label>
+            <input id="cfgMinInterval" type="number" value="0" step="0.1" min="0">
+          </div>
+          <div class="field full">
+            <label>测试问题</label>
+            <input id="cfgQuestion" value="你好，请用一句话简短介绍你自己。">
+          </div>
+          <div class="field"><label>Max Tokens</label><input id="cfgMaxTokens" type="number" value="200"></div>
+          <div class="field"><label>超时(s)</label><input id="cfgTimeout" type="number" value="60"></div>
+          <div class="field"><label>并发/Workers</label><input id="cfgWorkers" type="number" value="3" min="1"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>① 单轮连通性 <span class="tag">逐个模型测一次</span></h3>
+        <div class="radio-row">
+          <label><input type="radio" name="smode" value="auto" checked> 自动拉取 /models 并按过滤筛选</label>
+          <label><input type="radio" name="smode" value="manual"> 手动指定模型</label>
+        </div>
+        <textarea id="singleModels" placeholder="手动模式：每行或逗号分隔一个模型 ID，例如&#10;openai/gpt-4o-mini&#10;anthropic/claude-3.5-haiku"></textarea>
+        <div class="row-btns"><button class="btn primary" id="btnSingle">▶ 运行单轮测试</button></div>
+      </div>
+
+      <div class="card">
+        <h3>② 多轮负载连通性 <span class="tag">并发会话 × 多轮对话</span></h3>
+        <div class="grid">
+          <div class="field full"><label>模型 ID</label><input id="loadModel" placeholder="例如 deepseek-ai/DeepSeek-V4-Flash-0731"></div>
+          <div class="field"><label>每会话轮数</label><input id="loadTurns" type="number" value="5" min="1"></div>
+          <div class="field"><label>并发会话数</label><input id="loadConcurrency" type="number" value="3" min="1"></div>
+        </div>
+        <div class="row-btns"><button class="btn primary" id="btnLoad">▶ 运行负载测试</button></div>
+      </div>
+
+      <div class="card">
+        <h3>③ 扫描新增模型 <span class="tag">diff 上次快照并自动测连通性</span></h3>
+        <div class="grid">
+          <div class="field"><label>过滤口径</label>
+            <select id="scanFilter">
+              <option value="all">全部</option>
+              <option value="free">仅免费</option>
+              <option value="free_text" selected>免费+文本</option>
+            </select>
+          </div>
+          <div class="field"><label>&nbsp;</label><button class="btn" id="btnSnap">刷新快照列表</button></div>
+        </div>
+        <div class="row-btns"><button class="btn primary" id="btnScan">▶ 扫描新增</button></div>
+        <div class="snap-list" id="snapList">（暂无快照，首次扫描将建立基线）</div>
+      </div>
+    </div>
+
+    <!-- 右列：结果 -->
+    <div class="col-right">
+      <div class="card">
+        <h3>汇总</h3>
+        <div id="summary"></div>
+      </div>
+      <div class="card">
+        <h3>结果明细</h3>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>模型</th><th>状态</th><th>延迟(s)</th><th>finish</th><th>预览</th></tr></thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="card">
+        <h3>运行日志</h3>
+        <div id="console"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const $ = (id)=>document.getElementById(id);
+let runId=null, running=false;
+function toast(m){const t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2200);}
+function cfg(){
+  return {
+    base_url:$("cfgBase").value.trim(),
+    api_key:$("cfgKey").value.trim(),
+    filter:$("cfgFilter").value,
+    question:$("cfgQuestion").value||"你好，请用一句话简短介绍你自己。",
+    max_tokens:+$("cfgMaxTokens").value||200,
+    timeout:+$("cfgTimeout").value||60,
+    workers:Math.max(1,+$("cfgWorkers").value||3),
+    min_interval:parseFloat($("cfgMinInterval").value)||0,
+  };
+}
+function clearResults(){
+  $("summary").textContent="";$("tbody").innerHTML="";$("console").textContent="";
+}
+function logLine(msg,cls){
+  const c=$("console");const s=document.createElement("div");
+  s.style.color = cls==="err"?"#fca5a5":cls==="ok"?"#86efac":cls==="warn"?"#fcd34d":"#cbd5e1";
+  s.textContent=msg;c.append(s);c.scrollTop=c.scrollHeight;
+}
+function addRow(d){
+  const tr=document.createElement("tr");
+  const st=d.status;
+  const cls = st==="ok"?"b-ok":(st==="empty"||st==="timeout")?"b-warn":"b-err";
+  const label = st==="ok"?"可用":st==="http_error"?("HTTP"+d.code):st==="empty"?"空响应":st==="timeout"?"超时":"错误";
+  tr.innerHTML=`<td class="model">${esc(d.model)}${d.is_new?'<span class="badge b-new">新增</span>':''}</td>`+
+    `<td><span class="badge ${cls}">${label}</span></td>`+
+    `<td>${d.elapsed??""}</td><td>${d.finish_reason??""}</td>`+
+    `<td class="preview">${esc(d.preview||"")}</td>`;
+  $("tbody").append(tr);
+}
+function esc(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+function setSummary(lines){
+  $("summary").textContent = lines.join("\n");
+}
+
+// 运行（SSE via fetch stream）
+async function run(endpoint, extra){
+  if(running){toast("有任务正在运行，先停止");return;}
+  const body=Object.assign(cfg(), extra);
+  if(!body.base_url){toast("请先填写 Base URL");return;}
+  running=true;runId=null;
+  $("btnSingle").disabled=$("btnLoad").disabled=$("btnScan").disabled=true;
+  $("btnStop").disabled=false;
+  clearResults();
+  logLine("▶ 请求: "+endpoint+" @ "+body.base_url,"");
+  let resp;
+  try{
+    resp=await fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+  }catch(e){logLine("请求失败: "+e.message,"err");finish();return;}
+  if(!resp.ok){logLine("HTTP "+resp.status+": "+await resp.text(),"err");finish();return;}
+  const reader=resp.body.getReader(),dec=new TextDecoder();let buf="";
+  try{
+    while(true){
+      const {done,value}=await reader.read();
+      if(done)break;
+      buf+=dec.decode(value,{stream:true});
+      let i;
+      while((i=buf.indexOf("\n\n"))>=0){
+        const frame=buf.slice(0,i);buf=buf.slice(i+2);
+        const line=frame.split("\n").find(l=>l.startsWith("data: "));
+        if(!line)continue;
+        let evt;try{evt=JSON.parse(line.slice(6));}catch(e){continue;}
+        handle(evt);
+      }
+    }
+  }catch(e){logLine("流中断: "+e.message,"err");}
+  finish();
+}
+function handle(evt){
+  const t=evt.type,d=evt.data||{};
+  switch(t){
+    case "start":runId=d.run_id;logLine("[run_id="+d.run_id+"]","");break;
+    case "info":logLine("· "+d.msg,"");break;
+    case "row":addRow(d);break;
+    case "scan_diff":
+      if(d.first) logLine("首次扫描：建立基线，候选 "+d.added.length+" 个","ok");
+      else logLine("扫描结果：新增 "+d.added.length+" / 下线 "+d.removed.length+" / 未变 "+d.unchanged,"ok");
+      if(d.added.length) logLine("新增列表: "+d.added.join(", "),"warn");
+      if(d.removed.length) logLine("下线列表: "+d.removed.join(", "),"warn");
+      break;
+    case "summary":setSummary(d.lines||[]);logLine("—— "+d.title+" ——","ok");(d.lines||[]).forEach(l=>logLine("  "+l,"ok"));break;
+    case "exit":logLine("■ 结束 (code "+(d.code??"?")+")","");break;
+  }
+}
+function finish(){
+  running=false;runId=null;
+  $("btnSingle").disabled=$("btnLoad").disabled=$("btnScan").disabled=false;
+  $("btnStop").disabled=true;
+}
+async function stopRun(){
+  if(!runId){toast("当前无运行任务");return;}
+  try{
+    const r=await fetch("/api/stop",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({run_id:runId})});
+    const j=await r.json();logLine("■ 已发送停止信号","warn");
+  }catch(e){toast("停止失败: "+e.message);}
+}
+
+// 快照列表
+async function loadSnaps(){
+  try{
+    const r=await fetch("/api/snapshots");const j=await r.json();
+    const box=$("snapList");
+    if(!j.snapshots.length){box.textContent="（暂无快照，首次扫描将建立基线）";return;}
+    box.innerHTML=j.snapshots.map(s=>`<div>🔖 ${esc(s.base_url)} · 过滤=${s.filter} · ${s.count} 个 · ${s.fetched_at}</div>`).join("");
+  }catch(e){$("snapList").textContent="快照列表加载失败";}
+}
+
+// 绑定
+document.querySelectorAll(".prov button").forEach(b=>b.onclick=()=>{$("cfgBase").value=b.dataset.base;toast("已填入 "+b.textContent+" 地址（钥匙请自行粘贴）");});
+$("btnSingle").onclick=()=>{
+  const mode=document.querySelector('input[name=smode]:checked').value;
+  const extra={models_mode:mode};
+  if(mode==="manual") extra.models_text=$("singleModels").value;
+  run("/api/single",extra);
+};
+$("btnLoad").onclick=()=>run("/api/load",{model:$("loadModel").value.trim(),turns:Math.max(1,+$("loadTurns").value||5),concurrency:Math.max(1,+$("loadConcurrency").value||3)});
+$("btnScan").onclick=()=>run("/api/scan",{filter:$("scanFilter").value});
+$("btnStop").onclick=stopRun;
+$("btnSnap").onclick=loadSnaps;
+loadSnaps();
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenRouter 免费文本模型清单更新与连通性实测 · 2026-09-18</title>
+<style>
+  :root{
+    --bg:#fafafa; --ink:#141416; --ink-2:#55555e; --ink-3:#8a8a92;
+    --line:#e3e3e7; --line-strong:#c9c9cf;
+    --accent:#0e6f66;
+    --ok:#167a4d; --warn:#9a6700; --bad:#b3372f;
+    --mono:"Cascadia Mono","Consolas","Courier New",monospace;
+    --sans:"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{background:var(--bg)}
+  body{font-family:var(--sans);color:var(--ink);font-size:15px;line-height:1.6;
+       -webkit-font-smoothing:antialiased}
+  .canvas{max-width:1180px;margin:0 auto;padding:56px 40px 64px}
+
+  /* ---------- header ---------- */
+  .kicker{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1{font-size:40px;line-height:1.15;letter-spacing:-0.02em;font-weight:600;margin:14px 0 10px}
+  .lede{font-size:16px;color:var(--ink-2);max-width:62ch}
+  .meta-row{display:flex;flex-wrap:wrap;gap:0;margin-top:30px;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line)}
+  .meta-cell{padding:12px 28px 12px 0;margin-right:28px;border-right:1px solid var(--line)}
+  .meta-cell:last-child{border-right:none}
+  .meta-k{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+  .meta-v{font-size:14px;margin-top:2px}
+  .meta-v code{font-family:var(--mono);font-size:12.5px}
+
+  /* ---------- metrics ---------- */
+  .metrics{display:flex;flex-wrap:wrap;margin:40px 0 8px;border-top:2px solid var(--ink)}
+  .metric{flex:1 1 180px;padding:18px 24px 18px 0;margin-right:24px;border-bottom:1px solid var(--line)}
+  .metric:last-child{margin-right:0}
+  .metric .num{font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.1}
+  .metric .num small{font-size:15px;font-weight:400;color:var(--ink-3);letter-spacing:0}
+  .metric .lbl{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-top:6px}
+  .metric .sub{font-size:12.5px;color:var(--ink-3);margin-top:3px}
+
+  /* ---------- sections ---------- */
+  section{margin-top:56px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line-strong);padding-bottom:10px;margin-bottom:22px}
+  .sec-no{font-family:var(--mono);font-size:13px;color:var(--accent)}
+  .sec-title{font-size:21px;font-weight:600;letter-spacing:-0.01em}
+  .sec-note{margin-left:auto;font-size:12.5px;color:var(--ink-3)}
+
+  p.body{max-width:76ch;color:var(--ink);margin-bottom:12px}
+  p.body b{font-weight:600}
+
+  /* ---------- table ---------- */
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  thead th{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);font-weight:600;
+           text-align:left;padding:9px 12px;border-bottom:2px solid var(--ink);white-space:nowrap}
+  tbody td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  tbody tr:hover{background:#f2f2f4}
+  td.mid{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+  .st{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600;font-size:12.5px}
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+  .dot.ok{background:var(--ok)} .dot.warn{background:var(--warn)} .dot.bad{background:var(--bad)}
+  .st.ok{color:var(--ok)} .st.warn{color:var(--warn)} .st.bad{color:var(--bad)}
+  td .note{color:var(--ink-2);font-size:12.5px}
+
+  /* ---------- failure blocks ---------- */
+  .fail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-strong)}
+  .fail-block{padding:20px 26px 20px 0;margin-right:26px;border-bottom:1px solid var(--line)}
+  .fail-block:last-child{margin-right:0;border-right:none}
+  .fail-k{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+  .fail-k.warn{color:var(--warn)} .fail-k.bad{color:var(--bad)}
+  .fail-title{font-size:15.5px;font-weight:600;margin-bottom:6px}
+  .fail-block p{font-size:13.5px;color:var(--ink-2);max-width:40ch}
+  .fail-models{margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--ink-2);line-height:1.8;word-break:break-all}
+  .fail-fix{margin-top:10px;font-size:12.5px;color:var(--ink)}
+  .fail-fix b{font-weight:600;color:var(--accent)}
+
+  /* ---------- findings ---------- */
+  ol.findings{list-style:none;counter-reset:f;max-width:88ch}
+  ol.findings li{counter-increment:f;position:relative;padding:14px 0 14px 46px;border-bottom:1px solid var(--line)}
+  ol.findings li::before{content:counter(f,decimal-leading-zero);position:absolute;left:0;top:14px;
+       font-family:var(--mono);font-size:13px;color:var(--accent)}
+  ol.findings .f-t{font-weight:600;margin-bottom:3px}
+  ol.findings .f-d{font-size:13.5px;color:var(--ink-2)}
+  ol.findings code{font-family:var(--mono);font-size:12px;background:#f0f0f2;padding:1px 5px}
+
+  /* ---------- limits ---------- */
+  .limits-wrap{display:flex;gap:48px;align-items:flex-start;flex-wrap:wrap}
+  .limits-wrap table{flex:1 1 380px}
+  .kv{flex:1 1 320px;font-size:13.5px}
+  .kv .row{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .kv .k{flex:0 0 128px;color:var(--ink-3);font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding-top:2px}
+  .kv .v{flex:1}
+
+  /* ---------- method / footer ---------- */
+  .method{font-size:13.5px;color:var(--ink-2);max-width:80ch}
+  .method code{font-family:var(--mono);font-size:12px;background:#f0f0f2;padding:1px 5px}
+  .colophon{margin-top:64px;border-top:2px solid var(--ink);padding-top:14px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .colophon div{font-size:12px;color:var(--ink-3)}
+  .colophon code{font-family:var(--mono);font-size:11px}
+  
+  /* ---------- additions for 2026-09-18 report ---------- */
+  td.note{color:var(--ink-2);font-size:12.5px}
+  tbody tr.dim{background:#f7f7f8}
+  tbody tr.dim td{color:var(--ink-3)}
+  tbody tr.dim td.mid{color:var(--ink-2)}
+  tbody tr.dim:hover{background:#f2f2f4}
+  ul.findings{list-style:none;max-width:88ch}
+  ul.findings li{position:relative;padding:13px 0 13px 22px;border-bottom:1px solid var(--line)}
+  ul.findings li::before{content:"";position:absolute;left:0;top:22px;width:8px;height:8px;background:var(--accent)}
+  ul.findings code{font-family:var(--mono);font-size:12px;background:#f0f0f2;padding:1px 5px}
+  @media print{ body{background:#fff} .canvas{padding:20px 8px} tbody tr:hover{background:none} }
+</style></head><body><div class="canvas">
+<div class="kicker">OpenRouter · Inventory Update &amp; Connectivity Test · 2026-09-18</div>
+<h1>免费文本模型清单更新与连通性实测</h1>
+<p class="lede">对比 2026-09-07 存档，重新拉取 OpenRouter 模型广场
+（free 变体 + 文本输出口径）并逐个实测 <code style="font-family:var(--mono);font-size:13px">chat/completions</code>。
+清单 21 → 25 个：新增 6、下线 2。</p>
+<div class="meta-row">
+  <div class="meta-cell"><div class="meta-k">测试时间</div><div class="meta-v">2026-09-18 19:55:57 GMT+8</div></div>
+  <div class="meta-cell"><div class="meta-k">端点</div><div class="meta-v"><code>api/v1/chat/completions</code></div></div>
+  <div class="meta-cell"><div class="meta-k">密钥</div><div class="meta-v"><code>sk-or-…fcf5</code> · free tier</div></div>
+  <div class="meta-cell"><div class="meta-k">判定口径</div><div class="meta-v">HTTP 200 且返回真实文本</div></div>
+</div>
+<div class="metrics">
+<div class="metric"><div class="num">25</div><div class="lbl">免费文本模型</div><div class="sub">原 21 · 净 +4</div></div>
+<div class="metric"><div class="num" style="color:var(--ok)">18</div><div class="lbl">实测可用</div><div class="sub">全部 cost = 0</div></div>
+<div class="metric"><div class="num" style="color:var(--warn)">3</div><div class="lbl">上游限流 429</div><div class="sub">间歇可用 · 本轮未恢复</div></div>
+<div class="metric"><div class="num" style="color:var(--bad)">4</div><div class="lbl">硬性不可用 403</div><div class="sub">地区 2 · 调用门槛 2</div></div>
+<div class="metric"><div class="num">2.2<small>–42.2s</small></div><div class="lbl">延迟区间</div><div class="sub">中位 9.8s</div></div>
+</div>
+<section><div class="sec-head"><span class="sec-no">01</span><span class="sec-title">结论</span></div>
+<p class="body"><b>18/25 可用，新增模型全部完成实测。</b>
+6 个新增免费模型中 5 个实测可用（deepseek/deepseek-v4-flash-0731:free、inclusionai/ling-3.0-flash-vl:free、nex-agi/nex-n2.5-mini:free、nex-agi/nex-n2.5-pro:free、z-ai/glm-5.2:free），
+1 个撞上游限流（qwen/qwen3.8-27b:free）。
+上一轮 3 个 429 里 <code>poolside/laguna-xs-2.1:free</code> 本轮恢复正常（20.29s，但为 reasoning 模型、400 tokens 触顶）；
+2 个 Google Gemma 与 MiniMax 的处境见下节。</p>
+<p class="body"><b>MiniMax 退出免费层。</b><code>minimax/minimax-m2.7:free</code> 与 <code>minimax/minimax-m3:free</code> 的免费变体已从清单中整体删除，
+基础模型仍在售（prompt $0.30/M、completion $1.20/M），本轮免费清单里已无 MiniMax。</p>
+<p class="body"><b>网站口径与 API 完全一致。</b>网页价格滑杆（FREE）背后是
+<code>api/frontend/v1/models/find?max_price=0</code>，返回 99 个零价格模型（含图像/视频/语音/rerank/embedding）；
+叠加「文本输出」后恰为 24 个，与 <code>GET /api/v1/models?max_price=0</code> 逐个 ID 相等。
+第 25 行 <code>openrouter/free</code> 是自动路由器，定价字段非零，故不出现在网站免费筛选中。</p></section>
+<section><div class="sec-head"><span class="sec-no">02</span><span class="sec-title">清单变更 · 新增 6 / 下线 2</span>
+<span class="sec-note">created 为模型自身上架日，不代表免费变体开放日</span></div>
+<table><thead><tr><th style="width:26px">#</th><th>模型 ID</th><th class="num">上下文</th><th>输入模态</th><th class="num">上架</th><th>状态</th><th>说明</th></tr></thead><tbody>
+<tr><td class="num">1</td><td class="mid">deepseek/deepseek-v4-flash-0731:free</td><td class="num">1M</td><td>tex</td><td class="num">2026-07-31</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">MoE 284B/激活13B，编程与 agent 向；OpenInference 供路，4.91s</td></tr>
+<tr><td class="num">2</td><td class="mid">inclusionai/ling-3.0-flash-vl:free</td><td class="num">262K</td><td>tex,ima,vid</td><td class="num">2026-09-10</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">Ling 3.0 Flash 的多模态版，支持图像+视频输入</td></tr>
+<tr><td class="num">3</td><td class="mid">nex-agi/nex-n2.5-mini:free</td><td class="num">262K</td><td>tex,ima</td><td class="num">2026-09-08</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">agentic coding 向，视觉反馈回路；自述身份一致</td></tr>
+<tr><td class="num">4</td><td class="mid">nex-agi/nex-n2.5-pro:free</td><td class="num">262K</td><td>tex,ima</td><td class="num">2026-09-08</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">同族大杯，与 mini 共用额度池</td></tr>
+<tr><td class="num">5</td><td class="mid">qwen/qwen3.8-27b:free</td><td class="num">262K</td><td>tex,ima,vid</td><td class="num">2026-08-14</td><td><span class="st warn"><span class="dot warn"></span>限流 429</span></td><td class="note">稠密视觉语言模型；本轮 ModelRun 上游 429 未恢复</td></tr>
+<tr><td class="num">6</td><td class="mid">z-ai/glm-5.2:free</td><td class="num">33K</td><td>tex</td><td class="num">2026-06-16</td><td><span class="st warn"><span class="dot warn"></span>可用（重试后）</span></td><td class="note">首次 429（Decart overloaded），重试 9.78s 成功；reasoning 模型</td></tr>
+<tr class="dim"><td class="num">-1</td><td class="mid">minimax/minimax-m2.7:free</td><td class="num">197K</td><td>-</td><td class="num">-</td><td><span class="st bad"><span class="dot bad"></span>已下线</span></td><td class="note">免费变体从清单删除，仅保留付费版本</td></tr>
+<tr class="dim"><td class="num">-2</td><td class="mid">minimax/minimax-m3:free</td><td class="num">1M</td><td>-</td><td class="num">-</td><td><span class="st bad"><span class="dot bad"></span>已下线</span></td><td class="note">免费变体从清单删除，仅保留付费版本</td></tr>
+</tbody></table></section>
+<section><div class="sec-head"><span class="sec-no">03</span><span class="sec-title">全量实测 · 25 个模型</span>
+<span class="sec-note">按模型 ID 字母序 · 延迟为最终成功那次</span></div>
+<table><thead><tr><th style="width:26px">#</th><th>模型 ID</th><th class="num">上下文</th><th>提供方</th>
+<th class="num">延迟</th><th>状态</th><th>备注</th></tr></thead><tbody>
+<tr><td class="num">1</td><td class="mid">cohere/north-mini-code:free</td><td class="num">256K</td><td>Cohere</td><td class="num">2.18s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">2</td><td class="mid">deepseek/deepseek-v4-flash-0731:free</td><td class="num">1M</td><td>OpenInference</td><td class="num">4.91s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">3</td><td class="mid">dots-studio/dots-3-note-preview:free</td><td class="num">512K</td><td>AtlasCloud</td><td class="num">5.67s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr class="dim"><td class="num">4</td><td class="mid">google/gemma-4-26b-a4b-it:free</td><td class="num">262K</td><td>-</td><td class="num">1.06s</td><td><span class="st warn"><span class="dot warn"></span>限流 429</span></td><td class="note">上游共享池容量不足（Google AI Studio）</td></tr>
+<tr class="dim"><td class="num">5</td><td class="mid">google/gemma-4-31b-it:free</td><td class="num">262K</td><td>-</td><td class="num">7.42s</td><td><span class="st warn"><span class="dot warn"></span>限流 429</span></td><td class="note">上游共享池容量不足（Google AI Studio）</td></tr>
+<tr class="dim"><td class="num">6</td><td class="mid">google/lyria-3-clip-preview</td><td class="num">1M</td><td>-</td><td class="num">0.8s</td><td><span class="st bad"><span class="dot bad"></span>不可用 403</span></td><td class="note">地区封锁（geo restriction）</td></tr>
+<tr class="dim"><td class="num">7</td><td class="mid">google/lyria-3-pro-preview</td><td class="num">1M</td><td>-</td><td class="num">3.64s</td><td><span class="st bad"><span class="dot bad"></span>不可用 403</span></td><td class="note">地区封锁（geo restriction）</td></tr>
+<tr><td class="num">8</td><td class="mid">inclusionai/ling-3.0-flash-fin:free</td><td class="num">262K</td><td>Novita</td><td class="num">9.19s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">finish=length</td></tr>
+<tr><td class="num">9</td><td class="mid">inclusionai/ling-3.0-flash-sante:free</td><td class="num">262K</td><td>Novita</td><td class="num">9.87s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">10</td><td class="mid">inclusionai/ling-3.0-flash-vl:free</td><td class="num">262K</td><td>Novita</td><td class="num">8.03s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">11</td><td class="mid">liquid/lfm-2.5-2.6b:free</td><td class="num">66K</td><td>Liquid</td><td class="num">9.38s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">12</td><td class="mid">nex-agi/nex-n2.5-mini:free</td><td class="num">262K</td><td>Nex AGI</td><td class="num">11.1s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">13</td><td class="mid">nex-agi/nex-n2.5-pro:free</td><td class="num">262K</td><td>Nex AGI</td><td class="num">9.04s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">14</td><td class="mid">nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free</td><td class="num">256K</td><td>Nvidia</td><td class="num">11.6s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">15</td><td class="mid">nvidia/nemotron-3-super-120b-a12b:free</td><td class="num">262K</td><td>Nvidia</td><td class="num">10.06s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">16</td><td class="mid">nvidia/nemotron-3-ultra-550b-a55b:free</td><td class="num">1M</td><td>Nvidia</td><td class="num">13.06s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">17</td><td class="mid">nvidia/nemotron-3.5-content-safety:free</td><td class="num">128K</td><td>Nvidia</td><td class="num">42.23s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">18</td><td class="mid">nvidia/nemotron-3.5-lightning:free</td><td class="num">1M</td><td>Nvidia</td><td class="num">14.24s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">finish=length</td></tr>
+<tr><td class="num">19</td><td class="mid">openrouter/free</td><td class="num">200K</td><td>Nvidia</td><td class="num">15.44s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">20</td><td class="mid">poolside/laguna-s-2.1:free</td><td class="num">262K</td><td>Poolside</td><td class="num">2.84s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note"></td></tr>
+<tr><td class="num">21</td><td class="mid">poolside/laguna-xs-2.1:free</td><td class="num">262K</td><td>Poolside</td><td class="num">20.29s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">finish=length</td></tr>
+<tr class="dim"><td class="num">22</td><td class="mid">qwen/qwen3.8-27b:free</td><td class="num">262K</td><td>-</td><td class="num">4.27s</td><td><span class="st warn"><span class="dot warn"></span>限流 429</span></td><td class="note">上游共享池容量不足（ModelRun）</td></tr>
+<tr class="dim"><td class="num">23</td><td class="mid">thinkingmachines/inkling-small:free</td><td class="num">1M</td><td>-</td><td class="num">1.56s</td><td><span class="st bad"><span class="dot bad"></span>不可用 403</span></td><td class="note">仅限 agentic harness 调用</td></tr>
+<tr class="dim"><td class="num">24</td><td class="mid">thinkingmachines/inkling:free</td><td class="num">1M</td><td>-</td><td class="num">3.75s</td><td><span class="st bad"><span class="dot bad"></span>不可用 403</span></td><td class="note">仅限 agentic harness 调用</td></tr>
+<tr><td class="num">25</td><td class="mid">z-ai/glm-5.2:free</td><td class="num">33K</td><td>Decart</td><td class="num">9.78s</td><td><span class="st warn"><span class="dot warn"></span>可用（重试后）</span></td><td class="note">finish=length</td></tr>
+</tbody></table></section>
+<section><div class="sec-head"><span class="sec-no">04</span><span class="sec-title">值得注意</span></div>
+<ul class="findings">
+<li><b>身份自述与路由字段矛盾（延续上一轮）。</b><code>nvidia/nemotron-3-ultra-550b-a55b:free</code> 自称「我是 GLM，Z.ai 训练」；
+<code>poolside/laguna-xs-2.1:free</code> 本轮自称「我是通义」。两者路由字段均显示各自原生名称。用前请自行验证权重。</li>
+<li><b><code>openrouter/free</code> 仍不保证是聊天模型。</b>本次把请求路由到 <code>nvidia/nemotron-3.5-content-safety:free</code>，
+返回 "User Safety: safe"（15.44s），与 2026-09-07 表现一致 —— 不要拿它当默认聊天端点。</li>
+<li><b>reasoning 模型在 400 tokens 下全部触顶。</b><code>z-ai/glm-5.2:free</code>（reasoning 796 / content 26）、
+<code>poolside/laguna-xs-2.1:free</code>（reasoning 1290 / content 7）、<code>nvidia/nemotron-3.5-lightning:free</code>、
+<code>inclusionai/ling-3.0-flash-fin:free</code> 均 <code>finish=length</code>。接入 agent 时 max_tokens 需给到数千以上。</li>
+<li><b>新模型的输入模态值得留意。</b>新增 6 个里有 4 个支持图像输入（<code>ling-3.0-flash-vl</code>、<code>qwen3.8-27b</code> 还支持视频，
+<code>nex-n2.5-mini/pro</code> 支持图像），免费层首次具备较可用的视觉输入选项。</li>
+<li><b><code>nvidia/nemotron-3.5-content-safety:free</code> 耗时 42.23s</b>，是清单里最慢的一个；它是审核分类器而非对话模型，不建议作对话用途。</li>
+<li><b><code>z-ai/glm-5.2:free</code> 上下文只有 32K。</b>与同族宣称的 1M 窗口不符，是免费变体被上游裁剪过的结果。</li>
+</ul></section>
+<section><div class="sec-head"><span class="sec-no">05</span><span class="sec-title">网站免费模型口径核对</span></div>
+<p class="body">网站 <code>/models?max_price=0</code> 是纯客户端渲染，抓 HTML 拿不到过滤结果（SSR 内容与不过滤时逐字节相同）。
+价格滑杆值 0 即「FREE」标签，实际调用 <code>api/frontend/v1/models/find?max_price=0</code>。</p>
+<table><thead><tr><th>口径</th><th class="num">数量</th><th>拆解</th></tr></thead><tbody>
+<tr><td class="mid">网站 FREE 滑杆（全模态）</td><td class="num">99</td><td>image 34 · video 29 · text 22 · rerank 7 · embeddings 3 · speech 2 · audio+text 2</td></tr>
+<tr><td class="mid">上述 + 文本输出（has_text_output）</td><td class="num">24</td><td>22 个 variant=free（即 <code>:free</code> ID）+ 2 个零价 standard（Google Lyria）</td></tr>
+<tr><td class="mid"><code>GET /api/v1/models?max_price=0</code> + text 输出</td><td class="num">24</td><td>与网站集合逐个 ID 相等，无差集</td></tr>
+<tr><td class="mid">本报告清单</td><td class="num">25</td><td>再加 <code>openrouter/free</code> 自动路由器（定价字段非零，不进网站筛选）</td></tr>
+<tr><td class="mid">官方全量目录 <code>GET /api/v1/models</code></td><td class="num">445</td><td>2026-09-07 为 430；期间新上架 28、下架 13</td></tr>
+</tbody></table></section>
+<section><div class="sec-head"><span class="sec-no">06</span><span class="sec-title">免费层限额与密钥状态</span></div>
+<p class="body">官方限额未变（docs/api-reference/limits）：<code>:free</code> 模型 <b>20 次/分</b>；累计充值 &lt; $10 → <b>50 次/天</b>，
+≥ $10 → <b>1000 次/天</b>。本密钥累计消费 $0.0740079，仍在 50 次/天档内，故本轮拆成 13 + 12 两次运行并加全局节流（最小请求间隔 3.3s），
+避免自造 429。</p>
+<table><thead><tr><th>字段</th><th>值</th></tr></thead><tbody>
+<tr><td class="mid">label</td><td><code>sk-or-…fcf5</code></td></tr>
+<tr><td class="mid">is_free_tier</td><td>True</td></tr>
+<tr><td class="mid">usage（累计消费）</td><td>$0.0740079</td></tr>
+<tr><td class="mid">limit / rateLimit</td><td>未设置 / 未设置</td></tr>
+<tr><td class="mid">本轮请求成本</td><td>全部 cost = 0（25 个模型逐个 usage 校验）</td></tr>
+</tbody></table></section>
+<section><div class="sec-head"><span class="sec-no">07</span><span class="sec-title">复测方法</span></div>
+<p class="body">两步：<code>python diff_free_models.py</code> 拉清单并出差异，<code>python openrouter_connectivity_test.py --skip-fetch</code>
+跑连通性。提问「你好，请用一句话简短介绍你自己。」，max_tokens=400，timeout=75s。
+失败自动重试一次（429 前置等待 22s），末尾对仍 429 的再等 60s 复测一轮。
+本轮分两批（13 个新增+历史失败、12 个历史成功）以贴住 50 次/天额度。</p>
+<p class="body">产物：<code>data/connectivity_test.json</code>（本轮全量）、<code>data/connectivity_test-20260907.json</code>（上一轮存档）、
+<code>data/raw/free_models_diff_20260907_vs_20260918.json</code>（差异）、<code>data/raw/*_20260918.json</code>（清单快照）。</p></section>
+<footer>本报告由 工具集/build_report.py 从 JSON 结果生成 · 结论以实测 JSON 为准</footer>
+</div></body></html>

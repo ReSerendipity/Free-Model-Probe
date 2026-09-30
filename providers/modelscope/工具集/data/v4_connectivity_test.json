@@ -1,0 +1,66 @@
+{
+  "test_time": "2026-08-25 23:51:01",
+  "base_url": "https://api-inference.modelscope.cn/v1",
+  "results": [
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro",
+      "result": {
+        "status": "ok",
+        "elapsed": 2.52,
+        "content_length": 19,
+        "usage": {
+          "prompt_tokens": 17,
+          "completion_tokens": 46,
+          "total_tokens": 63
+        }
+      }
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "result": {
+        "status": "empty_response",
+        "elapsed": 1.1030943393707275,
+        "error": "空响应 (choices=null)"
+      }
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "result": {
+        "status": "ok",
+        "elapsed": 1.61,
+        "content_length": 11,
+        "usage": {
+          "prompt_tokens": 96,
+          "completion_tokens": 38,
+          "total_tokens": 134
+        }
+      }
+    },
+    {
+      "model": "Qwen/Qwen3.5-397B-A17B",
+      "result": {
+        "status": "ok",
+        "elapsed": 7.55,
+        "content_length": 9,
+        "usage": {
+          "prompt_tokens": 27,
+          "completion_tokens": 332,
+          "total_tokens": 359
+        }
+      }
+    },
+    {
+      "model": "ZhipuAI/GLM-5.2",
+      "result": {
+        "status": "ok",
+        "elapsed": 3.02,
+        "content_length": 0,
+        "usage": {
+          "prompt_tokens": 27,
+          "completion_tokens": 101,
+          "total_tokens": 128
+        }
+      }
+    }
+  ]
+}

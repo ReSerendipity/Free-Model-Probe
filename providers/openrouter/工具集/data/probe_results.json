@@ -1,0 +1,706 @@
+{
+  "probe_time": "2026-09-07 11:20:43",
+  "question": "请依次回答以下三个小问题，用编号 1/2/3 分点作答：\n1. 数列 2, 6, 12, 20, 30, … 按规律继续写，第 10 项是多少？\n2. 47 是质数吗？\n3. 用一句话解释机器学习里的“过拟合”。",
+  "retest2": {
+    "google/gemma-4-26b-a4b-it:free": {
+      "status": "http_error",
+      "code": 429,
+      "elapsed": 1.2,
+      "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"",
+      "retried": true
+    },
+    "google/gemma-4-31b-it:free": {
+      "status": "http_error",
+      "code": 429,
+      "elapsed": 1.18,
+      "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Google AI Studio\",\"is_b",
+      "retried": true
+    },
+    "poolside/laguna-xs-2.1:free": {
+      "status": "ok",
+      "elapsed": 1.56,
+      "finish": "stop",
+      "content": "你好，我是GLM，这是一款由智谱AI训练的大语言模型，能够理解和生成人类语言，支持多种语言，广泛适用于文本理解、写作和代码生成等任务，欢迎随时提问。",
+      "reasoning_len": 824,
+      "provider": "Poolside",
+      "routed": "poolside/laguna-xs-2.1:free",
+      "usage": {
+        "prompt_tokens": 56,
+        "completion_tokens": 276,
+        "total_tokens": 332,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 217,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "retried": true
+    }
+  },
+  "probes": {
+    "dots-studio/dots-3-note-preview:free": {
+      "status": "ok",
+      "elapsed": 1.5,
+      "finish": "stop",
+      "content": "\n\n1. 第 10 项是 110。  \n2. 是的，47 是质数。  \n3. 过拟合是指模型在训练数据上过度学习噪声和细节，导致在新数据上泛化能力差。",
+      "reasoning_len": 429,
+      "provider": "AtlasCloud",
+      "routed": "dots-studio/dots-3-note-preview:free",
+      "usage": {
+        "prompt_tokens": 96,
+        "completion_tokens": 375,
+        "total_tokens": 471,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 330,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "cohere/north-mini-code:free": {
+      "status": "ok",
+      "elapsed": 1.54,
+      "finish": "stop",
+      "content": "1. 该数列遵循 \\(a_n = n(n+1)\\) 的规律，因此第 10 项是 \\(10 \\times 11 = \\mathbf{110}\\)。\n2. 是的，47 是一个质数（它仅能被 1 和 47 整除）。\n3. 过拟合是指模型过度学习训练数据的噪声和细节，导致在新数据上的表现不佳。",
+      "reasoning_len": 798,
+      "provider": "Cohere",
+      "routed": "cohere/north-mini-code:free",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 323,
+        "total_tokens": 401,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 202,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "inclusionai/ling-3.0-flash-fin:free": {
+      "status": "ok",
+      "elapsed": 2.79,
+      "finish": "length",
+      "content": "",
+      "reasoning_len": 786,
+      "provider": "Novita",
+      "routed": "inclusionai/ling-3.0-flash-fin:free",
+      "usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 500,
+        "total_tokens": 597,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 352,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "inclusionai/ling-3.0-flash-sante:free": {
+      "status": "ok",
+      "elapsed": 1.69,
+      "finish": "length",
+      "content": "",
+      "reasoning_len": 770,
+      "provider": "Novita",
+      "routed": "inclusionai/ling-3.0-flash-sante:free",
+      "usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 500,
+        "total_tokens": 597,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 382,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "liquid/lfm-2.5-2.6b:free": {
+      "status": "ok",
+      "elapsed": 1.5,
+      "finish": "length",
+      "content": "",
+      "reasoning_len": 1178,
+      "provider": "Liquid",
+      "routed": "liquid/lfm-2.5-2.6b:free",
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 500,
+        "total_tokens": 592,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 497,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "minimax/minimax-m3:free": {
+      "status": "ok",
+      "elapsed": 2.51,
+      "finish": "stop",
+      "content": "1. 第10项是 **110**。规律为 aₙ = n(n+1)，所以第10项为 10×11 = 110。\n\n2. 是的，47 是质数。它只能被 1 和 47 本身整除，无法被 2 至 6 之间的任何质数（2、3、5）整除。\n\n3. 过拟合是指模型过度学习了训练数据中的细节和噪声，导致在新数据上表现不佳的现象。",
+      "reasoning_len": 0,
+      "provider": "GMICloud",
+      "routed": "minimax/minimax-m3:free",
+      "usage": {
+        "prompt_tokens": 233,
+        "completion_tokens": 100,
+        "total_tokens": 333,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 128,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "minimax/minimax-m2.7:free": {
+      "status": "ok",
+      "elapsed": 2.34,
+      "finish": "length",
+      "content": "",
+      "reasoning_len": 1064,
+      "provider": "GMICloud",
+      "routed": "minimax/minimax-m2.7:free",
+      "usage": {
+        "prompt_tokens": 111,
+        "completion_tokens": 500,
+        "total_tokens": 611,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 296,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+      "status": "ok",
+      "elapsed": 1.5,
+      "finish": "stop",
+      "content": "1. 按规律 \\(a_n = n(n+1)\\)，第 10 项为 \\(10 \\times 11 = 110\\)。  \n2. 47 是质数。  \n3. 过拟合是指模型在训练数据上拟合得非常好，但在未见的新数据上预测能力显著下降的现象。",
+      "reasoning_len": 657,
+      "provider": "Nvidia",
+      "routed": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "usage": {
+        "prompt_tokens": 108,
+        "completion_tokens": 379,
+        "total_tokens": 487,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 194,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "nvidia/nemotron-3-super-120b-a12b:free": {
+      "status": "ok",
+      "elapsed": 1.94,
+      "finish": "stop",
+      "content": "1. 数列的通项公式为 \\(a_n = n(n+1)\\)；因此第 10 项是 \\(a_{10}=10\\times11=110\\)。  \n2. 47 是质数（它不能被小于其平方根的任何质数整除）。  \n3. 过拟合是指模型在训练数据上学习到了噪声和细节，导致在未见数据上的表现变差。",
+      "reasoning_len": 883,
+      "provider": "Nvidia",
+      "routed": "nvidia/nemotron-3-super-120b-a12b:free",
+      "usage": {
+        "prompt_tokens": 108,
+        "completion_tokens": 468,
+        "total_tokens": 576,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 222,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "nvidia/nemotron-3.5-lightning:free": {
+      "status": "ok",
+      "elapsed": 1.51,
+      "finish": "length",
+      "content": "Here's a thinking process:\n\n1.  **Analyze the user's request:**\n   - Three sub-questions to answer in order, numbered 1/2/3.\n   - Each should be a distinct point.\n   - Question 1: Sequence 2, 6, 12, 20, 30, ... continue the pattern, find the 10th term.\n   - Question 2: Is 47 a prime number?\n   - Question 3: One-sentence explanation of \"overfitting\" in machine learning.\n\n2.  **Question 1: Sequence pattern**\n   Sequence: 2, 6, 12, 20, 30, ...\n   Let's find the pattern:\n   - Differences: 6-2=4, 12-6=6, 20-12=8, 30-20=10\n   - Second differences: 6-4=2, 8-6=2, 10-8=2 -> constant 2, so quadratic.\n   - Formula: nth term = n(n+1) \n     Let's check: n=1: 1*2=2, n=2: 2*3=6, n=3: 3*4=12, n=4: 4*5=20, n=5: 5*6=30. Yes.\n   - 10th term: n=10 -> 10*11 = 110.\n   - Alternatively, could be n^2 + n, same thing.\n   - I'll state the pattern and the 10th term.\n\n3.  **Question 2: Is 47 prime?**\n   - Check divisibility: sqrt(47) ≈ 6.85, so check primes up to 7: 2, 3, 5, 7.\n   - 47 is odd -> not divisible by 2.\n   - Sum of digits: 4+7=11, not divisible by 3.\n   - Doesn't end in 0/5 -> not divisible by 5.\n   - 47/7 ≈ 6.71, 7*6=42, 7*7=49 -> not",
+      "reasoning_len": 1136,
+      "provider": "Nvidia",
+      "routed": "nvidia/nemotron-3.5-lightning:free",
+      "usage": {
+        "prompt_tokens": 108,
+        "completion_tokens": 500,
+        "total_tokens": 608,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 293,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "openrouter/free": {
+      "status": "ok",
+      "elapsed": 1.52,
+      "finish": "length",
+      "content": "Here's a thinking process:\n\n1.  **Analyze the user's request:**\n   - Three sub-questions in order.\n   - Must answer using numbered points 1/2/3.\n   - No extra fluff, just the answers.\n\n2.  **Question 1: Sequence 2, 6, 12, 20, 30, … continue the pattern, find the 10th term.**\n   - Let's look at the sequence: 2, 6, 12, 20, 30, ...\n   - Differences: 6-2=4, 12-6=6, 20-12=8, 30-20=10. Second differences are constant (+2 each time). So it's a quadratic sequence.\n   - Let's find the formula. nth term: n(n+1)? Let's check:\n     n=1: 1*2=2 ✓\n     n=2: 2*3=6 ✓\n     n=3: 3*4=12 ✓\n     n=4: 4*5=20 ✓\n     n=5: 5*6=30 ✓\n   - So the nth term is n(n+1).\n   - 10th term: 10*11 = 110.\n   - Continue the sequence: 30, 42, 56, 72, 90, 110 (or just give the 10th term as asked, but \"按规律继续写\" might mean write the next few terms or just the 10th. I'll give the 10th term and maybe the continuation, but the question says \"按规律继续写，第 10 项是多少？\" I'll output the pattern continuation and the 10th term.)\n   - I'll structure it: Next terms: 42, 56, 72, 90, 110. 10th term: 110.\n\n3.  **Question 2: Is 47 a prime number?**\n   - Check divisibility: sqrt(47) ≈ 6.8. Primes to check: 2,",
+      "reasoning_len": 1159,
+      "provider": "Nvidia",
+      "routed": "nvidia/nemotron-3.5-lightning:free",
+      "usage": {
+        "prompt_tokens": 108,
+        "completion_tokens": 500,
+        "total_tokens": 608,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 315,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "nvidia/nemotron-3-ultra-550b-a55b:free": {
+      "status": "ok",
+      "elapsed": 1.58,
+      "finish": "stop",
+      "content": "1. 第 10 项是 **110**（规律为 $n(n+1)$，即 $10 \\times 11 = 110$）。  \n2. **是**，47 是质数（仅能被 1 和 47 整除）。  \n3. 过拟合是指模型过度学习训练数据中的噪声与细节，导致在训练集上表现极好但在未见数据上泛化能力差。",
+      "reasoning_len": 568,
+      "provider": "Nvidia",
+      "routed": "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "usage": {
+        "prompt_tokens": 108,
+        "completion_tokens": 385,
+        "total_tokens": 493,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 145,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "poolside/laguna-xs-2.1:free": {
+      "status": "ok",
+      "elapsed": 1.57,
+      "finish": "length",
+      "content": "",
+      "reasoning_len": 1282,
+      "provider": "Poolside",
+      "routed": "poolside/laguna-xs-2.1:free",
+      "usage": {
+        "prompt_tokens": 134,
+        "completion_tokens": 500,
+        "total_tokens": 634,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 500,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "poolside/laguna-s-2.1:free": {
+      "status": "ok",
+      "elapsed": 3.79,
+      "finish": "stop",
+      "content": "1. **110**  \n   - 数列为 \\(n(n+1)\\)，第10项为 \\(10 \\times 11 = 110\\)。\n\n2. **是**  \n   - 47 无法被2至6之间（\\(\\sqrt{47} \\approx 6.86\\)）的任何整数整除，因此是质数。\n\n3. **模型在训练数据上学习过细，导致泛化能力下降。**",
+      "reasoning_len": 0,
+      "provider": "Poolside",
+      "routed": "poolside/laguna-s-2.1:free",
+      "usage": {
+        "prompt_tokens": 134,
+        "completion_tokens": 111,
+        "total_tokens": 245,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 32,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "retried": true
+    }
+  },
+  "wall_seconds": 94.1,
+  "probe2": {
+    "inclusionai/ling-3.0-flash-fin:free": {
+      "status": "ok",
+      "elapsed": 2.4,
+      "finish": "stop",
+      "content": "1. 110\n2. 是\n3. 过拟合是指机器学习模型过度学习了训练数据中的特征和噪声，导致在新的未见数据上泛化能力差的现象。",
+      "reasoning_len": 1194,
+      "provider": "Novita",
+      "routed": "inclusionai/ling-3.0-flash-fin:free",
+      "usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 795,
+        "total_tokens": 892,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 64,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 697,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "inclusionai/ling-3.0-flash-sante:free": {
+      "status": "ok",
+      "elapsed": 2.24,
+      "finish": "stop",
+      "content": "1. 第 10 项是 110。该数列的规律为第 n 项等于 n(n+1)，即 1×2=2，2×3=6，3×4=12……因此第 10 项为 10×11=110。\n2. 是质数。47 只能被 1 和它本身整除，无法被 2、3、5、7 等小于它平方根的质数整除。\n3. 过拟合是指模型在训练数据上表现过于优秀，将噪声和细节也当作规律记忆，导致在新数据上泛化能力下降的现象。",
+      "reasoning_len": 1312,
+      "provider": "Novita",
+      "routed": "inclusionai/ling-3.0-flash-sante:free",
+      "usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 984,
+        "total_tokens": 1081,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 64,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 746,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "liquid/lfm-2.5-2.6b:free": {
+      "status": "ok",
+      "elapsed": 1.65,
+      "finish": "stop",
+      "content": "**1.** 该数列遵循 \\(a_n = n(n+1)\\)，因此第 10 项为 \\(10 \\times 11 = 110\\)。  \n\n**2.** 是的，47 是质数（只能被 1 和本身整除）。  \n\n**3.** 过拟合是指模型在训练数据上表现极好，却在未见数据上失去泛化能力，因为它过度记住了噪声而非学习本质规律。",
+      "reasoning_len": 1464,
+      "provider": "Liquid",
+      "routed": "liquid/lfm-2.5-2.6b:free",
+      "usage": {
+        "prompt_tokens": 92,
+        "completion_tokens": 681,
+        "total_tokens": 773,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 80,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 572,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "minimax/minimax-m2.7:free": {
+      "status": "ok",
+      "elapsed": 3.34,
+      "finish": "stop",
+      "content": "1. 第10项是 **110**。  \n2. **47 是质数**（只能被 1 和 47 整除）。  \n3. 过拟合指模型在训练数据上学得太“好”，把噪声也记住了，导致在未见过的数据上表现差。",
+      "reasoning_len": 1812,
+      "provider": "GMICloud",
+      "routed": "minimax/minimax-m2.7:free",
+      "usage": {
+        "prompt_tokens": 111,
+        "completion_tokens": 754,
+        "total_tokens": 865,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 541,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "openrouter/free": {
+      "status": "ok",
+      "elapsed": 1.53,
+      "finish": "stop",
+      "content": "**1. 数列 2, 6, 12, 20, 30, … 的第 10 项**\n\n- 这是一个“n × (n + 1)”型数列：\n  - 2 = 1 × 2\n  - 6 = 2 × 3\n  - 12 = 3 × 4\n  - 20 = 4 × 5\n  - 30 = 5 × 6\n- 一般项为 **aₙ = n × (n + 1)**。\n- 第 10 项：a₁₀ = 10 × 11 = **110**。\n\n**2. 47 是否为质数？**\n\n- 47 只有 **1** 和 **47** 两个正整数因数。\n- 它不能被 2、3、5、7 整除（7 × 7 = 49 > 47，因此只需检查 ≤ √47≈6.8 的素数）。\n- 因此，**47 是一个质数**。\n\n**3. 用一句话解释机器学习中的“过拟合”**\n\n- 过拟合是指模型在训练数据上表现完美，但在新、未知数据上表现糟糕的现象，因为它过度关注了训练集中的噪声和细节，而未能捕捉真实模式。",
+      "reasoning_len": 213,
+      "provider": "Cohere",
+      "routed": "cohere/north-mini-code:free",
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 343,
+        "total_tokens": 421,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 54,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "nvidia/nemotron-3.5-lightning:free": {
+      "status": "ok",
+      "elapsed": 1.65,
+      "finish": "stop",
+      "content": "1. The sequence follows the pattern \\(n(n+1)\\) (i.e., \\(1\\times2\\), \\(2\\times3\\), \\(3\\times4\\), …). Continuing: 42, 56, 72, 90, 110. The 10th term is **110**.  \n2. **Yes**, 47 is a prime number (not divisible by 2, 3, 5, or 7, the primes ≤ √47).  \n3. Overfitting occurs when a machine learning model learns the training data too well, including its noise and outliers, and thus fails to generalize to new, unseen data.",
+      "reasoning_len": 2197,
+      "provider": "Nvidia",
+      "routed": "nvidia/nemotron-3.5-lightning:free",
+      "usage": {
+        "prompt_tokens": 108,
+        "completion_tokens": 1000,
+        "total_tokens": 1108,
+        "cost": 0,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0,
+          "upstream_inference_prompt_cost": 0,
+          "upstream_inference_completions_cost": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 578,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    },
+    "poolside/laguna-xs-2.1:free": {
+      "status": "http_error",
+      "code": 429,
+      "elapsed": 1.39,
+      "body": "{\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"poolside/laguna-xs-2.1:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations\",\"provider_name\":\"Poolside\",\"is_byok\":fa",
+      "retried": true
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "Model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "MagicCost": 2,
+    "Tier": "ultra",
+    "SupportInference": "txt2txt",
+    "Experience": 1,
+    "Downloads": 61813
+  },
+  {
+    "Model": "Qwen/Qwen3.5-397B-A17B",
+    "MagicCost": 2,
+    "Tier": "ultra",
+    "SupportInference": "txt2txt",
+    "Experience": 1,
+    "Downloads": 204431
+  },
+  {
+    "Model": "MiniMax/MiniMax-M3",
+    "MagicCost": 1,
+    "Tier": "standard",
+    "SupportInference": "txt2txt",
+    "Experience": 1,
+    "Downloads": 3158
+  }
+]

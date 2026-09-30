@@ -1,0 +1,54 @@
+# 统一 UTF-8 + LF 行尾，防止跨平台编码损坏
+* text=auto
+
+# 源码与文本文件强制 UTF-8 + LF
+*.py    text eol=lf
+*.js    text eol=lf
+*.mjs   text eol=lf
+*.ts    text eol=lf
+*.json  text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.toml  text eol=lf
+*.md    text eol=lf
+*.html  text eol=lf
+*.css   text eol=lf
+*.svg   text eol=lf
+*.xml   text eol=lf
+*.cfg   text eol=lf
+*.ini   text eol=lf
+*.txt   text eol=lf
+*.csv   text eol=lf
+*.sh    text eol=lf
+
+# Windows 批处理必须 CRLF（cmd 解析 LF-only 脚本会在 if(...) 括号块、
+# goto 标签处产生碎片化命令错误 —— 本仓 webui/start.bat 曾因此被修过一次）
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+*.ps1   text eol=crlf
+
+# 二进制文件不转换
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.otf  binary
+*.zip  binary
+*.gz   binary
+*.7z   binary
+*.tar  binary
+*.mp3  binary
+*.wav  binary
+*.mp4  binary
+*.db   binary
+*.sqlite binary
+*.enc  binary
+
+# 治理文件自身固定 LF：让 gitignore / attributes 在各平台 checkout 后字节一致，便于审计与 diff
+/.gitignore text eol=lf
+/.gitattributes text eol=lf

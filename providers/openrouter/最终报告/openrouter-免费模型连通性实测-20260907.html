@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenRouter 免费文本模型连通性实测 · 2026-09-07</title>
+<style>
+  :root{
+    --bg:#fafafa; --ink:#141416; --ink-2:#55555e; --ink-3:#8a8a92;
+    --line:#e3e3e7; --line-strong:#c9c9cf;
+    --accent:#0e6f66;
+    --ok:#167a4d; --warn:#9a6700; --bad:#b3372f;
+    --mono:"Cascadia Mono","Consolas","Courier New",monospace;
+    --sans:"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{background:var(--bg)}
+  body{font-family:var(--sans);color:var(--ink);font-size:15px;line-height:1.6;
+       -webkit-font-smoothing:antialiased}
+  .canvas{max-width:1180px;margin:0 auto;padding:56px 40px 64px}
+
+  /* ---------- header ---------- */
+  .kicker{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1{font-size:40px;line-height:1.15;letter-spacing:-0.02em;font-weight:600;margin:14px 0 10px}
+  .lede{font-size:16px;color:var(--ink-2);max-width:62ch}
+  .meta-row{display:flex;flex-wrap:wrap;gap:0;margin-top:30px;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line)}
+  .meta-cell{padding:12px 28px 12px 0;margin-right:28px;border-right:1px solid var(--line)}
+  .meta-cell:last-child{border-right:none}
+  .meta-k{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+  .meta-v{font-size:14px;margin-top:2px}
+  .meta-v code{font-family:var(--mono);font-size:12.5px}
+
+  /* ---------- metrics ---------- */
+  .metrics{display:flex;flex-wrap:wrap;margin:40px 0 8px;border-top:2px solid var(--ink)}
+  .metric{flex:1 1 180px;padding:18px 24px 18px 0;margin-right:24px;border-bottom:1px solid var(--line)}
+  .metric:last-child{margin-right:0}
+  .metric .num{font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.1}
+  .metric .num small{font-size:15px;font-weight:400;color:var(--ink-3);letter-spacing:0}
+  .metric .lbl{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-top:6px}
+  .metric .sub{font-size:12.5px;color:var(--ink-3);margin-top:3px}
+
+  /* ---------- sections ---------- */
+  section{margin-top:56px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line-strong);padding-bottom:10px;margin-bottom:22px}
+  .sec-no{font-family:var(--mono);font-size:13px;color:var(--accent)}
+  .sec-title{font-size:21px;font-weight:600;letter-spacing:-0.01em}
+  .sec-note{margin-left:auto;font-size:12.5px;color:var(--ink-3)}
+
+  p.body{max-width:76ch;color:var(--ink);margin-bottom:12px}
+  p.body b{font-weight:600}
+
+  /* ---------- table ---------- */
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  thead th{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);font-weight:600;
+           text-align:left;padding:9px 12px;border-bottom:2px solid var(--ink);white-space:nowrap}
+  tbody td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  tbody tr:hover{background:#f2f2f4}
+  td.mid{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+  .st{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600;font-size:12.5px}
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+  .dot.ok{background:var(--ok)} .dot.warn{background:var(--warn)} .dot.bad{background:var(--bad)}
+  .st.ok{color:var(--ok)} .st.warn{color:var(--warn)} .st.bad{color:var(--bad)}
+  td .note{color:var(--ink-2);font-size:12.5px}
+
+  /* ---------- failure blocks ---------- */
+  .fail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-strong)}
+  .fail-block{padding:20px 26px 20px 0;margin-right:26px;border-bottom:1px solid var(--line)}
+  .fail-block:last-child{margin-right:0;border-right:none}
+  .fail-k{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+  .fail-k.warn{color:var(--warn)} .fail-k.bad{color:var(--bad)}
+  .fail-title{font-size:15.5px;font-weight:600;margin-bottom:6px}
+  .fail-block p{font-size:13.5px;color:var(--ink-2);max-width:40ch}
+  .fail-models{margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--ink-2);line-height:1.8;word-break:break-all}
+  .fail-fix{margin-top:10px;font-size:12.5px;color:var(--ink)}
+  .fail-fix b{font-weight:600;color:var(--accent)}
+
+  /* ---------- findings ---------- */
+  ol.findings{list-style:none;counter-reset:f;max-width:88ch}
+  ol.findings li{counter-increment:f;position:relative;padding:14px 0 14px 46px;border-bottom:1px solid var(--line)}
+  ol.findings li::before{content:counter(f,decimal-leading-zero);position:absolute;left:0;top:14px;
+       font-family:var(--mono);font-size:13px;color:var(--accent)}
+  ol.findings .f-t{font-weight:600;margin-bottom:3px}
+  ol.findings .f-d{font-size:13.5px;color:var(--ink-2)}
+  ol.findings code{font-family:var(--mono);font-size:12px;background:#f0f0f2;padding:1px 5px}
+
+  /* ---------- limits ---------- */
+  .limits-wrap{display:flex;gap:48px;align-items:flex-start;flex-wrap:wrap}
+  .limits-wrap table{flex:1 1 380px}
+  .kv{flex:1 1 320px;font-size:13.5px}
+  .kv .row{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .kv .k{flex:0 0 128px;color:var(--ink-3);font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding-top:2px}
+  .kv .v{flex:1}
+
+  /* ---------- method / footer ---------- */
+  .method{font-size:13.5px;color:var(--ink-2);max-width:80ch}
+  .method code{font-family:var(--mono);font-size:12px;background:#f0f0f2;padding:1px 5px}
+  .colophon{margin-top:64px;border-top:2px solid var(--ink);padding-top:14px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .colophon div{font-size:12px;color:var(--ink-3)}
+  .colophon code{font-family:var(--mono);font-size:11px}
+  @media print{ body{background:#fff} .canvas{padding:20px 8px} tbody tr:hover{background:none} }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <!-- ======= HEADER ======= -->
+  <div class="kicker">OpenRouter · Connectivity Test · 2026-09-07</div>
+  <h1>免费文本模型连通性实测</h1>
+  <p class="lede">对 OpenRouter 模型广场「free 变体 + 文本输出」口径下的全部 21 个模型逐一发起真实
+  <code style="font-family:var(--mono);font-size:13px">chat/completions</code> 调用，验证密钥
+  <code style="font-family:var(--mono);font-size:13px">sk-or-…fcf5</code> 与每个模型的实际可达性。</p>
+
+  <div class="meta-row">
+    <div class="meta-cell"><div class="meta-k">测试时间</div><div class="meta-v">2026-09-07 09:38 – 09:45 GMT+8</div></div>
+    <div class="meta-cell"><div class="meta-k">端点</div><div class="meta-v"><code>api/v1/chat/completions</code></div></div>
+    <div class="meta-cell"><div class="meta-k">密钥</div><div class="meta-v"><code>sk-or-…fcf5</code> · free tier</div></div>
+    <div class="meta-cell"><div class="meta-k">判定口径</div><div class="meta-v">HTTP 200 且返回真实文本</div></div>
+  </div>
+
+  <!-- ======= METRICS ======= -->
+  <div class="metrics">
+    <div class="metric"><div class="num">21</div><div class="lbl">测试模型</div><div class="sub">free 变体 + text 输出</div></div>
+    <div class="metric"><div class="num" style="color:var(--ok)">14</div><div class="lbl">直连可用</div><div class="sub">全部 cost = 0</div></div>
+    <div class="metric"><div class="num" style="color:var(--warn)">3</div><div class="lbl">上游限流 429</div><div class="sub">间歇可用 · 复测未恢复</div></div>
+    <div class="metric"><div class="num" style="color:var(--bad)">4</div><div class="lbl">硬性不可用 403</div><div class="sub">地区封锁 ×2 · 门槛 ×2</div></div>
+    <div class="metric"><div class="num">1.4<small>–10.9s</small></div><div class="lbl">延迟区间</div><div class="sub">中位约 1.8s</div></div>
+  </div>
+
+  <!-- ======= 1 结论 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">01</span><span class="sec-title">结论</span></div>
+    <p class="body"><b>密钥有效、网络通畅，免费模型整体可用。</b>14/21 个模型一次直连成功并返回真实内容，
+    本次测试全部请求 cost = 0。7 个失败模型中没有一例是密钥或网络问题：3 个是上游免费共享池临时限流（429，
+    属于容量问题、间歇可用），2 个是 Google Lyria 对当前地区封锁（403），2 个是 Thinking Machines inkling
+    官方限定只能在 agentic harness（编码 Agent、生产力应用）内调用（403）。</p>
+    <p class="body">可用模型以 <b>NVIDIA Nemotron 3 系列（4 个）</b>、<b>MiniMax M2.7 / M3</b>、
+    <b>蚂蚁百灵 Ling 3.0（2 个）</b>为主力，另有 Cohere、小红书 dots、Liquid、Poolside 与 OpenRouter 自动路由器。
+    1M 上下文的免费模型有 4 个（minimax-m3、nemotron-3.5-lightning、inkling×2——后两者不可用）。</p>
+  </section>
+
+  <!-- ======= 2 全量结果 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">02</span><span class="sec-title">全量结果 · 21 个模型</span>
+      <span class="sec-note">按模型 ID 字母序 · 延迟为单次成功请求耗时</span></div>
+    <table>
+      <thead><tr>
+        <th style="width:26px">#</th><th>模型 ID</th><th class="num">上下文</th><th>提供方</th>
+        <th class="num">延迟</th><th>状态</th><th>备注</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td class="mid">cohere/north-mini-code:free</td><td class="num">256K</td><td>Cohere</td><td class="num">2.24s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">中文回复正常，finish=stop</td></tr>
+        <tr><td class="num">2</td><td class="mid">dots-studio/dots-3-note-preview:free</td><td class="num">512K</td><td>AtlasCloud</td><td class="num">2.29s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">小红书 Dots Studio 模型</td></tr>
+        <tr><td class="num">3</td><td class="mid">google/gemma-4-26b-a4b-it:free</td><td class="num">262K</td><td>Google AI Studio</td><td class="num">—</td><td><span class="st warn"><span class="dot warn"></span>限流</span></td><td class="note">上游共享池 429，两轮重试未恢复</td></tr>
+        <tr><td class="num">4</td><td class="mid">google/gemma-4-31b-it:free</td><td class="num">262K</td><td>Google AI Studio</td><td class="num">—</td><td><span class="st warn"><span class="dot warn"></span>限流</span></td><td class="note">上游共享池 429，两轮重试未恢复</td></tr>
+        <tr><td class="num">5</td><td class="mid">google/lyria-3-clip-preview</td><td class="num">1M</td><td>—</td><td class="num">—</td><td><span class="st bad"><span class="dot bad"></span>地区封锁</span></td><td class="note">403 not available in your region；text+audio 音乐模型</td></tr>
+        <tr><td class="num">6</td><td class="mid">google/lyria-3-pro-preview</td><td class="num">1M</td><td>—</td><td class="num">—</td><td><span class="st bad"><span class="dot bad"></span>地区封锁</span></td><td class="note">403 not available in your region；text+audio 音乐模型</td></tr>
+        <tr><td class="num">7</td><td class="mid">inclusionai/ling-3.0-flash-fin:free</td><td class="num">262K</td><td>Novita</td><td class="num">1.68s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">蚂蚁百灵·金融垂域变体</td></tr>
+        <tr><td class="num">8</td><td class="mid">inclusionai/ling-3.0-flash-sante:free</td><td class="num">262K</td><td>Novita</td><td class="num">1.72s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">蚂蚁百灵·健康垂域变体</td></tr>
+        <tr><td class="num">9</td><td class="mid">liquid/lfm-2.5-2.6b:free</td><td class="num">65K</td><td>Liquid</td><td class="num">1.54s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">2.6B 小模型，主打端侧高效</td></tr>
+        <tr><td class="num">10</td><td class="mid">minimax/minimax-m2.7:free</td><td class="num">196K</td><td>GMICloud</td><td class="num">2.51s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">带 reasoning 输出（约 783 字符）</td></tr>
+        <tr><td class="num">11</td><td class="mid">minimax/minimax-m3:free</td><td class="num">1M</td><td>GMICloud</td><td class="num">10.92s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">全场最慢；1M 上下文</td></tr>
+        <tr><td class="num">12</td><td class="mid">nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free</td><td class="num">256K</td><td>Nvidia</td><td class="num">1.54s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">omni reasoning 变体</td></tr>
+        <tr><td class="num">13</td><td class="mid">nvidia/nemotron-3-super-120b-a12b:free</td><td class="num">262K</td><td>Nvidia</td><td class="num">1.44s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">全场最快</td></tr>
+        <tr><td class="num">14</td><td class="mid">nvidia/nemotron-3-ultra-550b-a55b:free</td><td class="num">1M</td><td>Nvidia</td><td class="num">1.63s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">⚠ 自述「GLM，Z.ai 训练」，身份存疑</td></tr>
+        <tr><td class="num">15</td><td class="mid">nvidia/nemotron-3.5-content-safety:free</td><td class="num">128K</td><td>Nvidia</td><td class="num">1.85s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">内容安全分类器，输出「User Safety: safe」，非对话模型</td></tr>
+        <tr><td class="num">16</td><td class="mid">nvidia/nemotron-3.5-lightning:free</td><td class="num">1M</td><td>Nvidia</td><td class="num">1.53s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">reasoning 模型，思考链写入正文，400 tokens 触顶 finish=length</td></tr>
+        <tr><td class="num">17</td><td class="mid">openrouter/free</td><td class="num">200K</td><td>路由 → Nvidia</td><td class="num">1.50s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">自动路由器，本次路由到 content-safety 分类器</td></tr>
+        <tr><td class="num">18</td><td class="mid">poolside/laguna-s-2.1:free</td><td class="num">262K</td><td>Poolside</td><td class="num">2.10s</td><td><span class="st ok"><span class="dot ok"></span>可用</span></td><td class="note">英文回复，代码方向模型</td></tr>
+        <tr><td class="num">19</td><td class="mid">poolside/laguna-xs-2.1:free</td><td class="num">262K</td><td>Poolside</td><td class="num">—</td><td><span class="st warn"><span class="dot warn"></span>限流</span></td><td class="note">上游共享池 429，两轮重试未恢复</td></tr>
+        <tr><td class="num">20</td><td class="mid">thinkingmachines/inkling-small:free</td><td class="num">1M</td><td>—</td><td class="num">—</td><td><span class="st bad"><span class="dot bad"></span>调用门槛</span></td><td class="note">403：仅限 agentic harness 内调用</td></tr>
+        <tr><td class="num">21</td><td class="mid">thinkingmachines/inkling:free</td><td class="num">1M</td><td>—</td><td class="num">—</td><td><span class="st bad"><span class="dot bad"></span>调用门槛</span></td><td class="note">403：仅限 agentic harness 内调用</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ======= 3 失败拆解 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">03</span><span class="sec-title">7 个失败的三类原因</span></div>
+    <div class="fail-grid">
+      <div class="fail-block">
+        <div class="fail-k warn">429 · 上游共享池限流（3 个）</div>
+        <div class="fail-title">容量问题，通道本身正常</div>
+        <p>错误元数据 <span style="font-family:var(--mono);font-size:11.5px">limit_source=upstream_provider_shared_pool</span>，来自 Google AI Studio / Poolside 的免费共享池，与本密钥无关。等待 60–80 秒后复测仍未恢复，属持续高峰。</p>
+        <div class="fail-models">google/gemma-4-26b-a4b-it:free<br>google/gemma-4-31b-it:free<br>poolside/laguna-xs-2.1:free</div>
+        <div class="fail-fix"><b>对策</b>：错峰重试；或在 OpenRouter 绑定自己的 Google / Poolside 密钥（BYOK）独享限额。</div>
+      </div>
+      <div class="fail-block">
+        <div class="fail-k bad">403 · 地区封锁（2 个）</div>
+        <div class="fail-title">Google Lyria 音乐模型</div>
+        <p>路由在「Gate Endpoints with Geo Restrictions」一步被拒，当前网络区域无法调用。二者为 text+audio 音乐生成模型，即使可达也不适合文本任务。</p>
+        <div class="fail-models">google/lyria-3-clip-preview<br>google/lyria-3-pro-preview</div>
+        <div class="fail-fix"><b>对策</b>：无（地区硬门槛）；文本场景直接忽略。</div>
+      </div>
+      <div class="fail-block">
+        <div class="fail-k bad">403 · 仅限 Agentic Harness（2 个）</div>
+        <div class="fail-title">Thinking Machines inkling</div>
+        <p>官方在「Gate Free Endpoints by Agentic Harness」一步拦截：只允许通过编码 Agent、生产力应用等 agentic harness 调用，纯 API 直接请求不开放。</p>
+        <div class="fail-models">thinkingmachines/inkling:free<br>thinkingmachines/inkling-small:free</div>
+        <div class="fail-fix"><b>对策</b>：把模型接入 OpenRouter 应用列表中的编码 Agent（如 Cline、Roo Code 等）即可使用。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 4 发现 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">04</span><span class="sec-title">值得注意的发现</span></div>
+    <ol class="findings">
+      <li><div class="f-t">nemotron-3-ultra 自称 GLM</div><div class="f-d"><code>nvidia/nemotron-3-ultra-550b-a55b:free</code> 对身份提问的回答是「我是 GLM，Z.ai 训练的大语言模型」，而路由字段仍显示 Nvidia 端点。模型身份与标称不一致，对模型来源敏感的场景需自行验证。</div></li>
+      <li><div class="f-t">openrouter/free 路由器不保证路由到聊天模型</div><div class="f-d">本次请求被路由到 <code>nemotron-3.5-content-safety</code>，回答为「User Safety: safe」。该路由器按空闲度在免费模型间随机挑选，要稳定的对话质量应直接指定具体模型 ID。</div></li>
+      <li><div class="f-t">lightning 的思考链会占用输出预算</div><div class="f-d"><code>nemotron-3.5-lightning:free</code> 把推理过程直接写进 content（"Here's a thinking process: …"），400 个 max_tokens 全部耗尽、finish=length。作为 Agent 后端时需给足 max_tokens 或改用其他模型。</div></li>
+      <li><div class="f-t">content-safety 是分类器不是聊天模型</div><div class="f-d">它在免费清单里且连通，但用途是输入安全审核；做通用对话应排除。</div></li>
+      <li><div class="f-t">垂域变体可直接当通用模型用</div><div class="f-d">ling-3.0-flash-fin（金融）/ -sante（健康）对通用问候回复正常，没有强系统提示词偏移；dots-3-note-preview 也表现正常。</div></li>
+    </ol>
+  </section>
+
+  <!-- ======= 5 限额 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">05</span><span class="sec-title">免费层限额与密钥状态</span></div>
+    <div class="limits-wrap">
+      <table>
+        <thead><tr><th>累计充值（全历史）</th><th class="num">每分钟</th><th class="num">每天</th></tr></thead>
+        <tbody>
+          <tr><td>&lt; $10</td><td class="num">20 次</td><td class="num">50 次</td></tr>
+          <tr><td>≥ $10</td><td class="num">20 次</td><td class="num">1000 次</td></tr>
+        </tbody>
+      </table>
+      <div class="kv">
+        <div class="row"><div class="k">密钥状态</div><div class="v">free tier · 无自设额度上限 · 有效期无限制</div></div>
+        <div class="row"><div class="k">累计消费</div><div class="v">$0.074（本次测试全部 cost = 0）</div></div>
+        <div class="row"><div class="k">本次消耗</div><div class="v">约 40 次 :free 请求（21 首测 + 重试 + 复测），未触及 50 次/天上限</div></div>
+        <div class="row"><div class="k">来源</div><div class="v">openrouter.ai/docs/api-reference/limits</div></div>
+      </div>
+    </div>
+    <p class="body" style="margin-top:16px;color:var(--ink-2);font-size:13.5px">注意：本密钥为 free tier，按上表 :free 模型每天只有 50 次请求。日常只跑一两个模型足够；若要批量挂 Agent，建议充值 $10 把日额度提到 1000 次（充值不影响模型本身免费）。</p>
+  </section>
+
+  <!-- ======= 6 方法 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">06</span><span class="sec-title">测试方法</span></div>
+    <p class="method">模型清单取自 <code>GET /api/v1/models</code>（430 个），过滤条件与网页一致：ID 以 <code>:free</code> 结尾
+    或 prompt/completion 计价均为 0，且 output_modalities 含 text → 21 个。每个模型发送单条中文用户消息
+    （「你好，请用一句话简短介绍你自己。」），<code>max_tokens=400</code>，超时 75s，3 并发；失败自动重试 1 次；
+    429 模型等待 60s 后再整轮复测一次。判定「可用」= HTTP 200 且返回非空文本。全部原始响应与逐模型结果见
+    <code>工具集/data/</code>（connectivity_test.json + raw/）。</p>
+  </section>
+
+  <!-- ======= COLOPHON ======= -->
+  <div class="colophon">
+    <div>OpenRouter 免费模型连通性实测<br>复测脚本：<code>工具集/openrouter_connectivity_test.py</code>（标准库单文件，换密钥即用）</div>
+    <div style="text-align:right">数据快照 2026-09-07 09:45 GMT+8<br><code>工具集/data/connectivity_test.json</code></div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "test_time": "2026-08-25 23:55:38",
+  "base_url": "https://api-inference.modelscope.cn/v1",
+  "results": [
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro",
+      "label": "DeepSeek-V4-Pro (最新版)",
+      "result": {
+        "status": "ok",
+        "elapsed": 3.23,
+        "content_length": 39,
+        "usage": {
+          "prompt_tokens": 5,
+          "completion_tokens": 101,
+          "total_tokens": 106
+        }
+      }
+    }
+  ]
+}

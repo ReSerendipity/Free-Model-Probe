@@ -1,0 +1,72 @@
+# 最小 CI：Python 语法门禁 + 明文密钥防线
+# ─────────────────────────────────────────────────────────────────────
+# 说明：本仓库是「本地 / 自部署」的模型清单调研与连通性测试工具集，
+# 不含单元测试，因此**不**接入家族 reusable workflow
+# `ReSerendipity/.github/.github/workflows/python-quality-baseline.yml@main`
+# —— 该复用流要求 pytest 与覆盖率阈值（--cov-fail-under），本仓无测试可跑，
+# 接入只会恒红。待补测试后再切换（届时传 include_tests / mypy_target）。
+#
+# runner 钉 ubuntu-24.04（家族策略：不让 ubuntu-latest 的 OS 迁移静默改变结论）。
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# 组名带 event_name：避免 push-to-main 与其它同 ref 事件互相取消（家族口径）。
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  syntax:
+    name: Python syntax gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 全仓 .py 逐文件字节码编译。本仓脚本多为「顶层即执行」的一次性工具，
+      # 不导入执行，只做语法门禁——保证任何提交都至少能被解释器解析。
+      - name: Byte-compile all Python sources
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(find . -name '*.py' -not -path './.git/*' | sort)
+          printf '%s\n' "${files[@]}"
+          python -m py_compile "${files[@]}"
+          echo "py_compile OK (${#files[@]} files)"
+
+  secret-guard:
+    name: Secret leak guard
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      # 无第三方依赖的明文密钥防线（本仓主体是脚本 + 调研数据，密钥必须走
+      # 环境变量 / 未提交的 local_secret.py）。命中即红，禁止合并。
+      - name: Fail if a plaintext API key is committed
+        run: |
+          set -uo pipefail
+          hits=$(grep -rEn \
+            'sk-or-v1-[0-9a-f]{32,}|ms-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|sk-[A-Za-z0-9]{40,}' \
+            . --include='*.py' --include='*.json' --include='*.md' --include='*.txt' \
+              --include='*.html' --include='*.csv' --include='*.yml' \
+            --exclude-dir=.git \
+            | grep -v 'local_secret.example.py' || true)
+          if [ -n "$hits" ]; then
+            echo "::error::检测到疑似明文密钥，拒绝合并："
+            echo "$hits"
+            exit 1
+          fi
+          echo "未检测到明文密钥"

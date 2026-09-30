@@ -1,0 +1,266 @@
+[
+  {
+    "id": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+    "DescLen": 11173,
+    "Keywords": "coding",
+    "ReadMeHead": "<!-- markdownlint-disable first-line-h1 --> <!-- markdownlint-disable html --> <!-- markdownlint-disable no-duplicate-header --> <div align=\"center\"> <img src=\"https://github.com/deepseek-ai/DeepSeek-"
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-R1-0528",
+    "DescLen": 13312,
+    "Keywords": "LiveCodeBench,AIME,Codeforces,coding",
+    "ReadMeHead": "--- license: mit library_name: transformers --- # DeepSeek-R1-0528 <!-- markdownlint-disable first-line-h1 --> <!-- markdownlint-disable html --> <!-- markdownlint-disable no-duplicate-header --> <div"
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-V3-0324",
+    "DescLen": 9152,
+    "Keywords": "LiveCodeBench,AIME",
+    "ReadMeHead": "# DeepSeek-V3-0324 <!-- markdownlint-disable first-line-h1 --> <!-- markdownlint-disable html --> <!-- markdownlint-disable no-duplicate-header --> <div align=\"center\"> <img src=\"https://github.com/de"
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-V3.2",
+    "DescLen": 7134,
+    "Keywords": "coding",
+    "ReadMeHead": "# DeepSeek-V3.2: Efficient Reasoning & Agentic AI <!-- markdownlint-disable first-line-h1 --> <!-- markdownlint-disable html --> <!-- markdownlint-disable no-duplicate-header --> <div align=\"center\"> "
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "DescLen": 6429,
+    "Keywords": "coding",
+    "ReadMeHead": "# DeepSeek-V4-Flash-0731 <!-- markdownlint-disable first-line-h1 --> <!-- markdownlint-disable html --> <!-- markdownlint-disable no-duplicate-header --> <div align=\"center\"> <img src=\"https://github."
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-V4-Flash",
+    "DescLen": 13092,
+    "Keywords": "HumanEval,LiveCodeBench,Codeforces,coding",
+    "ReadMeHead": "# DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence <!-- markdownlint-disable first-line-h1 --> <!-- markdownlint-disable html --> <!-- markdownlint-disable no-duplicate-header "
+  },
+  {
+    "id": "deepseek-ai/DeepSeek-V4-Pro",
+    "DescLen": 13092,
+    "Keywords": "HumanEval,LiveCodeBench,Codeforces,coding",
+    "ReadMeHead": "# DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence <!-- markdownlint-disable first-line-h1 --> <!-- markdownlint-disable html --> <!-- markdownlint-disable no-duplicate-header "
+  },
+  {
+    "id": "Kwaipilot/KAT-Coder-V2.5-Dev",
+    "DescLen": 27045,
+    "Keywords": "SWE-bench,coding",
+    "ReadMeHead": " <div style=\"background-color:#ffffff;border:none;border-radius:12px;padding:14px 22px;display:inline-block;\"> <div style=\"display:flex;align-items:center;gap:20px;\"> <img src=\"kat_logo_hd.png\" alt=\"K"
+  },
+  {
+    "id": "LLM-Research/Meta-Llama-3.1-8B-Instruct",
+    "DescLen": 30151,
+    "Keywords": "HumanEval,MBPP,coding",
+    "ReadMeHead": " ## Model Information The Meta Llama 3.1 collection of multilingual large language models (LLMs) is a collection of pretrained and instruction tuned generative models in 8B, 70B and 405B sizes (text i"
+  },
+  {
+    "id": "MiniMax/MiniMax-M1-80k",
+    "DescLen": 24069,
+    "Keywords": "LiveCodeBench,SWE-bench,AIME,coding",
+    "ReadMeHead": " <div align=\"center\"> <svg width=\"60%\" height=\"auto\" viewBox=\"0 0 144 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M26.6782 7.96523C26.6782 7.02436 25.913 6.26087 24.9739 6.26087C24.03"
+  },
+  {
+    "id": "MiniMax/MiniMax-M2.5",
+    "DescLen": 28560,
+    "Keywords": "SWE-bench,AIME,coding",
+    "ReadMeHead": " <div align=\"center\"> <svg width=\"60%\" height=\"auto\" viewBox=\"0 0 144 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M26.6782 7.96523C26.6782 7.02436 25.913 6.26087 24.9739 6.26087C24.03"
+  },
+  {
+    "id": "MiniMax/MiniMax-M2.7",
+    "DescLen": 14704,
+    "Keywords": "",
+    "ReadMeHead": " <div align=\"center\"> <svg width=\"60%\" height=\"auto\" viewBox=\"0 0 144 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M26.6782 7.96523C26.6782 7.02436 25.913 6.26087 24.9739 6.26087C24.03"
+  },
+  {
+    "id": "MiniMax/MiniMax-M2",
+    "DescLen": 21829,
+    "Keywords": "LiveCodeBench,SWE-bench,AIME,coding",
+    "ReadMeHead": " <div align=\"center\"> <svg width=\"60%\" height=\"auto\" viewBox=\"0 0 144 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <path d=\"M26.6782 7.96523C26.6782 7.02436 25.913 6.26087 24.9739 6.26087C24.03"
+  },
+  {
+    "id": "MiniMax/MiniMax-M3",
+    "DescLen": 4915,
+    "Keywords": "coding",
+    "ReadMeHead": " <div align=\"center\"> <img width=\"60%\" src=\"figures/logo.svg\" alt=\"MiniMax\"> </div> <hr> <p align=\"center\"> <a href=\"https://agent.minimax.io/\" target=\"_blank\"><img src=\"https://img.shields.io/badge/M"
+  },
+  {
+    "id": "moonshotai/Kimi-K2-Instruct",
+    "DescLen": 25343,
+    "Keywords": "LiveCodeBench,SWE-bench,AIME,coding",
+    "ReadMeHead": "<div align=\"center\"> <picture> <img src=\"figures/kimi-logo.png\" width=\"30%\" alt=\"Kimi K2: Open Agentic Intellignece\"> </picture> </div> <hr> <div align=\"center\" style=\"line-height:1\"> <a href=\"https:/"
+  },
+  {
+    "id": "moonshotai/Kimi-K2.5",
+    "DescLen": 39889,
+    "Keywords": "LiveCodeBench,SWE-bench,AIME,coding",
+    "ReadMeHead": "<div align=\"center\"> <picture> <img src=\"figures/kimi-logo.png\" width=\"30%\" alt=\"Kimi K2.5\"> </picture> </div> <hr> <div align=\"center\" style=\"line-height:1\"> <a href=\"https://www.kimi.com\" target=\"_b"
+  },
+  {
+    "id": "moonshotai/Kimi-K2.6",
+    "DescLen": 29179,
+    "Keywords": "LiveCodeBench,SWE-bench,AIME,coding",
+    "ReadMeHead": "<div align=\"center\"> <picture> <img src=\"figures/kimi-logo.png\" width=\"30%\" alt=\"Kimi K2.6\"> </picture> </div> <hr> <div align=\"center\" style=\"line-height:1\"> <a href=\"https://www.kimi.com\" target=\"_b"
+  },
+  {
+    "id": "moonshotai/Kimi-K2.7-Code",
+    "DescLen": 14917,
+    "Keywords": "coding",
+    "ReadMeHead": "<div align=\"center\"> <picture> <img src=\"figures/kimi-logo.png\" width=\"30%\" alt=\"Kimi K2.7 Code\"> </picture> </div> <hr> <div align=\"center\" style=\"line-height:1\"> <a href=\"https://www.kimi.com/code\" "
+  },
+  {
+    "id": "moonshotai/Kimi-K3",
+    "DescLen": 45034,
+    "Keywords": "coding",
+    "ReadMeHead": "<div align=\"center\"> <picture> <img src=\"assets/kimi-logo.png\" width=\"30%\" alt=\"Kimi K3\"> </picture> </div> <hr> <div align=\"center\" style=\"line-height:1\"> <a href=\"https://www.kimi.com\" target=\"_blan"
+  },
+  {
+    "id": "openai-mirror/gpt-oss-120b",
+    "DescLen": 6995,
+    "Keywords": "",
+    "ReadMeHead": " <p align=\"center\"> <img alt=\"gpt-oss-120b\" src=\"https://raw.githubusercontent.com/openai/gpt-oss/main/docs/gpt-oss-120b.svg\"> </p> <p align=\"center\"> <a href=\"https://gpt-oss.com\"><strong>Try gpt-oss"
+  },
+  {
+    "id": "openai-mirror/gpt-oss-20b",
+    "DescLen": 6979,
+    "Keywords": "",
+    "ReadMeHead": " <p align=\"center\"> <img alt=\"gpt-oss-20b\" src=\"https://raw.githubusercontent.com/openai/gpt-oss/main/docs/gpt-oss-20b.svg\"> </p> <p align=\"center\"> <a href=\"https://gpt-oss.com\"><strong>Try gpt-oss</"
+  },
+  {
+    "id": "Qwen/Qwen2.5-Coder-32B-Instruct",
+    "DescLen": 6121,
+    "Keywords": "coding",
+    "ReadMeHead": " # Qwen2.5-Coder-32B-Instruct <a href=\"https://chat.qwenlm.ai/\" target=\"_blank\" style=\"margin: 2px;\"> <img alt=\"Chat\" src=\"https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5\" s"
+  },
+  {
+    "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+    "DescLen": 16037,
+    "Keywords": "LiveCodeBench,AIME,coding",
+    "ReadMeHead": " # Qwen3-235B-A22B-Instruct-2507 <a href=\"https://chat.qwen.ai/\" target=\"_blank\" style=\"margin: 2px;\"> <img alt=\"Chat\" src=\"https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5\" "
+  },
+  {
+    "id": "Qwen/Qwen3-32B",
+    "DescLen": 16482,
+    "Keywords": "coding",
+    "ReadMeHead": " # Qwen3-32B <a href=\"https://chat.qwen.ai/\" target=\"_blank\" style=\"margin: 2px;\"> <img alt=\"Chat\" src=\"https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5\" style=\"display: inli"
+  },
+  {
+    "id": "Qwen/Qwen3-8B",
+    "DescLen": 16474,
+    "Keywords": "coding",
+    "ReadMeHead": " # Qwen3-8B <a href=\"https://chat.qwen.ai/\" target=\"_blank\" style=\"margin: 2px;\"> <img alt=\"Chat\" src=\"https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5\" style=\"display: inlin"
+  },
+  {
+    "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+    "DescLen": 5252,
+    "Keywords": "coding",
+    "ReadMeHead": " # Qwen3-Coder-30B-A3B-Instruct <a href=\"https://chat.qwen.ai/\" target=\"_blank\" style=\"margin: 2px;\"> <img alt=\"Chat\" src=\"https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5\" s"
+  },
+  {
+    "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
+    "DescLen": 5325,
+    "Keywords": "coding",
+    "ReadMeHead": " # Qwen3-Coder-480B-A35B-Instruct <a href=\"https://chat.qwen.ai/\" target=\"_blank\" style=\"margin: 2px;\"> <img alt=\"Chat\" src=\"https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5\""
+  },
+  {
+    "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+    "DescLen": 16149,
+    "Keywords": "LiveCodeBench,AIME,coding",
+    "ReadMeHead": " # Qwen3-Next-80B-A3B-Instruct <a href=\"https://chat.qwen.ai/\" target=\"_blank\" style=\"margin: 2px;\"> <img alt=\"Chat\" src=\"https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5\" st"
+  },
+  {
+    "id": "Qwen/Qwen3.5-122B-A10B",
+    "DescLen": 92453,
+    "Keywords": "LiveCodeBench,SWE-bench,Codeforces,coding",
+    "ReadMeHead": " # Qwen3.5-122B-A10B <img width=\"400px\" src=\"https://qianwen-res.oss-accelerate.aliyuncs.com/logo_qwen3.5.png\"> [![Qwen Chat](https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5"
+  },
+  {
+    "id": "Qwen/Qwen3.5-35B-A3B",
+    "DescLen": 92942,
+    "Keywords": "LiveCodeBench,SWE-bench,Codeforces,coding",
+    "ReadMeHead": " # Qwen3.5-35B-A3B <img width=\"400px\" src=\"https://qianwen-res.oss-accelerate.aliyuncs.com/logo_qwen3.5.png\"> [![Qwen Chat](https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5)]"
+  },
+  {
+    "id": "Qwen/Qwen3.5-397B-A17B",
+    "DescLen": 94612,
+    "Keywords": "LiveCodeBench,SWE-bench,AIME,coding",
+    "ReadMeHead": " # Qwen3.5-397B-A17B <img width=\"400px\" src=\"https://qianwen-res.oss-accelerate.aliyuncs.com/logo_qwen3.5.png\"> [![Qwen Chat](https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5"
+  },
+  {
+    "id": "Qwen/Qwen3.6-35B-A3B",
+    "DescLen": 64378,
+    "Keywords": "LiveCodeBench,SWE-bench,AIME,coding",
+    "ReadMeHead": " # Qwen3.6-35B-A3B <img width=\"400px\" src=\"https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3.6/logo.png\"> [![Qwen Chat](https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5)]"
+  },
+  {
+    "id": "Qwen/QwQ-32B",
+    "DescLen": 6978,
+    "Keywords": "coding",
+    "ReadMeHead": " # QwQ-32B <a href=\"https://chat.qwenlm.ai/\" target=\"_blank\" style=\"margin: 2px;\"> <img alt=\"Chat\" src=\"https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5\" style=\"display: inli"
+  },
+  {
+    "id": "Shanghai_AI_Laboratory/Intern-S1-Pro",
+    "DescLen": 19548,
+    "Keywords": "coding",
+    "ReadMeHead": " ## Intern-S1-Pro <div align=\"center\"> <img src=\"./figs/title.png\" /> <div>&nbsp;</div> [💻Github Repo](https://github.com/InternLM/Intern-S1) • [🤗Model Collections](https://huggingface.co/collection"
+  },
+  {
+    "id": "stepfun-ai/Step-3.7-Flash",
+    "DescLen": 13998,
+    "Keywords": "SWE-bench,coding",
+    "ReadMeHead": " **[ModelPage]**: https://static.stepfun.com/blog/step-3.7-flash/ ## 1. Introduction Step 3.7 Flash is a 198B-parameter sparse Mixture-of-Experts (MoE) vision-language model that combines a 196B-param"
+  },
+  {
+    "id": "Tencent-Hunyuan/Hy3",
+    "DescLen": 10001,
+    "Keywords": "SWE-bench,coding",
+    "ReadMeHead": "<p align=\"left\"> <a href=\"README_CN.md\">中文</a>&nbsp;｜&nbsp;English </p> <br> <p align=\"center\"> <img src=\"assets/logo-en.png\" width=\"400\"/> <br> </p> <div align=\"center\" style=\"line-height: 1;\"> [![Li"
+  },
+  {
+    "id": "ZhipuAI/AutoGLM-Phone-9B",
+    "DescLen": 2772,
+    "Keywords": "",
+    "ReadMeHead": " # AutoGLM-Phone-9B <div align=\"center\"> <img src=\"https://raw.githubusercontent.com/zai-org/Open-AutoGLM/refs/heads/main/resources/logo.svg\" width=\"20%\"/> </div> <p align=\"center\"> 👋 Join our <a hre"
+  },
+  {
+    "id": "ZhipuAI/GLM-4.5",
+    "DescLen": 9541,
+    "Keywords": "coding",
+    "ReadMeHead": " # GLM-4.5 <div align=\"center\"> <img src=https://raw.githubusercontent.com/zai-org/GLM-4.5/refs/heads/main/resources/logo.svg width=\"15%\"/> </div> <p align=\"center\"> 👋 Join our <a href=\"https://disco"
+  },
+  {
+    "id": "ZhipuAI/GLM-4.6",
+    "DescLen": 2951,
+    "Keywords": "coding",
+    "ReadMeHead": " # GLM-4.6 <div align=\"center\"> <img src=https://raw.githubusercontent.com/zai-org/GLM-4.5/refs/heads/main/resources/logo.svg width=\"15%\"/> </div> <p align=\"center\"> 👋 Join our <a href=\"https://disco"
+  },
+  {
+    "id": "ZhipuAI/GLM-4.7-Flash",
+    "DescLen": 8059,
+    "Keywords": "SWE-bench,AIME,coding",
+    "ReadMeHead": " # GLM-4.7-Flash <div align=\"center\"> <img src=https://raw.githubusercontent.com/zai-org/GLM-4.5/refs/heads/main/resources/logo.svg width=\"15%\"/> </div> <p align=\"center\"> 👋 Join our <a href=\"https:/"
+  },
+  {
+    "id": "ZhipuAI/GLM-4.7",
+    "DescLen": 13485,
+    "Keywords": "LiveCodeBench,SWE-bench,AIME,coding",
+    "ReadMeHead": " # GLM-4.7 <div align=\"center\"> <img src=https://raw.githubusercontent.com/zai-org/GLM-4.5/refs/heads/main/resources/logo.svg width=\"15%\"/> </div> <p align=\"center\"> 👋 Join our <a href=\"https://disco"
+  },
+  {
+    "id": "ZhipuAI/GLM-5.1",
+    "DescLen": 10630,
+    "Keywords": "SWE-bench,AIME,coding",
+    "ReadMeHead": " # GLM-5.1 <div align=\"center\"> <img src=https://raw.githubusercontent.com/zai-org/GLM-5/refs/heads/main/resources/logo.svg width=\"15%\"/> </div> <p align=\"center\"> 👋 Join our <a href=\"https://raw.git"
+  },
+  {
+    "id": "ZhipuAI/GLM-5.2",
+    "DescLen": 10781,
+    "Keywords": "SWE-bench,AIME,coding",
+    "ReadMeHead": " # GLM-5.2 <div align=\"center\"> <img src=https://raw.githubusercontent.com/zai-org/GLM-5/refs/heads/main/resources/logo.svg width=\"15%\"/> </div> <p align=\"center\"> 👋 Join our <a href=\"https://raw.git"
+  },
+  {
+    "id": "ZhipuAI/GLM-5",
+    "DescLen": 12615,
+    "Keywords": "SWE-bench,AIME,coding",
+    "ReadMeHead": " # GLM-5 <div align=\"center\"> <img src=https://raw.githubusercontent.com/zai-org/GLM-5/refs/heads/main/resources/logo.svg width=\"15%\"/> </div> <p align=\"center\"> 👋 Join our <a href=\"https://raw.githu"
+  }
+]

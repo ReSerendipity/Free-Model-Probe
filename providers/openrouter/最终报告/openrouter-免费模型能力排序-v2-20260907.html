@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenRouter 免费模型能力排序 · 复测与探针 v2.1 · 2026-09-07</title>
+<style>
+  :root{
+    --bg:#fafafa; --ink:#141416; --ink-2:#55555e; --ink-3:#8a8a92;
+    --line:#e3e3e7; --line-strong:#c9c9cf;
+    --accent:#0e6f66;
+    --ok:#167a4d; --warn:#9a6700; --bad:#b3372f;
+    --mono:"Cascadia Mono","Consolas","Courier New",monospace;
+    --sans:"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{background:var(--bg)}
+  body{font-family:var(--sans);color:var(--ink);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .canvas{max-width:1180px;margin:0 auto;padding:56px 40px 64px}
+
+  .kicker{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1{font-size:38px;line-height:1.15;letter-spacing:-0.02em;font-weight:600;margin:14px 0 10px}
+  .lede{font-size:16px;color:var(--ink-2);max-width:66ch}
+  .meta-row{display:flex;flex-wrap:wrap;margin-top:30px;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line)}
+  .meta-cell{padding:12px 28px 12px 0;margin-right:28px;border-right:1px solid var(--line)}
+  .meta-cell:last-child{border-right:none}
+  .meta-k{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+  .meta-v{font-size:14px;margin-top:2px}
+  .meta-v code{font-family:var(--mono);font-size:12.5px}
+
+  .metrics{display:flex;flex-wrap:wrap;margin:40px 0 8px;border-top:2px solid var(--ink)}
+  .metric{flex:1 1 170px;padding:18px 24px 18px 0;margin-right:24px;border-bottom:1px solid var(--line)}
+  .metric:last-child{margin-right:0}
+  .metric .num{font-size:34px;font-weight:600;letter-spacing:-0.02em;line-height:1.1}
+  .metric .num small{font-size:15px;font-weight:400;color:var(--ink-3);letter-spacing:0}
+  .metric .lbl{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);margin-top:6px}
+  .metric .sub{font-size:12.5px;color:var(--ink-3);margin-top:3px}
+
+  section{margin-top:56px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line-strong);padding-bottom:10px;margin-bottom:22px}
+  .sec-no{font-family:var(--mono);font-size:13px;color:var(--accent)}
+  .sec-title{font-size:21px;font-weight:600;letter-spacing:-0.01em}
+  .sec-note{margin-left:auto;font-size:12.5px;color:var(--ink-3)}
+  p.body{max-width:80ch;color:var(--ink);margin-bottom:12px}
+  p.body b{font-weight:600}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  thead th{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2);font-weight:600;text-align:left;padding:9px 10px;border-bottom:2px solid var(--ink);white-space:nowrap}
+  tbody td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  tbody tr:hover{background:#f2f2f4}
+  td.mid{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+  td.num,th.num{text-align:right;font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+  .rank{font-family:var(--mono);font-weight:600;color:var(--accent)}
+  .tag{display:inline-block;font-size:11px;padding:1px 7px;border:1px solid var(--line-strong);border-radius:2px;color:var(--ink-2);white-space:nowrap;margin:1px 2px 1px 0}
+  .tag.warn{color:var(--warn);border-color:var(--warn)}
+  .tag.bad{color:var(--bad);border-color:var(--bad)}
+  .st{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600;font-size:12.5px}
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+  .dot.ok{background:var(--ok)} .dot.warn{background:var(--warn)} .dot.bad{background:var(--bad)}
+  .st.ok{color:var(--ok)} .st.warn{color:var(--warn)} .st.bad{color:var(--bad)}
+
+  .tiers{border-top:2px solid var(--ink)}
+  .tier{display:flex;gap:0;padding:18px 0;border-bottom:1px solid var(--line)}
+  .tier-k{flex:0 0 210px;padding-right:26px}
+  .tier-k .t-name{font-weight:600;font-size:15px}
+  .tier-k .t-sub{font-size:12.5px;color:var(--ink-3);margin-top:3px}
+  .tier-b{flex:1;font-size:13.5px;color:var(--ink-2)}
+  .tier-b code{font-family:var(--mono);font-size:12px;background:#f0f0f2;padding:1px 5px}
+  .tier-b div{margin-bottom:6px}
+
+  ol.findings{list-style:none;counter-reset:f;max-width:92ch}
+  ol.findings li{counter-increment:f;position:relative;padding:14px 0 14px 46px;border-bottom:1px solid var(--line)}
+  ol.findings li::before{content:counter(f,decimal-leading-zero);position:absolute;left:0;top:14px;font-family:var(--mono);font-size:13px;color:var(--accent)}
+  ol.findings .f-t{font-weight:600;margin-bottom:3px}
+  ol.findings .f-d{font-size:13.5px;color:var(--ink-2)}
+  ol.findings code{font-family:var(--mono);font-size:12px;background:#f0f0f2;padding:1px 5px}
+
+  .method{font-size:13.5px;color:var(--ink-2);max-width:84ch}
+  .method code{font-family:var(--mono);font-size:12px;background:#f0f0f2;padding:1px 5px}
+
+  .colophon{margin-top:64px;border-top:2px solid var(--ink);padding-top:14px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  .colophon div{font-size:12px;color:var(--ink-3)}
+  .colophon code{font-family:var(--mono);font-size:11px}
+  @media print{ body{background:#fff} .canvas{padding:20px 8px} tbody tr:hover{background:none} }
+</style>
+</head>
+<body>
+<div class="canvas">
+
+  <div class="kicker">OpenRouter · Retest &amp; Capability Ranking · v2.1 · 2026-09-07</div>
+  <h1>免费模型能力排序（复测后）</h1>
+  <p class="lede">在 v1 连通性实测基础上：对 3 个 429 模型做第二轮复测，剔除 4 个 403 模型，并对全部候选发起
+  统一能力探针（数列推理 / 质数判断 / 概念解释，单请求 3 题），结合两轮延迟、参数量级与实测行为排出可用性排序。</p>
+
+  <div class="meta-row">
+    <div class="meta-cell"><div class="meta-k">复测时间</div><div class="meta-v">2026-09-07 11:16 – 11:29 GMT+8</div></div>
+    <div class="meta-cell"><div class="meta-k">距首轮</div><div class="meta-v">约 1.6 – 1.9 小时</div></div>
+    <div class="meta-cell"><div class="meta-k">候选池</div><div class="meta-v">21 − 4 个 403 − 1 个分类器 = 16</div></div>
+    <div class="meta-cell"><div class="meta-k">探针通过</div><div class="meta-v"><code>13/13</code> 全对（1 个英文回答）</div></div>
+  </div>
+
+  <div class="metrics">
+    <div class="metric"><div class="num">13</div><div class="lbl">正式排序</div><div class="sub">聊天候选 · 探针全对</div></div>
+    <div class="metric"><div class="num">1</div><div class="lbl">路由器单列</div><div class="sub">openrouter/free 行为不定</div></div>
+    <div class="metric"><div class="num" style="color:var(--warn)">2</div><div class="lbl">复测仍 429</div><div class="sub">gemma ×2 · 暂不可调度</div></div>
+    <div class="metric"><div class="num" style="color:var(--bad)">4</div><div class="lbl">已剔除（403）</div><div class="sub">lyria ×2 · inkling ×2</div></div>
+    <div class="metric"><div class="num">1.4<small>–3.8s</small></div><div class="lbl">候选延迟带</div><div class="sub">m3 波动至 10.9s</div></div>
+  </div>
+
+  <!-- ======= 01 复测结论 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">01</span><span class="sec-title">429 复测结论</span></div>
+    <p class="body"><b>gemma 两兄弟彻底堵死：</b><code style="font-family:var(--mono);font-size:13px">google/gemma-4-26b-a4b-it:free</code> 与
+    <code style="font-family:var(--mono);font-size:13px">google/gemma-4-31b-it:free</code> 在 09:38 首测、09:45 一复、11:16 二复三个时点均为 429，
+    错误源始终是 <span style="font-family:var(--mono);font-size:12px">upstream_provider_shared_pool</span>（Google AI Studio 免费共享池）——
+    持续拥堵超过 1.5 小时，短期不建议作为候选。</p>
+    <p class="body"><b>laguna-xs 在恢复与限流之间抖动：</b><code style="font-family:var(--mono);font-size:13px">poolside/laguna-xs-2.1:free</code>
+    11:16 复测恢复（1.56s 正常回答），但 11:27 能力探针时再次 429——Poolside 免费池容量极不稳定。
+    另有一个值得警惕的发现：它恢复后自称「GLM，智谱AI训练」（详见第 04 节）。</p>
+    <p class="body">4 个 403 模型（google/lyria-3-clip/pro、thinkingmachines/inkling、inkling-small）按指示<strong>剔除候选池</strong>，本报告不再追踪；
+    <code style="font-family:var(--mono);font-size:13px">nemotron-3.5-content-safety:free</code> 为内容审核分类器，不属聊天候选，同样不参与排序。</p>
+  </section>
+
+  <!-- ======= 02 排序表 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">02</span><span class="sec-title">能力排序 · 13 个聊天候选</span>
+      <span class="sec-note">探针 3 题全对为门槛；名次由参数量级 + 实测行为 + 延迟综合评定</span></div>
+    <table>
+      <thead><tr>
+        <th style="width:44px">名次</th><th>模型 ID</th><th class="num">参数量（总/激活）</th><th class="num">上下文</th><th>定位</th>
+        <th>探针</th><th class="num">延迟（两轮）</th><th>综合评注</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="rank">01</td><td class="mid">minimax/minimax-m3:free</td><td class="num">428B / A23B</td><td class="num">1M</td><td>MiniMax 旗舰</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">2.5 / 10.9s</td><td class="note">候选中总参最大；满分且主动做整除验证。唯一短板：延迟波动最大（首轮 10.9s，本轮 2.5s）</td></tr>
+        <tr><td class="rank">02</td><td class="mid">nvidia/nemotron-3-ultra-550b-a55b:free</td><td class="num">550B / A55B</td><td class="num">1M</td><td>NVIDIA 前沿推理</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">1.6 / 1.6s</td><td class="note">总参与激活参均最大、速度极快。扣分项：自称「GLM，Z.ai 训练」，模型身份与标称不符 <span class="tag warn">身份存疑</span></td></tr>
+        <tr><td class="rank">03</td><td class="mid">nvidia/nemotron-3-super-120b-a12b:free</td><td class="num">120B / A12B</td><td class="num">262K</td><td>NVIDIA 多智能体</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">1.9 / 1.4s</td><td class="note">论证质量最佳（√47 内质数检验）；两轮延迟最快档且稳定，综合性价比第一</td></tr>
+        <tr><td class="rank">04</td><td class="mid">minimax/minimax-m2.7:free</td><td class="num">230B / A10B</td><td class="num">196K</td><td>MiniMax 上代旗舰</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">2.3–3.3s</td><td class="note">推理深（500 tokens 两次不够用，1800 才收尾），延迟略高于 Nemotron 系</td></tr>
+        <tr><td class="rank">05</td><td class="mid">inclusionai/ling-3.0-flash-sante:free</td><td class="num">124B / A5.1B</td><td class="num">262K</td><td>蚂蚁百灵·健康变体</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">1.7–2.2s</td><td class="note">探针论证优秀（√47 检验）；reasoning 型，输出预算需给足</td></tr>
+        <tr><td class="rank">06</td><td class="mid">inclusionai/ling-3.0-flash-fin:free</td><td class="num">124B / A5.1B</td><td class="num">262K</td><td>蚂蚁百灵·金融变体</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">1.7–2.8s</td><td class="note">与 sante 同底座不同垂域，答案正确性一致，论证略简</td></tr>
+        <tr><td class="rank">07</td><td class="mid">nvidia/nemotron-3.5-lightning:free</td><td class="num">30B / A3B</td><td class="num">1M</td><td>Nemotron 3.5 轻旗舰</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">~1.5–1.7s</td><td class="note">答案全对但<strong>无视中文指令用英文作答</strong>；量级仅 30B/A3B，1M 上下文是主要卖点 <span class="tag warn">语言遵循</span></td></tr>
+        <tr><td class="rank">08</td><td class="mid">nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free</td><td class="num">30B / A3B</td><td class="num">256K</td><td>NVIDIA omni 子代理</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">1.5s</td><td class="note">与 lightning 同量级，快而稳；omni 多模态入口，文本任务无短板</td></tr>
+        <tr><td class="rank">09</td><td class="mid">dots-studio/dots-3-note-preview:free</td><td class="num">280B / A16B</td><td class="num">512K</td><td>小红书 Dots · preview</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">1.5 / 2.3s</td><td class="note">总参第二大（280B）被低估了；preview 标签意味着可用性可能变动</td></tr>
+        <tr><td class="rank">10</td><td class="mid">cohere/north-mini-code:free</td><td class="num">30B / A3B</td><td class="num">256K</td><td>Cohere 代码 mini</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">1.5 / 2.2s</td><td class="note">代码特化但通用问答满分、格式干净；轻量任务首选之一</td></tr>
+        <tr><td class="rank">11</td><td class="mid">poolside/laguna-s-2.1:free</td><td class="num">118B / A8B</td><td class="num">262K</td><td>Poolside 代码模型</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">2.1 / 3.8s</td><td class="note">全对但答案最简；候选中延迟最高档，且 Poolside 池稳定性一般</td></tr>
+        <tr><td class="rank">12</td><td class="mid">liquid/lfm-2.5-2.6b:free</td><td class="num">2.6B 稠密</td><td class="num">65K</td><td>Liquid 端侧推理</td><td><span class="st ok"><span class="dot ok"></span>3/3</span></td><td class="num">~1.5–1.7s</td><td class="note">探针满分超出量级预期，表达甚至优雅；但 2.6B + 65K 上下文决定复杂任务上限</td></tr>
+        <tr><td class="rank">—</td><td class="mid">poolside/laguna-xs-2.1:free</td><td class="num">33B / A3B</td><td class="num">262K</td><td>Poolside xs</td><td><span class="st bad"><span class="dot bad"></span>未完成</span></td><td class="num">—</td><td class="note">不排名：恢复 10 分钟后再度 429（抖动），探针未拿到答案，且自称「GLM，智谱AI训练」<span class="tag bad">429 抖动</span> <span class="tag warn">身份存疑</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ======= 03 梯队 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">03</span><span class="sec-title">选用建议（按场景）</span></div>
+    <div class="tiers">
+      <div class="tier">
+        <div class="tier-k"><div class="t-name">第一梯队 · 旗舰级</div><div class="t-sub">复杂推理 / 长文档</div></div>
+        <div class="tier-b">
+          <div><code>minimax-m3:free</code>（428B/A23B）— 能力天花板 + 1M 上下文，接受延迟波动就选它</div>
+          <div><code>nemotron-3-ultra-550b:free</code>（550B/A55B）— 量级最大且 1.6s 级响应；介意身份异常则绕开</div>
+          <div><code>nemotron-3-super-120b:free</code>（120B/A12B）— <b>默认首选</b>：质量、速度、稳定性最均衡</div>
+          <div><code>minimax-m2.7:free</code>（230B/A10B）— 深度推理备选，记得给足输出预算</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-k"><div class="t-name">第二梯队 · 中坚</div><div class="t-sub">日常问答 / 轻量 Agent</div></div>
+        <div class="tier-b">
+          <div><code>ling-3.0-flash-sante / -fin:free</code>（124B/A5.1B）— 262K 上下文 + reasoning，中文场景可靠</div>
+          <div><code>dots-3-note-preview:free</code>（280B/A16B）— 参数第二大，被 preview 标签拖累；<code>nemotron-3-nano-omni-30b:free</code> / <code>north-mini-code:free</code>（均 30B/A3B）快省准</div>
+          <div><code>lightning:free</code>（30B/A3B）— 1M 上下文优势明显，但只认英文指令，需在 prompt 层兼容</div>
+        </div>
+      </div>
+      <div class="tier">
+        <div class="tier-k"><div class="t-name">特殊 / 观察名单</div><div class="t-sub">暂不作稳定候选</div></div>
+        <div class="tier-b">
+          <div><code>openrouter/free</code> — 路由器：三次调用路由到三种不同后端（分类器 / Nemotron reasoning / …），质量不可预测；探针这次满分不代表下次</div>
+          <div><code>poolside/laguna-xs-2.1:free</code>（33B/A3B）— 429 抖动 + 身份异常，观察</div>
+          <div><code>gemma-4-31b:free</code>（30.7B 稠密）/ <code>gemma-4-26b-a4b:free</code>（25.2B/A3.8B）— 恢复后值得补测入榜</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= 04 发现 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">04</span><span class="sec-title">本轮新发现</span></div>
+    <ol class="findings">
+      <li><div class="f-t">第二个身份异常：laguna-xs 自称 GLM</div><div class="f-d">恢复后的 <code>laguna-xs-2.1:free</code> 对问候语回答「你好，我是 GLM，这是一款由智谱AI训练的大语言模型」——与 nemotron-ultra 的自述相互印证：OpenRouter 免费池中至少两个标称模型实际由 GLM 系后端服务（或换标）。免费变体的模型身份要与官方标称分开看待。</div></li>
+      <li><div class="f-t">reasoning 模型的 tokens 陷阱是普遍现象</div><div class="f-d">ling×2、lfm-2.5、m2.7、laguna-xs 在 500 tokens 下全部只输出思考、没有答案（finish=length）；1800 tokens 才全部收尾。免费模型接 Agent 时 max_tokens 建议直接给 1500+，或选非 reasoning 型。</div></li>
+      <li><div class="f-t">lightning 的语言遵循缺陷</div><div class="f-d">中文提问、3 题全对，但整份回答是英文——reasoning 系模型的指令遵循盲区。中文产品里用它需要在系统提示词里强制中文。</div></li>
+      <li><div class="f-t">openrouter/free 的路由抽签</div><div class="f-d">三次调用分别落到 content-safety 分类器、Nemotron reasoning（思考链截断）、Nemotron reasoning（满分作答）。它是一个「免费体验入口」，不是稳定模型。</div></li>
+      <li><div class="f-t">Google / Poolside 免费池拥堵是常态</div><div class="f-d">gemma×2 跨 1.5h 三时点 429；laguna-xs 十分钟内恢复→再限流。凡 <span style="font-family:var(--mono);font-size:12px">upstream_provider_shared_pool</span> 限流，重试价值低，BYOK 或错峰才有意义。</div></li>
+      <li><div class="f-t">参数量揭底：两处与定位印象不符</div><div class="f-d"><code>dots-3-note-preview</code> 实为 280B/A16B（总参仅次于 550B 的 ultra，排第二），此前按 preview 标签低估了它；<code>lightning</code> 仅 30B/A3B，与 nano-omni、north-mini-code 同量级，它的核心竞争力是 1M 上下文而非参数。</div></li>
+    </ol>
+  </section>
+
+  <!-- ======= 05 方法 ======= -->
+  <section>
+    <div class="sec-head"><span class="sec-no">05</span><span class="sec-title">探针与排序方法</span></div>
+    <p class="method"><b>探针</b>：单请求 3 题——数列 2,6,12,20,30,…（考归纳推理，正确答案 110）、47 素性判断（考基础数感与论证）、
+    一句话解释过拟合（考概念与表达），要求编号分点作答（考指令遵循）。第一轮 max_tokens=500，reasoning 型模型普遍只够思考；
+    第二轮对 7 个未完成的模型补测 max_tokens=1800，全部收尾。<b>评分</b>：3 题全对 13/13——探针门槛已过，
+    名次差异来自：参数量级与官方定位＋实测行为（语言遵循、输出稳定性、身份异常，属实测）＋两轮延迟。
+    <b>参数量来源</b>：全部取自 OpenRouter 官方模型描述（550B/A55B、120B/A12B、30B/A3B、124B/A5.1B、280B/A16B、118B/A8B、33B/A3B、2.6B、30.7B、25.2B/A3.8B）；
+    MiniMax 两款描述未标注，经交叉核验补齐——M3 428B/A23B（NVIDIA Megatron Bridge 文档、MiniMax 官方博客）、
+    M2.7 230B/A10B（artificialanalysis、NVIDIA 开发者博客）。<b>数据</b>：探针原文、逐次延迟与 usage 见
+    <code>工具集/data/probe_results.json</code>；429 复测记录已并入 <code>工具集/data/connectivity_test.json</code>（retest2 字段）。</p>
+  </section>
+
+  <div class="colophon">
+    <div>OpenRouter 免费模型 · 复测与能力排序 v2.1（补参数量）<br>前置报告：openrouter-免费模型连通性实测-20260907.html</div>
+    <div style="text-align:right">数据快照 2026-09-07 11:29 GMT+8 · 参数补齐 11:4x GMT+8<br><code>工具集/data/probe_results.json</code></div>
+  </div>
+
+</div>
+</body>
+</html>

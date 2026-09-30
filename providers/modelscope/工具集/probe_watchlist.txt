@@ -1,0 +1,13 @@
+# 探测种子清单（Fix 2 增量探测用）
+# 一行一个「家族基础 model id」，脚本自动生成下一版本/变体候选并探测魔搭社区免费推理。
+# 覆盖当前报告中所有被跟踪的模型家族（按 org/家族基础 id 填写）。
+# 命中新模型：默认 dry-run 仅报告，--apply 才写入 supplement_models.txt。
+# 新增家族请在下方追加；列表越全，自动发现越完整（无法枚举全量目录，依赖种子）。
+deepseek-ai/DeepSeek-V4
+ZhipuAI/GLM-5
+Qwen/Qwen3
+Qwen/Qwen3.5
+nex-agi/Nex-N2.5
+stepfun-ai/Step-3
+mistralai/Mistral-Large
+Shanghai_AI_Laboratory/Intern-S1

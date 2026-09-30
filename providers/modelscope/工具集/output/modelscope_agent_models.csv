@@ -1,0 +1,25 @@
+﻿排名,模型ID,发布方/机构,魔搭社区魔粒/次,CostTier,计费口径,模态,稳定性,编程总分,编程基准,下载量,核对时间
+1,deepseek-ai/DeepSeek-V4-Pro-0813,deepseek-ai,2,ultra,每次调用,文本,稳定,87.9,Terminal Bench 2.1 87.9,7794,2026-09-21T07:10:54Z
+2,deepseek-ai/DeepSeek-V4-Flash-Vision-Exp,deepseek-ai,1,standard,每次调用,多模态(图文),实验/预览,83.9,Terminal Bench 2.1 83.9,26385,2026-09-21T07:10:54Z
+3,deepseek-ai/DeepSeek-V4-Flash-0731,deepseek-ai,2,ultra,每次调用,文本,稳定,82.7,Terminal Bench 2.1 82.7,115293,2026-09-21T07:10:54Z
+4,Qwen/Qwen3.8-Flash-Next,Qwen,1,standard,每次调用,多模态(图文),实验/预览,77.2,SWE-Bench Pro 62.5；LiveCodeBench 91.9,61988,2026-09-21T07:10:54Z
+5,Qwen/Qwen3.8-27B,Qwen,1,standard,每次调用,多模态(图文),稳定,75.0,Terminal Bench 2.1 73；SWE-Bench Pro 61.7；LiveCodeBench 90.3,444494,2026-09-21T07:10:54Z
+6,Qwen/Qwen3.5-397B-A17B,Qwen,2,ultra,每次调用,多模态(图文),稳定,73.9,SWE-bench Verified 80；Terminal Bench 2.1 54；LiveCodeBench 87.7,215839,2026-09-21T07:10:54Z
+7,deepseek-ai/DeepSeek-V4-Pro,deepseek-ai,2,ultra,每次调用,文本,稳定,65.4,Terminal Bench 2.1 65.4,241968,2026-09-21T07:10:54Z
+8,ZhipuAI/GLM-5.2,ZhipuAI,2,ultra,每次调用,文本,稳定,62.1,SWE-Bench Pro 62.1,192837,2026-09-21T07:10:54Z
+9,Qwen/Qwen3.5-35B-A3B,Qwen,1,standard,每次调用,多模态(图文),稳定,61.5,SWE-bench Verified 72；Terminal Bench 2.1 31.9；LiveCodeBench 80.5,3248576,2026-09-21T07:10:54Z
+10,Qwen/Qwen3.5-27B,Qwen,1,standard,每次调用,多模态(图文),稳定,61.5,SWE-bench Verified 72；Terminal Bench 2.1 31.9；LiveCodeBench 80.5,1900846,2026-09-21T07:10:54Z
+11,Qwen/Qwen3.5-122B-A10B,Qwen,1,standard,每次调用,多模态(图文),稳定,61.5,SWE-bench Verified 72；Terminal Bench 2.1 31.9；LiveCodeBench 80.5,322882,2026-09-21T07:10:54Z
+12,ZhipuAI/GLM-4.7-Flash,ZhipuAI,1,standard,每次调用,文本,稳定,59.2,SWE-bench Verified 59.2；AIME 25,698863,2026-09-21T07:10:54Z
+13,nex-agi/Nex-N2.5-mini,nex-agi,0.5,lite,每次调用,文本,稳定,58.6,Terminal Bench 2.1 73.4；SWE-Bench Pro 43.8,114,2026-09-21T07:10:54Z
+14,nex-agi/Nex-N2.5-Pro,nex-agi,1,standard,每次调用,文本,稳定,58.6,Terminal Bench 2.1 73.4；SWE-Bench Pro 43.8,56,2026-09-21T07:10:54Z
+15,stepfun-ai/Step-3.7-Flash,stepfun-ai,1,standard,每次调用,多模态(图文),稳定,57.9,Terminal Bench 2.1 59.5；SWE-Bench Pro 56.3,14140,2026-09-21T07:10:54Z
+16,stepfun-ai/Step-3.5-Flash,stepfun-ai,1,standard,每次调用,—,稳定,51.0,SWE-bench Verified 51；Terminal Bench 2.1 51,5031466,2026-09-21T07:10:54Z
+17,MiniMax/MiniMax-M1-80k,MiniMax,1,standard,每次调用,文本,稳定,40.0,SWE-bench Verified 56；LiveCodeBench 24,725212,2026-09-21T07:10:54Z
+18,mistralai/Mistral-Large-Instruct-2407,mistralai,1,standard,每次调用,文本,稳定,,无公开编程基准,76609,2026-09-21T07:10:54Z
+19,ZhipuAI/GLM-5.3-Flash,ZhipuAI,1,standard,每次调用,多模态(图文),稳定,,无公开编程基准,68666,2026-09-21T07:10:54Z
+20,deepseek-ai/DeepSeek-V4.1-Flash,deepseek-ai,2,ultra,每次调用,多模态(图文),稳定,,无公开编程基准,17706,2026-09-21T07:10:54Z
+21,Shanghai_AI_Laboratory/Intern-S1-mini,Shanghai_AI_Laboratory,1,standard,每次调用,多模态(图文),稳定,,无公开编程基准,7411,2026-09-21T07:10:54Z
+22,Shanghai_AI_Laboratory/Intern-S1,Shanghai_AI_Laboratory,1,standard,每次调用,多模态(图文),稳定,,无公开编程基准,4104,2026-09-21T07:10:54Z
+23,Shanghai_AI_Laboratory/Intern-S2-Preview,Shanghai_AI_Laboratory,1,standard,每次调用,多模态(图文),实验/预览,,无公开编程基准,460,2026-09-21T07:10:54Z
+24,early-access/EA-29B-A4B,early-access,0.5,lite,每次调用,—,实验/预览,,无公开编程基准,,2026-09-21T07:10:54Z

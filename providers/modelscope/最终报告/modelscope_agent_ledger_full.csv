@@ -1,0 +1,32 @@
+﻿排名,模型ID,发布方/机构,API可调用,主流依据,魔搭社区魔粒/次,计费口径,CostTier,编程基准,基准来源,核对时间
+1,deepseek-ai/DeepSeek-V4-Pro,DeepSeek 深度求索（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,2,每次调用,ultra,SWE-bench Verified 80.6 (Max); LiveCodeBench 93.5; Codeforces 3206,模型卡+morphllm.com/swe-bench-pro,2026-08-08/09
+2,deepseek-ai/DeepSeek-V4-Flash-0731,DeepSeek 深度求索（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,2,每次调用,ultra,Terminal Bench 2.1 82.7; NL2Repo 54.2; DeepSWE 54.4,模型卡+flowtivity.ai,2026-08-08/09
+3,Qwen/Qwen3.5-397B-A17B,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,2,每次调用,ultra,SWE-bench Verified 76.4; LiveCodeBench v6 83.6; AIME26 91.3,模型卡+morphllm.com/qwen-3-5,2026-08-08/09
+4,ZhipuAI/GLM-5.2,智谱 AI（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,2,每次调用,ultra,SWE-bench Pro 62.1(开源第一); Terminal Bench 2.1 81.0/82.7; AIME2026 99.2,模型卡+morphllm.com/swe-bench-pro,2026-08-08/09
+5,Qwen/Qwen3.5-122B-A10B,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,SWE-bench Verified 72.4,HF模型卡+digitalapplied.com,2026-08-08/09
+6,Qwen/Qwen3.5-35B-A3B,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,SWE-bench Verified 72.0,ModelScope模型卡,2026-08-08/09
+7,Qwen/Qwen3.5-27B,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,SWE-bench Verified 72.0,ModelScope模型卡README,2026-08-08/09
+8,MiniMax/MiniMax-M3,MiniMax 稀宇科技（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,SWE-bench Pro 59.0; Terminal-Bench 2.1 66.0,官方博客minimax.io,2026-08-08/09
+9,ZhipuAI/GLM-4.7-Flash,智谱 AI（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,SWE-bench Verified 59.2,ModelScope模型卡README,2026-08-08/09
+10,stepfun-ai/Step-3.7-Flash,阶跃星辰 StepFun（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,SWE-Bench PRO 56.3; Terminal-Bench 2.1 59.5,ModelScope模型卡,2026-08-08/09
+11,MiniMax/MiniMax-M1-80k,MiniMax 稀宇科技（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,SWE-bench Verified 56.0,ModelScope模型卡,2026-08-08/09
+12,stepfun-ai/Step-3.5-Flash,阶跃星辰 StepFun（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,SWE-bench Verified 51.0,ModelScope模型卡README,2026-08-08/09
+13,Qwen/Qwen3-Coder-30B-A3B-Instruct,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,SWE-bench Verified 51.6 (OpenHands 100 turns),HF Discussion#30,2026-08-08/09
+14,Tencent-Hunyuan/Hy3,腾讯混元（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,2,每次调用,ultra,模型卡提及 SWE-bench（无公开数值）,ModelScope模型卡,2026-08-08/09
+15,Qwen/Qwen3-Next-80B-A3B-Instruct,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,LiveCodeBench v6 / AIME25（模型卡提及）,ModelScope模型卡,2026-08-08/09
+16,Qwen/Qwen3-Next-80B-A3B-Thinking,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,推理增强版，模型卡提及 LiveCodeBench,ModelScope模型卡,2026-08-08/09
+17,Qwen/Qwen3-235B-A22B-Instruct-2507,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,LiveCodeBench v6 / AIME25（模型卡提及）,ModelScope模型卡,2026-08-08/09
+18,Qwen/Qwen3-235B-A22B-Thinking-2507,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,推理增强版，官方称推理/代码显著提升,ModelScope模型卡,2026-08-08/09
+19,Qwen/Qwen3-235B-A22B,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,旗舰 MoE，官方对标 DeepSeek-R1/o1 级别（无 SWEV 数值）,Qwen3官方博客,2026-08-08/09
+20,Qwen/Qwen3-30B-A3B,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,官方称超越 QwQ-32B（无 SWEV 数值）,Qwen3官方博客,2026-08-08/09
+21,Qwen/Qwen3-30B-A3B-Thinking-2507,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,推理增强版（无公开 SWEV）,ModelScope模型卡,2026-08-08/09
+22,Qwen/Qwen3-14B,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,通用对话（无公开 SWEV）,Qwen3官方博客,2026-08-08/09
+23,Qwen/Qwen3-8B,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,通用对话（无公开 SWEV）,Qwen3官方博客,2026-08-08/09
+24,Qwen/Qwen3-4B,阿里云通义千问（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,,每次调用,,小模型，无魔搭社区提供方（仅百炼）,api-inference清单,2026-08-08/09
+25,Shanghai_AI_Laboratory/Intern-S1,上海AI实验室（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,推理模型（无公开 SWEV）,ModelScope模型卡,2026-08-08/09
+26,Shanghai_AI_Laboratory/Intern-S1-mini,上海AI实验室（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,推理模型（无公开 SWEV）,ModelScope模型卡,2026-08-08/09
+27,Shanghai_AI_Laboratory/Intern-S2-Preview,上海AI实验室（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,推理模型（无公开 SWEV）,ModelScope模型卡,2026-08-08/09
+28,PaddlePaddle/ERNIE-4.5-300B-A47B-PT,百度飞桨/文心（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,文心 4.5 大杯（无公开编程数值）,ModelScope模型卡,2026-08-08/09
+29,PaddlePaddle/ERNIE-4.5-21B-A3B-PT,百度飞桨/文心（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,文心 4.5 中杯（无公开编程数值）,ModelScope模型卡,2026-08-08/09
+30,PaddlePaddle/ERNIE-4.5-0.3B-PT,百度飞桨/文心（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,文心 4.5 小杯（无公开编程数值）,ModelScope模型卡,2026-08-08/09
+31,mistralai/Mistral-Large-Instruct-2407,Mistral AI（官方机构）,是（OpenAI兼容API）,官方机构发布 + ModelScope 官方 API-Inference 清单在列（下载量/关注度头部）,1,每次调用,standard,2024 旗舰（无公开 SWEV）,ModelScope模型卡,2026-08-08/09
