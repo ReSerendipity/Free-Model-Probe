@@ -19,7 +19,7 @@
 | 工具集/data/raw/models_all_2026090{7,18}.json | 官方全量目录快照（430 → 445） |
 | 工具集/data/raw/models_maxprice0_20260918.json | `GET /models?max_price=0` 响应（网站价格筛选同源） |
 | 工具集/data/raw/frontend_free_models_20260918.json | 网站前端接口 `api/frontend/v1/models/find?max_price=0` 响应（99 行全模态） |
-| 工具集/data/raw/key_info.json | 密钥状态 |
+| 工具集/data/raw/key_info.json | 密钥状态（本地生成，含账号级字段，已加入 .gitignore 不入库） |
 | 最终报告/openrouter-免费模型连通性实测-20260907.html | v1 连通性实测报告（历史） |
 | 最终报告/openrouter-免费模型能力排序-v2-20260907.html | v2 429 复测 + 能力探针 + 综合排序（历史） |
 | 最终报告/openrouter-免费模型清单更新与连通性实测-20260918.html | **最新**：清单变更 + 25 模型全量实测 + 网站口径核对 |
