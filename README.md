@@ -113,3 +113,9 @@ python build_report.py                                       # 生成带日期�
 - **数据缓存**：ModelScope 详情缓存 24h（`DETAIL_TTL`），模型卡更新最多滞后 24h；强制刷新删 `data/raw/{model}__detail.json`。
 - **基准分局限**：ModelScope 的基准分由 README 自动提取，v5.3 起已收敛「误抓竞品对比表」，但高精度场景仍建议人工核对 `bench_warns`。
 - **接口边界**：ModelScope 无登录态无法枚举全量目录（`/api/v1/models` 返回 404/401），故用「种子家族版本/变体探测」策略。
+
+---
+
+## 许可证 / License
+
+本项目以 **Apache License 2.0** 授权发布，版权归 Copyright 2026 ReSerendipity。完整条款见仓库根目录的 [LICENSE](LICENSE)。
