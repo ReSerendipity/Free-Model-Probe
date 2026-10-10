@@ -98,7 +98,8 @@ def main():
     res = conn["results"]
     diff = load(os.path.join("raw", f"free_models_diff_20260907_vs_{day}.json"))
     inv = {m["id"]: m for m in load(os.path.join("raw", "free_text_models.json"))}
-    key = load(os.path.join("raw", "key_info.json")).get("data", {})
+    ki = os.path.join("raw", "key_info.json")
+    key = load(ki).get("data", {}) if os.path.exists(os.path.join(DATA, ki)) else {}
 
     usable = {k: v for k, v in res.items() if v["status"] == "ok" or v.get("retest", {}).get("status") == "ok"}
     lat = []
