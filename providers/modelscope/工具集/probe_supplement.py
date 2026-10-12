@@ -135,16 +135,22 @@ def main():
     print(f"种子 {len(seeds)} 个，已知 id（去重基准）{len(known)} 个")
     found = []
     seen = set()
+    dead = load_probe_history()
+    if dead:
+        print(f"探测留痕已有 {len(dead)} 个无效候选，本轮自动跳过")
     for seed in seeds:
         cands = gen_candidates(seed)
         for cand in cands:
-            if cand in known or cand in seen:
+            if cand in known or cand in seen or cand in dead:
                 continue
             seen.add(cand)
             fee = probe_one(cand)
             if fee:
                 found.append((cand, fee))
+                append_probe_history(cand, "free")
                 print(f"      ✅ 发现新模型（魔搭社区免费推理）: {cand} -> {fee['providers']}")
+            else:
+                append_probe_history(cand, "dead")
             time.sleep(0.3)
 
     if not found:
