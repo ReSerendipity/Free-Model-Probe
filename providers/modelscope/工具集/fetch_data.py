@@ -392,7 +392,8 @@ def main():
                 det = parse_detail(body)
                 det["benchmarks"], det["bench_warns"] = extract_benchmarks(det.pop("readme"), mid)
                 details[mid] = det
-                os.utime(raw_f)  # 刷新 mtime，保证高频运行时缓存不过期
+                # 详情缓存为绝对 TTL（24h）：不在此处刷新 mtime——滑动续期会让高频
+                # 运行下缓存永不过期，与 readme「模型卡更新最多滞后 24h」的承诺矛盾。
             except Exception:  # noqa: BLE001 - 缓存损坏则删除并重拉
                 cached = False
                 try:
@@ -476,6 +477,7 @@ def main():
                                              "humaneval", "aime")},
             })
 
+    bench_flagged = {r["model_id"]: (r.get("bench_warns") or []) for r in rows if r.get("bench_warns")}
     meta = {
         "fetched_at": fetch_ts,
         "list_total": len(ids),
@@ -483,6 +485,7 @@ def main():
         "non_agent_excluded": len(excluded),
         "failures": fee_failures + [mid for mid, det in details.items()
                                     if isinstance(det, dict) and "error" in det],
+        "bench_warns": bench_flagged,
     }
     with open(os.path.join(DATA_DIR, "fetch_meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=1)
