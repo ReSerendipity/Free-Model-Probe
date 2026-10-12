@@ -45,12 +45,6 @@ def _key_tail():
             v = (getattr(local_secret, "OPENROUTER_API_KEY", "") or "").strip()
         except Exception:
             v = ""
-    if not v:
-        try:
-            src = open(os.path.join(HERE, "openrouter_connectivity_test.py"), encoding="utf-8").read()
-            v = re.search(r'API_KEY\s*=\s*"([^"]+)"', src).group(1)
-        except Exception:
-            v = ""
     return v[-4:]
 
 
