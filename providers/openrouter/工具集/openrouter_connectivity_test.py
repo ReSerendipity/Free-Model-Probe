@@ -123,12 +123,16 @@ def main():
 
     if not skip_fetch or not os.path.exists(free_text_file):
         # 1. 密钥状态
-        try:
-            key_info = http_json(f"{BASE}/auth/key")
-            json.dump(key_info, open(os.path.join(RAW, "key_info.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-            print("KEY:", json.dumps(key_info.get("data", {}).get("label")), "| usage:", key_info.get("data", {}).get("usage"))
-        except Exception as e:
-            print("key info failed:", e)
+        if API_KEY:
+            try:
+                key_info = http_json(f"{BASE}/auth/key")
+                with open(os.path.join(RAW, "key_info.json"), "w", encoding="utf-8") as f:
+                    json.dump(key_info, f, ensure_ascii=False, indent=2)
+                print("KEY:", json.dumps(key_info.get("data", {}).get("label")), "| usage:", key_info.get("data", {}).get("usage"))
+            except Exception as e:
+                print("key info failed:", e)
+        else:
+            print("KEY: 未配置 OPENROUTER_API_KEY（环境变量 / local_secret.py），跳过 /auth/key 查询")
         # 2. 模型清单 + 过滤
         data = http_json(f"{BASE}/models")
         json.dump(data, open(os.path.join(RAW, "models_all.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
