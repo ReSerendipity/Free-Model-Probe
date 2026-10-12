@@ -8,3 +8,7 @@ local_secret.py
 # OpenRouter 账号响应（含 key label / 用量 / 账号 ID）
 # 由 openrouter_connectivity_test.py 本地生成，属账号级数据，不入库
 providers/openrouter/工具集/data/raw/key_info.json
+
+# WebUI 运行时快照（webui/server.py 的 SNAP_DIR，/api/scan 扫描时自动写入）
+# 属本机运行状态（端点地址 + 模型 id 清单），不入库
+webui/snapshots/
