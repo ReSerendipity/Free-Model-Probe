@@ -61,9 +61,11 @@ jobs:
           hits=$(grep -rEn \
             'sk-or-v1-[0-9a-f]{32,}|ms-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|sk-[A-Za-z0-9]{40,}' \
             . --include='*.py' --include='*.json' --include='*.md' --include='*.txt' \
-              --include='*.html' --include='*.csv' --include='*.yml' \
+              --include='*.html' --include='*.csv' --include='*.yml' --include='*.yaml' \
+              --include='*.bat' --include='*.sh' \
             --exclude-dir=.git \
-            | grep -v 'local_secret.example.py' || true)
+            --exclude='local_secret.example.py' \
+            || true)
           if [ -n "$hits" ]; then
             echo "::error::检测到疑似明文密钥，拒绝合并："
             echo "$hits"
