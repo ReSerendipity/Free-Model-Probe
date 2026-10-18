@@ -24,7 +24,7 @@
 - 遵循 **Keep a Changelog**：`Added / Changed / Fixed / Deprecated / Removed / Security`。
 - 每次合并 `main` 在 `[Unreleased]` 追加；type 映射 `feat→Added`、`fix→Fixed`、`refactor→Changed`。
 - 发版时 `[Unreleased]` → `[VERSION] - YYYY-MM-DD`。
-- **当前状态**：仓内尚无根 `CHANGELOG.md`（待定：首个正式发布前由仓库负责人建立，触发条件为打第一个 v* tag）。历史变更记录目前散见于 git log 与各平台包内的 `README-说明.md`。
+- **当前状态**：仓内已建立根 `CHANGELOG.md`（Keep a Changelog 结构，C-12 补建 PR 落地）。当前仍无 `v*` tag / Release，`[Unreleased]` 段仅含提交历史归类；首个正式发布时按 §10.2 将 `[Unreleased]` → `[VERSION] - YYYY-MM-DD`。
 
 ## 3. 发布流程（远端）
 
